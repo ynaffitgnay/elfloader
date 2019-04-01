@@ -1,0 +1,9 @@
+00800000-008ca000 r-xp 00000000 00:28 20083579                           /home/tiffanyyang/labs/lab3/inputprogs/readmap.o
+00ac9000-00acc000 rw-p 000c9000 00:28 20083579                           /home/tiffanyyang/labs/lab3/inputprogs/readmap.o
+00acc000-00ace000 rw-p 00000000 00:00 0 
+02867000-0288a000 rw-p 00000000 00:00 0                                  [heap]
+7fff2337e000-7fff2339f000 rw-p 00000000 00:00 0                          [stack]
+7fff233ca000-7fff233cd000 r--p 00000000 00:00 0                          [vvar]
+7fff233cd000-7fff233cf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
