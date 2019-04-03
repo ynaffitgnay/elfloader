@@ -34,14 +34,14 @@ INCLUDES = -I$(LSHDIR) -I$(PAGERDIR) -I$(TOPDIR) -I$(INDIR)
 
 .PRECIOUS: $(TARGET) $(OBJECTS)
 
-$(TARGET): $(SHARED_OBJS)
+$(TARGET): $(OBJECTS)
 	$(CC) $(PAGERDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(PCFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
-$(INPROGS):  $(SHARED_OBJS)
+$(INPROGS):  $(OBJECTSS)
 	$(CC) $(INDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 clean:
 	-rm -f *.o
 	-rm -f $(LSHDIR)/*.o
 	-rm -f $(INDIR)/*.o
-	-rm -f $(TARGET)
+	-rm -f $(TARGET) $(INPROGS)
