@@ -38,7 +38,7 @@ $(TARGET): $(OBJECTS)
 	$(CC) $(PAGERDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(PCFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 $(INPROGS):  $(OBJECTSS)
-	$(CC) $(INDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
+	$(CC) $(INDIR)/$@.o $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 clean:
 	-rm -f *.o

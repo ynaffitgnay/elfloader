@@ -3,8 +3,6 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
-#include "loader_utils.h"
-
 #define MAXLINE 1000
 
 int two_page_array[2570];
@@ -34,7 +32,7 @@ read_maps( void ) {
 int
 main( )
 {
-  lu_print_maps();
+  read_maps();
   printf( "Printing this other thing\n" );
   return 0;
 }
