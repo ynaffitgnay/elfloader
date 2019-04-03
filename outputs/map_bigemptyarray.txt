@@ -1,0 +1,9 @@
+00800000-008ca000 r-xp 00000000 00:28 26434659                           /home/tiffanyyang/labs/lab3/code/readmap_bigarray.o
+00ac9000-00acc000 rw-p 000c9000 00:28 26434659                           /home/tiffanyyang/labs/lab3/code/readmap_bigarray.o
+00acc000-00ad0000 rw-p 00000000 00:00 0 
+02945000-02968000 rw-p 00000000 00:00 0                                  [heap]
+7ffdde63d000-7ffdde65e000 rw-p 00000000 00:00 0                          [stack]
+7ffdde727000-7ffdde72a000 r--p 00000000 00:00 0                          [vvar]
+7ffdde72a000-7ffdde72c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Printing this other thing
