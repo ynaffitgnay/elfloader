@@ -29,9 +29,6 @@ INCLUDES = -I$(LSHDIR) -I$(PAGERDIR) -I$(TOPDIR) -I$(INDIR)
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-#$(SHARED_OBJS): $(SHARED_SRC) $(HEADERS)
-#	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
-
 .PRECIOUS: $(TARGET) $(OBJECTS)
 
 $(TARGET): $(OBJECTS)
