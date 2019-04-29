@@ -1,6 +1,8 @@
+#define _GNU_SOURCE  // to get mmap macrosx
 #include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/mman.h>
 #include <linux/auxvec.h>
 
 #include "loader.h"
@@ -9,6 +11,22 @@
 
 int main( int argc, char** argv, char** envp )
 {
+
+  if (argc != 2) return 0;
+  
+  Loadee_mgmt* loadee = loader_get_new_manager( argv );
+
+  if (loadee == NULL) {
+    printf ("Loadee failed, i guess\n");
+    return 1;
+  }
+
+  Elf_info ei;
+  
+  le_get_elfinfo( loadee, &ei );
+  
+  return 0;
+  
   Elf64_auxv_t *auxv = NULL;
   printf( "argv: %#" PRIx64
           "\t contents: %s\n", (uint64_t)argv, *argv );
@@ -62,6 +80,8 @@ int main( int argc, char** argv, char** envp )
     if (auxv->a_type == AT_EXECFN) {
       printf("    exec addr: %#" PRIx64 " \n contents: %s\n",
              (uint64_t)(auxv->a_un.a_val), (char*)(auxv->a_un.a_val));
+    } else if (auxv->a_type == AT_PHDR) {
+      printf("    phdr addr: %#" PRIx64 "\n", (uint64_t)(auxv->a_un.a_val) );
     }
   }
 
@@ -73,5 +93,20 @@ int main( int argc, char** argv, char** envp )
   sp += 16;
   printf("sp: %#" PRIx64 " capability string? %s \n", (uint64_t)sp, sp);
   //printf("capability string now? %s \n", *(char*)(auxv++));
+
+  lu_print_maps();
+
+  char* newstack = mmap( (void*)0x600000000000, INITIAL_STACK_SIZE, 
+                         PROT_READ |  PROT_WRITE,
+                         MAP_PRIVATE | MAP_ANONYMOUS | MAP_GROWSDOWN, -1, 0);
+
+  if (newstack) {
+    printf("Mapped a stack! \n");
+  } else {
+    perror( "Unable to mmap for stack" );
+  }
+
+  lu_print_maps();
+  
   return 0;
 }

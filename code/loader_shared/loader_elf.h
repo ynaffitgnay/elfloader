@@ -3,26 +3,27 @@
 
 #include <elf.h>
 
+#include "loader.h"
+
 typedef struct
 {
-  Elf64_Ehdr hdr;  /* Actual ELF header */
+  Elf64_Ehdr* hdr;  /* ELF header pointer */
   Elf64_Phdr* phdr; /* Pointer to first entry in program header table */
-  Elf64_Shdr* shdr; /* Pointer to first entry in section header table */
+  //Elf64_Shdr* shdr; /* Pointer to first entry in section header table */
   
 } Elf_info;
 
-int
-le_get_elfinfo( );
-
-//int
-//le_load_elf_binary( );
 
 int
-le_load_elf_phdrs( );
+le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info );
+
+Elf64_Phdr*
+le_load_elf_phdrs( Elf64_Ehdr* elf_hdr );
 
 int
-le_load_elf_shdrs( );
+le_check_sector_addrs( struct mem_bounds* bounds, Elf_info* info );
 
 int
-le_map_section( int section );
+le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv );
+
 #endif
