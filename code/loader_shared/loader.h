@@ -7,7 +7,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#define PG_SIZE (4096)
 #define INITIAL_STACK_SIZE (131072)
 //#define MAX_SIZE 1000
 
