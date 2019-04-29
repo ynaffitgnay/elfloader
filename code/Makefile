@@ -6,7 +6,7 @@ TARGET = apager
 INPROGS = readmap hello
 LIBS = -lm
 CC = gcc
-CFLAGS = -g -Wall --std=c99
+CFLAGS = -g -Wall --std=gnu99
 SCFLAGS = -static -static-libgcc -Bstatic -fPIE
 PCFLAGS = -Wl,-Ttext-segment=0x400000
 ICFLAGS = -Wl,-Ttext-segment=0x1000000 
