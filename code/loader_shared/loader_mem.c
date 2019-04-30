@@ -9,11 +9,11 @@
 static void lm_print_mapping( struct mem_region* mr);
 static void lm_print_mem_region( struct mem_region* mr);
 
-int lm_validate_address( struct mem_bounds* loadee_mem, void* addr ) {
+int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
   
-  if (((uint64_t)addr <= (uint64_t)loadee_mem->end_addr) &&
-      ((uint64_t)addr >= (uint64_t)loadee_mem->start_addr))
+  if ((addr <= loadee_mem->end_addr) &&
+      (addr >= loadee_mem->start_addr))
     return 0;
   return -1;
 }  

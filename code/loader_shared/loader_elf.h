@@ -8,7 +8,7 @@
 typedef struct
 {
   Elf64_Ehdr* hdr;  /* ELF header pointer */
-  Elf64_Phdr* phdr; /* Pointer to first entry in program header table */
+  Elf64_Phdr* phdrs; /* Pointer to first entry in program header table */
   //Elf64_Shdr* shdr; /* Pointer to first entry in section header table */
   
 } Elf_info;
@@ -18,10 +18,10 @@ int
 le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info );
 
 Elf64_Phdr*
-le_load_elf_phdrs( Elf64_Ehdr* elf_hdr );
+le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info );
 
 int
-le_check_sector_addrs( struct mem_bounds* bounds, Elf_info* info );
+le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info );
 
 int
 le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv );
