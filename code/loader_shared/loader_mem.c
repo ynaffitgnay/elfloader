@@ -18,12 +18,12 @@ int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
   return -1;
 }  
 
-size_t lm_calc_mmap_length( void* start_addr, size_t size ) {
+size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   uint64_t end_addr;
   int num_pages;
   size_t num_bytes;
 
-  end_addr = (uint64_t)start_addr + (uint64_t)size;
+  end_addr = start_addr + (uint64_t)size;
   num_pages = (size / PG_SIZE) + ((size % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
 
   //TODO
