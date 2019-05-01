@@ -33,9 +33,9 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
   }
 
   // overshoot start_addr in order to set it in elf loader
-  new_loadee->bounds.start_addr = (char*)LOAD_START;
-  new_loadee->bounds.end_addr = (char*)STACK_BASE;
-  new_loadee->sp = (char*)STACK_BASE;  
+  new_loadee->bounds.start_addr = (uint64_t)LOAD_START;
+  new_loadee->bounds.end_addr = (uint64_t)STACK_BASE;
+  new_loadee->sp = (uint64_t)STACK_BASE;  
   
   return new_loadee;
 
