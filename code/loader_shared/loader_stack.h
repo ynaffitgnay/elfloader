@@ -1,10 +1,12 @@
 #ifndef _LOADER_STACK_H_
 #define _LOADER_STACK_H_
 
+#include <inttypes.h>
+
 #include "loader.h"
 
 struct loader_stack_info {
-  int argc;
+  uint64_t argc;
   char** argv;
   int envc;
   char** envp;
@@ -13,7 +15,7 @@ struct loader_stack_info {
 };
 
 int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee );
-void* ls_get_auxv_addr( char** envp, int* num_env_vars );
+char* ls_get_auxv_addr( char** envp, int* num_env_vars );
 
 
 #endif

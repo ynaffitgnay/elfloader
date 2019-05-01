@@ -6,8 +6,8 @@
 
 #include "loader_mem.h"
 
-static void lm_print_mapping( struct mem_region* mr);
-static void lm_print_mem_region( struct mem_region* mr);
+static void print_mapping( struct mem_region* mr);
+static void print_mem_region( struct mem_region* mr);
 
 int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
@@ -77,23 +77,23 @@ int lm_map_memregion(struct mem_region* mappee) {
   mappee->map_size = map_length;
   mappee->map_end = (char*)map_end_addr;
 
-  lm_print_mem_region( mappee );
+  print_mem_region( mappee );
   return 0;
 
   
   // TODO: get rid of "print_mem_region"
-  lm_print_mapping( mappee );
+  print_mapping( mappee );
   
   return 0;
 }
 
-void lm_print_mapping( struct mem_region* mr ) {
+void print_mapping( struct mem_region* mr ) {
   fprintf(stderr, "mapping created at address: %#" PRIx64
           "\toffset: %ld\tsize: %lu\n",
           (uint64_t)mr->map_start, mr->map_offset, mr->map_size);
 }
 
-void lm_print_mem_region( struct mem_region* mr ) {
+void print_mem_region( struct mem_region* mr ) {
   fprintf(stderr, "mapping at virtual address: %#" PRIx64
          "\n\tlength: %lu\n\tprotection: %d\n\tflags: %d\n\tfd: %d\n\t"
           "offset: %ld\n\tmap_start: %#" PRIx64
