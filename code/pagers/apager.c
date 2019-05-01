@@ -11,7 +11,7 @@
 
 int main( int argc, char** argv, char** envp )
 {
-
+/*
   if (argc != 2) return 0;
   
   Loadee_mgmt* loadee = loader_get_new_manager( argv );
@@ -26,7 +26,7 @@ int main( int argc, char** argv, char** envp )
   le_get_elfinfo( loadee, &ei );
   
   return 0;
-  
+*/
   Elf64_auxv_t *auxv = NULL;
   printf( "argv: %#" PRIx64
           "\t contents: %s\n", (uint64_t)argv, *argv );
@@ -57,9 +57,15 @@ int main( int argc, char** argv, char** envp )
 
   char* final_string_addr = orig_envp[num_env_vars - 1];
   unsigned long chars_in_final_string = strlen(final_string_addr);
-  printf("strlen of last value @ envp: %lu\n", chars_in_final_string );  
+  printf("strlen of last value @ envp: %lu\n", chars_in_final_string );
+
   printf("address of final_string_addr + strlen = %lx\n",
          (unsigned long)final_string_addr + chars_in_final_string );
+  
+  // this should give address to execfn (includes null terminator)
+  printf("address of final_string_addr + strlen + 1= %lx\0n",
+         (unsigned long)final_string_addr + chars_in_final_string + 1 );
+
 
   printf( "total number of environment variables: %d\n",
           num_env_vars );
