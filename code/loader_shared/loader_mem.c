@@ -11,9 +11,12 @@ static void lm_print_mem_region( struct mem_region* mr);
 
 int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
+
+  printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
+          PRIx64 "\n", addr, loadee_mem->start_addr, loadee_mem->end_addr );
   
   if ((addr <= loadee_mem->end_addr) &&
-      (addr >= loadee_mem->start_addr))
+      (addr >= loadee_mem->start_addr)) 
     return 0;
   return -1;
 }  
@@ -38,7 +41,7 @@ int lm_map_memregion(struct mem_region* mappee) {
   off_t map_offset;
   size_t map_length;
   char* mapping = NULL;
-  char* real_end_addr = NULL;
+  uint64_t real_end_addr;
   uint64_t map_end_addr;
   uint64_t leftover_bytes;
 
@@ -59,12 +62,12 @@ int lm_map_memregion(struct mem_region* mappee) {
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;
   real_end_addr = mappee->virt_address + mappee->length;
 
-  leftover_bytes = map_end_addr - (uint64_t)real_end_addr; 
+  leftover_bytes = map_end_addr - real_end_addr; 
   
   // Zero out data that should not be file-backed
   if (leftover_bytes) {
     // Part of mapped region should not be populated by file
-    memset( real_end_addr, 0, leftover_bytes );
+    memset( (void*)real_end_addr, 0, leftover_bytes );
   } else if (mappee->flags & MAP_ANONYMOUS) {
     memset( (void*)map_start, 0, map_length );
   }

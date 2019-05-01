@@ -91,21 +91,23 @@ le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
   int first_load = 0;
    
   for (int i = 0; i < info->hdr->e_phnum; ++i) {
-    if (lm_validate_address( &(loadee->bounds), phdr_it->p_vaddr ) == -1 ||
-        lm_validate_address( &(loadee->bounds), (phdr_it->p_vaddr + phdr_it->p_memsz)) == -1 ) {
-      fprintf( stderr, "Failed address verification on %dth section\n", i);
-      return -1;
-    }
+    if (phdr_it->p_type == PT_LOAD) {
+      if (lm_validate_address( &(loadee->bounds), phdr_it->p_vaddr ) != 0 ||
+          lm_validate_address( &(loadee->bounds), (phdr_it->p_vaddr + phdr_it->p_memsz)) != 0 ) {
+        fprintf( stderr, "Failed address verification on %dth section\n", i);
+        return -1;
+      }
 
-    // If this is the first load segment, after verifying that vaddr falls in
-    // default bounds, set start address of bounds to start of the text segment
-    if (phdr_it->p_type == PT_LOAD && !first_load) {
-      first_load = 1;
-      printf( "Setting start bound to %#" PRIx64 "\n", phdr_it->p_vaddr ); 
+      // If this is the first load segment, after verifying that vaddr falls in
+      // default bounds, set start address of bounds to start of the text segment
+      if (!first_load) {
+        first_load = 1;
+        printf( "Setting start bound to %#" PRIx64 "\n", phdr_it->p_vaddr ); 
     
-      loadee->bounds.start_addr = phdr_it->p_vaddr;
+        loadee->bounds.start_addr = phdr_it->p_vaddr;
+      }
     }
-
+    
     ++phdr_it;
   }
 

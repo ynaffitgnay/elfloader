@@ -15,7 +15,7 @@
 #define DEFAULT_FLAGS ( MAP_PRIVATE | MAP_POPULATE )
 
 struct mem_region {
-  char* virt_address;
+  uint64_t virt_address;
   size_t length;
   int protection;
   int flags;

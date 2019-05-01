@@ -43,5 +43,6 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
 
 void loader_start_loadee( Loadee_mgmt* loadee ) {
   // set regs
-  // free loadee_mgmt
+  // free loadee_mgmt (try not freeing first in case you accidentally refer to stuff in loadee_mgmt)
+  // maybe try memsetting all of loadee_mgmt with 0
 }
