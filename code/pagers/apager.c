@@ -48,12 +48,17 @@ int main( int argc, char** argv, char** envp )
 
   char** orig_envp = envp;
   int num_env_vars = 0;
+
+  // Use do-while loop to see environment var output
+  /*
   do {
     printf( "env var: %s\n", *envp );
     num_env_vars++;
   } while (*envp++ != NULL);
-
-  num_env_vars -= 1;  // account for the extra null
+  num_env_vars -= 1;  // account for the extra null in do-while
+  */
+  
+  while (*envp++ != NULL) ++num_env_vars;
 
   char* final_string_addr = orig_envp[num_env_vars - 1];
   unsigned long chars_in_final_string = strlen(final_string_addr);
@@ -63,7 +68,7 @@ int main( int argc, char** argv, char** envp )
          (unsigned long)final_string_addr + chars_in_final_string );
   
   // this should give address to execfn (includes null terminator)
-  printf("address of final_string_addr + strlen + 1= %lx\0n",
+  printf("address of final_string_addr + strlen + 1 = %lx\n",
          (unsigned long)final_string_addr + chars_in_final_string + 1 );
 
 
