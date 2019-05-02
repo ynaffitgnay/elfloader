@@ -69,9 +69,19 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   }
 
   // populate_info_block does alignment
-  populate_info_block( lsinfo, loadee, temp_argv, temp_envp );
+  if (populate_info_block( lsinfo, loadee, temp_argv, temp_envp ) != 0) {
+    fprintf( stderr, "Failed to populate information block. \n" );
+    free( temp_argv );
+    free( temp_envp );
+    return -1;
+  }
 
-  le_create_elf_tables( loadee, (Elf64_auxv_t*)auxv_addr, auxv_entries );
+  if (le_create_elf_tables( loadee, (Elf64_auxv_t*)auxv_addr, auxv_entries ) != 0) {
+    fprintf( stderr, "Failed to create elf tables. \n" );
+    free( temp_argv );
+    free( temp_envp );
+    return -1;
+  }
 
   // Insert null word between aux vector and envp
   loadee->sp -= 8;

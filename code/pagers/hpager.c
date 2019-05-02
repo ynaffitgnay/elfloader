@@ -12,7 +12,10 @@
 #include "loader_stack.h"
 #include "loader_utils.h"
 
-int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
+// TODO: put this at the top of loader_handler.h
+enum heuristics { MAP1, MAP2, MAP3 };
+
+int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
   Elf64_Phdr* phdr_it = ei->phdrs;
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
     int prot = 0;
@@ -39,7 +42,8 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         fprintf( stderr, "Failed to mmap file-backed segment\n" );
         return -1;
       }
-      
+
+      // HYBRID SHOULDN'T DO THIS!!
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
         struct mem_region anonymous_seg;
         size_t first_section_bytes;
@@ -82,7 +86,7 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
 }
  
 
-int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
+int hybrid_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
   if (loadee == NULL) {
     printf ("Invalid loadee\n");
     return -1;
@@ -92,7 +96,7 @@ int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char**
   
   le_get_elfinfo( loadee, &ei );
 
-  if ( all_load_segments( loadee, &ei ) != 0) {
+  if ( hybrid_load_segments( loadee, &ei ) != 0) {
     fprintf( stderr, "Failed to load segments properly\n" );
     exit( -1 );
   }
@@ -102,25 +106,46 @@ int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char**
 }
 
 int main( int argc, char** argv, char** envp ) {
-  
-  if (argc < 2) {
-    fprintf( stderr, "Please supply an additional argument\n" );
-    return 0;
-  }
-
-  Loadee_mgmt* loadee = loader_get_new_manager( argv );
+  enum heuristics heuristic;
+  Loadee_mgmt* loadee = NULL;
   uint64_t sp;
   uint64_t ept;
   
+  if (argc < 3) {
+    fprintf( stderr, "Please supply an additional argument. \nExample: \n" );
+    fprintf( stderr, "  $ ./hpager 1 input_prog\n" );
+    return 0;
+  }
+
+  // Determine which heuristic is desired
+  if (strncmp( argv[1], "1", 1 ) == 0) {
+    printf( "Map 1 page\n" );
+    heuristic = MAP1; 
+  } else if (strncmp( argv[1], "2", 1 ) == 0) {
+    printf( "Map 2 pages\n" );
+    heuristic = MAP2; 
+  } else if (strncmp( argv[1], "3", 1 ) == 0) {
+    printf( "Map 3 pages\n" );
+    heuristic = MAP3; 
+  } else {
+    fprintf( stderr, "Unexpected heuristic choice. Please use either 1, 2, or 3" );
+    return -1;
+  }
+  
+  
+  loadee = loader_get_new_manager( argv + 1 );
+  
+  
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
-  struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
+  struct loader_stack_info apager_info = { argc - 1, argv + 1, 0, envp, 19, NULL };
 
   //lu_print_maps();
 
-  if (all_load_elf_binary( loadee ) != 0) {
+  if (hybrid_load_elf_binary( loadee ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
   }
+
 
   if (ls_setup_stack( &apager_info, loadee ) != 0) {
     fprintf( stderr, "Failed to set up stack\n" );

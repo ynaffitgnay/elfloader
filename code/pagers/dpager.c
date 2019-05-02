@@ -12,7 +12,7 @@
 #include "loader_stack.h"
 #include "loader_utils.h"
 
-int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
+int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
   Elf64_Phdr* phdr_it = ei->phdrs;
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
     int prot = 0;
@@ -82,7 +82,7 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
 }
  
 
-int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
+int demand_get_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
   if (loadee == NULL) {
     printf ("Invalid loadee\n");
     return -1;
@@ -92,7 +92,7 @@ int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char**
   
   le_get_elfinfo( loadee, &ei );
 
-  if ( all_load_segments( loadee, &ei ) != 0) {
+  if ( demand_get_segments( loadee, &ei ) != 0) {
     fprintf( stderr, "Failed to load segments properly\n" );
     exit( -1 );
   }
@@ -117,12 +117,13 @@ int main( int argc, char** argv, char** envp ) {
 
   //lu_print_maps();
 
-  if (all_load_elf_binary( loadee ) != 0) {
+  if (demand_get_elf_binary( loadee ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
   }
 
-  if (ls_setup_stack( &apager_info, loadee ) != 0) {
+
+  if (ls_setup_stack( &apager_info, loadee ) != 0 ) {
     fprintf( stderr, "Failed to set up stack\n" );
     return -1;
   }

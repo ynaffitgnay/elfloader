@@ -22,7 +22,7 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
   if (new_loadee->fd < 0) {
     perror( "Failed to open loadee file" );
     free( new_loadee );
-    return NULL;
+    exit( -1 );
   }
 
   if (read( new_loadee->fd, (void*)(new_loadee->buf), HDR_BUF_SIZE ) < HDR_BUF_SIZE) {
