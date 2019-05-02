@@ -9,7 +9,7 @@
 #include "loader_elf.h"
 
 static int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
-                                char** out_argv, char** out_envp, char** execfn_addr );
+                                char** out_argv, char** out_envp );
 static int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv );
 
 int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
@@ -20,9 +20,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   int envp_size;
   char* auxv_addr = NULL;
   char** temp_envp = NULL;
-  int* argc_ptr = NULL;
-  char* execfn = NULL;
-  
+  int* argc_ptr = NULL;  
 
   // Allocate room for the stack
   newstack = mmap( (void*)loadee->sp, INITIAL_STACK_SIZE,
@@ -62,10 +60,8 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   }
 
   // populate_info_block does alignment
-  populate_info_block( lsinfo, loadee, temp_argv, temp_envp, &execfn );
+  populate_info_block( lsinfo, loadee, temp_argv, temp_envp );
 
-
-  // TODO: need to propogate execfn addr to program
   le_create_elf_tables( loadee, (Elf64_auxv_t*)auxv_addr );
 
   // Insert null word between aux vector and envp
@@ -128,26 +124,38 @@ char* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
 
 
 int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
-                         char** out_argv, char** out_envp, char** execfn_addr ) {
+                         char** out_argv, char** out_envp ) {
 
   // MAKE SURE WHEN CALLING COPY_ARGS WITH ARGV, INCREMENT ARGV BY 1 AND
   // DECREMENT ARGC BY 1
   uint64_t loadee_argc;
   char** loadee_argv = NULL;
   int alignment;
+  int execfn_size;
 
   loadee_argc = lsinfo->argc - 1;
   loadee_argv = lsinfo->argv + 1;
 
   // Copy the name of the program into the stack
   // JK DON'T DO IT THIS WAY
-  copy_args( loadee_argv, 1, loadee, execfn_addr );
+  //copy_args( loadee_argv, 1, loadee, execfn_addr );
+  execfn_size = strlen( loadee->filename ) + 1;
+  loadee->sp -= execfn_size;
+  if ((uint64_t)memcpy( (void*)loadee->sp, loadee->filename, execfn_size ) != loadee->sp) {
+    fprintf( stderr, "Error copying filename into stack\n" );
+    return -1;
+  }
+  
 
   // Copy the environment variables onto the stack
-  copy_args( lsinfo->envp, lsinfo->envc, loadee, out_envp );
+  if (copy_args( lsinfo->envp, lsinfo->envc, loadee, out_envp ) != 0) {
+    return -1;
+  }
 
   // Copy the arguments onto the stack
-  copy_args( loadee_argv, loadee_argc, loadee, out_argv );
+  if (copy_args( loadee_argv, loadee_argc, loadee, out_argv ) != 0) {
+    return -1;
+  }
 
   // MAKE SURE TO DO ALIGNMENT
   alignment = (8 - (loadee->sp % 8)) * ((loadee->sp % 8) && 1);
@@ -160,6 +168,7 @@ int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
 
   if ((uint64_t)memset( (void*)loadee->sp, 0, alignment ) != loadee->sp) {
     fprintf( stderr, "Error memsetting stack alignment\n" );
+    return -1;
   }
   
   return 0;
@@ -178,6 +187,7 @@ int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv ) 
 
     if (memcpy( sp, str, len ) != sp) {
       fprintf(stderr, "Error copying argument %d to the argument array\n", argc );
+      return -1;
     }
 
     out_argv[ argc ] = sp;

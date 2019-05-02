@@ -1,3 +1,4 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -34,8 +35,8 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
 
   // overshoot start_addr in order to set it in elf loader
   new_loadee->bounds.start_addr = (uint64_t)LOAD_START;
-  new_loadee->bounds.end_addr = (uint64_t)STACK_BASE;
-  new_loadee->sp = (uint64_t)STACK_BASE;  
+  new_loadee->bounds.end_addr = (uint64_t)STACK_BASE - 1;
+  new_loadee->sp = (uint64_t)STACK_BASE - 1;  
   
   return new_loadee;
 
@@ -45,4 +46,44 @@ void loader_start_loadee( Loadee_mgmt* loadee ) {
   // set regs
   // free loadee_mgmt (try not freeing first in case you accidentally refer to stuff in loadee_mgmt)
   // maybe try memsetting all of loadee_mgmt with 0
+
+  // store entry point and stack pointer locally
+  uint64_t ept = loadee->entry_pt;
+  uint64_t sp = loadee->sp;
+
+  asm( "movq %0, %%rsp;"
+       :
+       : "g" (sp)
+       :  "rsp"
+    );
+  
+  asm( "movq %0, %%rax;"
+       :
+       : "g" (ept)
+       : "rax"
+    );
+
+  asm( "movq %rax, %rbp ");
+
+  //register uint64_t entry_pt asm( "rax" ) = ept;
+  //asm ( "movq %rax, %rbp" );
+  //register uint64_t stack_ptr asm( "rbx" ) = sp;
+  //asm ( "movq %rbx, %rsp" );
+  
+  asm ( "xor %rax, %rax" );
+  asm ( "xor %rbx, %rbx" );
+  asm ( "xor %rcx, %rcx" );
+  asm ( "xor %rdx, %rdx" );
+  asm ( "xor %rsi, %rsi" );
+  asm ( "xor %rdi, %rdi" );
+  asm ( "xor %r8, %r8" );
+  asm ( "xor %r9, %r9" );
+  asm ( "xor %r10, %r10" );
+  asm ( "xor %r11, %r11" );
+  asm ( "xor %r12, %r12" );
+  asm ( "xor %r13, %r13" );
+  asm ( "xor %r14, %r14" );
+  asm ( "xor %r15, %r15" );
+  asm ( "jmp *%rbp" );
+  
 }
