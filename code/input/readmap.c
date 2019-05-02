@@ -1,3 +1,4 @@
+#include <inttypes.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
@@ -26,13 +27,32 @@ read_maps( void ) {
   }
 
   fclose (fp);
+
+  printf( "\n\n" );
   return 0;
 }
 
 int
-main( )
-{
+main( ) {
+  size_t size = (uint64_t)1024 * (uint64_t)1024 * (uint64_t)1024 * (uint64_t)4; 
   read_maps();
-  printf( "Printing this other thing\n" );
+  
+  printf( "mallocing small (less than 1GB) region.\n" );
+
+  if (malloc( 4097 ) == NULL) {
+  fprintf( stderr,"Unable to malloc small region\n" );
+    return -1;
+  }
+  read_maps();
+  
+  printf( "mallocing large (greater than 1GB) region.\n" );
+  if (malloc( size ) == NULL) {
+  fprintf( stderr,
+    "Unable to malloc large region\n" );
+    return -1;
+}
+  read_maps();
+  
+  
   return 0;
 }

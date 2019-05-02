@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/mman.h>
+#include <unistd.h>
 #include <linux/auxvec.h>
 
 #include "loader.h"
@@ -13,7 +14,7 @@
 
 int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
   Elf64_Phdr* phdr_it = ei->phdrs;
-  
+  uint64_t bkpt = 0;
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
     int prot = 0;
     int flags = MAP_PRIVATE;
@@ -39,6 +40,9 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         fprintf( stderr, "Failed to mmap file-backed segment\n" );
         return -1;
       }
+
+      // Increase the program break to include the loaded program 
+      bkpt = (bkpt < (uint64_t)file_backed_seg.map_end) ? (uint64_t)file_backed_seg.map_end : bkpt;
       
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
         struct mem_region anonymous_seg;
@@ -71,12 +75,20 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
           fprintf( stderr, "Failed to map anonymous segment\n" );
           return -1;
         }
+
+        // Increase the breakpoint if additional segment is mapped
+        bkpt = (bkpt < (uint64_t)anonymous_seg.map_end) ? (uint64_t)anonymous_seg.map_end : bkpt;
       }
       
     }
     
     phdr_it++;  
   }
+
+  printf( "Breakpt: %lx\n", bkpt );
+
+  brk( (void*)bkpt );
+  
   return 0;
 }
  
@@ -110,14 +122,14 @@ int main( int argc, char** argv, char** envp ) {
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
   struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
 
-  //lu_print_maps();
+  lu_print_maps();
 
   // close file when you exit
   
   all_load_elf_binary( loadee );
 
   ls_setup_stack( &apager_info, loadee ); 
-  //lu_print_maps();
+  lu_print_maps();
   
   
   loader_start_loadee( loadee );
