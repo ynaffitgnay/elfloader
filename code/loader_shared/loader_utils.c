@@ -24,6 +24,7 @@ lu_print_maps( void ) {
   }
 
   fclose (fp);
+  printf( "\n\n\n" );
   return 0;
 }
 
