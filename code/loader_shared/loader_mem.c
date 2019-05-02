@@ -13,8 +13,8 @@ static void print_mem_region( struct mem_region* mr);
 int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
 
-  printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
-          PRIx64 "\n", addr, loadee_mem->start_addr, loadee_mem->end_addr );
+  //printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
+  //        PRIx64 "\n", addr, loadee_mem->start_addr, loadee_mem->end_addr );
   
   if ((addr <= loadee_mem->end_addr) &&
       (addr >= loadee_mem->start_addr)) 
@@ -28,7 +28,6 @@ size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   size_t num_bytes;
 
   end_addr = start_addr + (uint64_t)size;
-  
   //printf( " (size / PG_SIZE): %lu (%lx)\n ((start_addr % PG_SIZE) && 1): %lu (%lx)\n ((end_addr % PG_SIZE) && 1): %lu (%lx)\n",
   //        (size / PG_SIZE), (size / PG_SIZE),
   //        ((start_addr % PG_SIZE) && 1), ((start_addr % PG_SIZE) && 1),
@@ -37,7 +36,7 @@ size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   num_pages = (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
 
   //TODO
-  printf("num_pages: %d\n", num_pages);
+  //printf("num_pages: %d\n", num_pages);
   num_bytes = num_pages * PG_SIZE;
   
   return num_bytes;
@@ -72,7 +71,7 @@ int lm_map_memregion(struct mem_region* mappee) {
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;
   real_end_addr = mappee->virt_address + mappee->length;
 
-  printf( "real_end_addr: %#" PRIx64 "\n", real_end_addr );
+  //printf( "real_end_addr: %#" PRIx64 "\n", real_end_addr );
   
   mappee->map_start = (char*)map_start;
   mappee->map_offset = map_offset;
@@ -83,7 +82,7 @@ int lm_map_memregion(struct mem_region* mappee) {
   // Can't memset unwritable region
   if (mappee->protection & PROT_WRITE) {
     leftover_bytes = map_end_addr - real_end_addr; 
-    printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
+    //printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
 
     // Zero out data that should not be file-backed
     if (leftover_bytes) {

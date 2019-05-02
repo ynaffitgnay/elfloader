@@ -27,11 +27,9 @@ le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info ) {
     fprintf( stderr, "Input executable is built for incorrect architecture.\n" );
     return -1;
   }
-
-  printf( "Oooh loading in an elf\n" );
   
   if ((info->phdrs = le_load_elf_phdrs( loadee, info )) != NULL) {
-    printf( "Successfully read in program headers\n" );
+    //printf( "Successfully read in program headers\n" );
   }
 
   if (le_check_segment_addrs( loadee, info ) != 0) {
@@ -102,7 +100,7 @@ le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
       // default bounds, set start address of bounds to start of the text segment
       if (!first_load) {
         first_load = 1;
-        printf( "Setting start bound to %#" PRIx64 "\n", phdr_it->p_vaddr ); 
+        //printf( "Setting start bound to %#" PRIx64 "\n", phdr_it->p_vaddr ); 
     
         loadee->bounds.start_addr = phdr_it->p_vaddr;
       }
@@ -133,10 +131,6 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_e
   // Get a pointer to the address of the random number and platform capability string
   rand_n_plat_ptr = (uint64_t)loader_auxv + auxv_size;
 
-  printf ("rand_n_plat_ptr: 0x%lx\n", rand_n_plat_ptr );
-  printf ("rand: %s, plat cap: %s\n", (char*) rand_n_plat_ptr, (char*)(rand_n_plat_ptr + 24));
-
-  printf(" strlen plat cap: %d\n", strlen((char*) rand_n_plat_ptr ));
   loadee->sp -= 32;  // Subtract 24 bytes from stack pointer
 
   // Copy the random number and platform capability string to the loadee stack
@@ -159,62 +153,37 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_e
   int randBytesIdx = 0;
   for (auxv = loadee_stack_auxv; auxv->a_type != AT_NULL; auxv++ ) {
     // Correct entries in the auxv
-    //if (loadee_stack_auxv[4].a_type != AT_PHDR) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 4 );
-    //}
-
     switch (auxv->a_type) {
       case AT_PHDR:
         auxv->a_un.a_val = loadee->bounds.start_addr + hdr->e_phoff;
         break;
         
-    //if (loadee_stack_auxv[6].a_type != AT_PHNUM) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 6 );
-    //}
       case AT_PHNUM:
         auxv->a_un.a_val = hdr->e_phnum;
         break;
         
-    //if (loadee_stack_auxv[8].a_type != AT_FLAGS) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 8 );
-    //}
-
       case AT_FLAGS:
         auxv->a_un.a_val = hdr->e_flags;
         break;
-    //if (loadee_stack_auxv[9].a_type != AT_ENTRY) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 9 );
-    //}
 
       case AT_ENTRY:
         auxv->a_un.a_val = hdr->e_entry;
         break;
         
-    //if (loadee_stack_auxv[15].a_type != AT_RANDOM) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 15 );
-    //}
-    case AT_RANDOM:
-      auxv->a_un.a_val = loadee->sp + auxv_size + 8 + 1;
-      randBytesIdx = idx;
-      break;
-
-    //if (loadee_stack_auxv[16].a_type != AT_EXECFN) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 16 );
-    //}
-
-    case AT_EXECFN: 
-    // Execfn is last value in the info block (so closest to the base of the stack)
-      printf( "strlen( loadee->filename ): %d\n", strlen(loadee->filename) );
-      auxv->a_un.a_val = loadee->bounds.end_addr - (strlen( loadee->filename ) + 1);
-      break;
+      case AT_RANDOM:
+        auxv->a_un.a_val = loadee->sp + auxv_size + 8 + 1;
+        randBytesIdx = idx;
+        break;
       
-    //if (loadee_stack_auxv[17].a_type != AT_PLATFORM) {
-    //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 17 );
-    //}
-
-    case AT_PLATFORM:
-      auxv->a_un.a_val = loadee_stack_auxv[randBytesIdx].a_un.a_val + 16;
-      break;
+      case AT_EXECFN: 
+        // Execfn is last value in the info block (so closest to the base of the stack)
+        //printf( "strlen( loadee->filename ): %d\n", strlen(loadee->filename) );
+        auxv->a_un.a_val = loadee->bounds.end_addr - (strlen( loadee->filename ) + 1);
+        break;
+        
+      case AT_PLATFORM:
+        auxv->a_un.a_val = loadee_stack_auxv[randBytesIdx].a_un.a_val + 16;
+        break;
     }
 
     ++idx;

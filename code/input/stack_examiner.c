@@ -7,6 +7,7 @@
 #include <linux/auxvec.h>
 
 #define HDR_BUF_SIZE 128
+#define NUM_AUXV 20
 
 int main( int argc, char** argv, char** envp )
 {
@@ -61,9 +62,9 @@ int main( int argc, char** argv, char** envp )
   char* ptr = (char*) envp;
   printf("sp: %#" PRIx64
          " end o auxv: %#" PRIx64
-         " \n", (uint64_t)ptr, (uint64_t)(ptr + 19 * sizeof( Elf64_auxv_t )));
+         " \n", (uint64_t)ptr, (uint64_t)(ptr + NUM_AUXV * sizeof( Elf64_auxv_t )));
 
-  ptr += 19 * sizeof( Elf64_auxv_t );
+  ptr += NUM_AUXV * sizeof( Elf64_auxv_t );
   printf("length of random bytes + cap string: %lu\n", strlen(ptr));
 
   /* see which entries we have */
@@ -78,7 +79,13 @@ int main( int argc, char** argv, char** envp )
       printf("        strlen: %d\n", execfn_len );
     } else if (auxv->a_type == AT_PHDR) {
       printf("    phdr addr: %#" PRIx64 "\n", (uint64_t)(auxv->a_un.a_val) );
+    } else if (auxv->a_type == AT_PLATFORM) {
+      printf("    at_plat addr: %#" PRIx64 "\n", (uint64_t)(auxv->a_un.a_val) );
+      printf("     and at_plat val: %s\n", (char*)(auxv->a_un.a_val) );
+    } else if (auxv->a_type == AT_RANDOM) {
+      printf("    rand addr: %#" PRIx64 "\n", (uint64_t)(auxv->a_un.a_val) );
     }
+    
   }
 
   char buffer[17];

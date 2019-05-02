@@ -124,7 +124,7 @@ Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars ) {
   
   while (*envp++ != NULL) ++envc;
 
-  printf( "Number of environment vars: %d\n", envc );
+  //printf( "Number of environment vars: %d\n", envc );
   
   if (num_env_vars != NULL) *num_env_vars = envc;
   
@@ -138,7 +138,7 @@ int get_num_auxv_entries( Elf64_auxv_t* aux_table ) {
     ++aux_table;
   }
  
-  printf( "Number of aux entries: %d\n", entries );
+  //printf( "Number of aux entries: %d\n", entries );
   return entries;
 }
 
@@ -161,8 +161,7 @@ int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
   //copy_args( loadee_argv, 1, loadee, execfn_addr );
   execfn_size = strlen( loadee->filename ) + 1;
   loadee->sp -= execfn_size;
-  printf( "execfn addr: %lx\n", loadee->sp );
-  
+    
   if ((uint64_t)memcpy( (void*)loadee->sp, loadee->filename, execfn_size ) != loadee->sp) {
     fprintf( stderr, "Error copying filename into stack\n" );
     return -1;
@@ -180,12 +179,13 @@ int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
   }
 
   // MAKE SURE TO DO ALIGNMENT
-  alignment = (8 - (loadee->sp % 8)) * ((loadee->sp % 8) && 1);
+  alignment = ((loadee->sp % 8)) * ((loadee->sp % 8) && 1);
+  //printf("oldsp: %lu, new alignment: %d\n", loadee->sp, alignment);
   
   loadee->sp -= alignment;
 
-  if (loadee->sp % 8 != 0) {
-    fprintf( stderr, "You seem to be aligning incorrectly.\n" );
+  if ((loadee->sp % 8) != 0) {
+    fprintf( stderr, "You seem to be aligning incorrectly.sp: %lu\n", loadee->sp );
   }
 
   if ((uint64_t)memset( (void*)loadee->sp, 0, alignment ) != loadee->sp) {
