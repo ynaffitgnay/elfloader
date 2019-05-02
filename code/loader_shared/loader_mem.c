@@ -28,10 +28,12 @@ size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   size_t num_bytes;
 
   end_addr = start_addr + (uint64_t)size;
-  printf( " (size / PG_SIZE): %lu (%lx)\n ((start_addr % PG_SIZE) && 1): %lu (%lx)\n ((end_addr % PG_SIZE) && 1): %lu (%lx)\n",
-          (size / PG_SIZE), (size / PG_SIZE),
-          ((start_addr % PG_SIZE) && 1), ((start_addr % PG_SIZE) && 1),
-          ((end_addr % PG_SIZE) && 1), ((end_addr % PG_SIZE) && 1));
+  
+  //printf( " (size / PG_SIZE): %lu (%lx)\n ((start_addr % PG_SIZE) && 1): %lu (%lx)\n ((end_addr % PG_SIZE) && 1): %lu (%lx)\n",
+  //        (size / PG_SIZE), (size / PG_SIZE),
+  //        ((start_addr % PG_SIZE) && 1), ((start_addr % PG_SIZE) && 1),
+  //        ((end_addr % PG_SIZE) && 1), ((end_addr % PG_SIZE) && 1));
+  
   num_pages = (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
 
   //TODO
@@ -54,10 +56,10 @@ int lm_map_memregion(struct mem_region* mappee) {
   map_offset = ((uint64_t)mappee->offset) & ~((uint64_t)PG_SIZE - 1);
   map_length = lm_calc_mmap_length( mappee->virt_address, mappee->length );
 
-  lu_print_maps();
+  //lu_print_maps();
   mapping = mmap( (void*)map_start, map_length, mappee->protection,
                  (mappee->flags | DEFAULT_FLAGS), mappee->fd, map_offset );
-  lu_print_maps();
+  //lu_print_maps();
   
   
   if ((uint64_t)mapping != map_start) {
@@ -94,10 +96,7 @@ int lm_map_memregion(struct mem_region* mappee) {
     }
   }
 
-  print_mem_region( mappee );
-
-  return 0;
-
+  //print_mem_region( mappee );
   
   // TODO: get rid of "print_mem_region"
   print_mapping( mappee );

@@ -8,7 +8,8 @@
 #include "loader_stack.h"
 #include "loader_elf.h"
 
-static Elf64_auxv_t* ls_get_auxv_addr( char** envp, int* num_env_vars );
+static Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars );
+static int get_num_auxv_entries( Elf64_auxv_t* aux_table );
 static int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
                                 char** out_argv, char** out_envp );
 static int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv );
@@ -21,6 +22,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   int num_env_vars;
   int envp_size;
   Elf64_auxv_t* auxv_addr = NULL;
+  int auxv_entries;
   char** temp_envp = NULL;
   int* argc_ptr = NULL;  
 
@@ -46,10 +48,14 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
 
   //TODO: erase this
   // Make sure envp isn't getting changed by this function inadverdently 
-  printf( "Original envp: %#" PRIx64 " ", (uint64_t)lsinfo->envp );
-  auxv_addr = ls_get_auxv_addr( lsinfo->envp, &num_env_vars );
+  //printf( "Original envp: %#" PRIx64 " ", (uint64_t)lsinfo->envp );
+  auxv_addr = get_auxv_addr( lsinfo->envp, &num_env_vars );
+  //printf( "num auxv entries: %d\n" , get_num_auxv_entries( auxv_addr ) );
+  auxv_entries = get_num_auxv_entries( auxv_addr );
+  
   lsinfo->auxv = auxv_addr;
-  printf( "Final envp: %#" PRIx64 " \n", (uint64_t)lsinfo->envp);
+  lsinfo->auxc = auxv_entries;
+  //printf( "Final envp: %#" PRIx64 " \n", (uint64_t)lsinfo->envp);
 
   lsinfo->envc = num_env_vars;
   
@@ -65,7 +71,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   // populate_info_block does alignment
   populate_info_block( lsinfo, loadee, temp_argv, temp_envp );
 
-  le_create_elf_tables( loadee, (Elf64_auxv_t*)auxv_addr );
+  le_create_elf_tables( loadee, (Elf64_auxv_t*)auxv_addr, auxv_entries );
 
   // Insert null word between aux vector and envp
   loadee->sp -= 8;
@@ -113,7 +119,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   return 0;
 }
 
-Elf64_auxv_t* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
+Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars ) {
   int envc = 0;
   
   while (*envp++ != NULL) ++envc;
@@ -123,6 +129,17 @@ Elf64_auxv_t* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
   if (num_env_vars != NULL) *num_env_vars = envc;
   
   return (Elf64_auxv_t*)envp;
+}
+
+int get_num_auxv_entries( Elf64_auxv_t* aux_table ) {
+  int entries = 1;
+  while (aux_table->a_type != AT_NULL) {
+    ++entries;
+    ++aux_table;
+  }
+ 
+  printf( "Number of aux entries: %d\n", entries );
+  return entries;
 }
 
 
@@ -144,6 +161,8 @@ int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
   //copy_args( loadee_argv, 1, loadee, execfn_addr );
   execfn_size = strlen( loadee->filename ) + 1;
   loadee->sp -= execfn_size;
+  printf( "execfn addr: %lx\n", loadee->sp );
+  
   if ((uint64_t)memcpy( (void*)loadee->sp, loadee->filename, execfn_size ) != loadee->sp) {
     fprintf( stderr, "Error copying filename into stack\n" );
     return -1;
