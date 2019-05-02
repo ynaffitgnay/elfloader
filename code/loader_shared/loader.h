@@ -7,9 +7,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-#define INITIAL_STACK_SIZE (131072)
-//#define MAX_SIZE 1000
-
 #define LOAD_START (0x700000)
 #define STACK_BASE (0x600000000000)
 

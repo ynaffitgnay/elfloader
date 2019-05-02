@@ -63,12 +63,9 @@ void loader_start_loadee( Loadee_mgmt* loadee ) {
        : "rax"
     );
 
+  // Move the entry point from rax to rbp, which will be 0'd out at the beginning
+  // of _start
   asm( "movq %rax, %rbp ");
-
-  //register uint64_t entry_pt asm( "rax" ) = ept;
-  //asm ( "movq %rax, %rbp" );
-  //register uint64_t stack_ptr asm( "rbx" ) = sp;
-  //asm ( "movq %rbx, %rsp" );
   
   asm ( "xor %rax, %rax" );
   asm ( "xor %rbx, %rbx" );
@@ -84,6 +81,7 @@ void loader_start_loadee( Loadee_mgmt* loadee ) {
   asm ( "xor %r13, %r13" );
   asm ( "xor %r14, %r14" );
   asm ( "xor %r15, %r15" );
+    
   asm ( "jmp *%rbp" );
   
 }

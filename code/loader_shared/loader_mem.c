@@ -104,9 +104,15 @@ int lm_map_memregion(struct mem_region* mappee) {
 }
 
 void print_mapping( struct mem_region* mr ) {
-  fprintf(stderr, "mapping created at address: %#" PRIx64
-          "\toffset: %ld\tsize: %lu\n",
-          (uint64_t)mr->map_start, mr->map_offset, mr->map_size);
+  if ( mr->fd != -1 ) {
+    fprintf(stderr, "mapping created at address: %#" PRIx64
+            "\toffset: %ld\tsize: %lu (0x%lx)\n",
+            (uint64_t)mr->map_start, mr->map_offset, mr->map_size, mr->map_size);
+  } else {  
+    fprintf(stderr, "mapping created at address: %#" PRIx64
+            "\toffset: N/A \tsize: %lu (0x%lx)\n",
+            (uint64_t)mr->map_start, mr->map_size, mr->map_size);
+  }
 }
 
 void print_mem_region( struct mem_region* mr ) {
