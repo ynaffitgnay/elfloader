@@ -93,7 +93,7 @@ int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char**
 
   if ( all_load_segments( loadee, &ei ) != 0) {
     fprintf( stderr, "Failed to load segments properly\n" );
-    return -1;
+    exit( -1 );
   }
 
   free (ei.phdrs);

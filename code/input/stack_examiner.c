@@ -11,17 +11,21 @@
 
 int main( int argc, char** argv, char** envp )
 {
+  char** orig_argv = argv;
   Elf64_auxv_t *auxv = NULL;
-  printf( "argv: %#" PRIx64
-          "\t contents: %s\n", (uint64_t)argv, *argv );
-  ++argv;
-  printf( "++argv: %#" PRIx64
-          "\t contents: %s\n", (uint64_t)argv, *argv );
+  int argvIdx = 0;
+  do {
+    printf( "argv[%d]: %#" PRIx64
+            "\t contents: %s\n", argvIdx++, (uint64_t)argv, *argv );
+  } while ( *argv++ != NULL );
+    
+  //printf( "++argv: %#" PRIx64
+  //        "\t contents: %s\n", (uint64_t)argv, *argv );
 
   FILE * fp = NULL;
   char buf[HDR_BUF_SIZE];
   if (argc > 1) {
-    fp = fopen ((const char*)(*argv), "r");
+    fp = fopen ((const char*)(*orig_argv), "r");
     fread( buf, 1, HDR_BUF_SIZE, fp );
     fclose( fp );
 
