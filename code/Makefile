@@ -3,7 +3,7 @@ PAGERDIR = $(TOPDIR)/pagers
 LSHDIR = $(TOPDIR)/loader_shared
 INDIR = $(TOPDIR)/input
 TARGET = apager
-INPROGS = readmap hello
+INPROGS = readmap hello stack_examiner
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall --std=gnu99
@@ -13,10 +13,10 @@ ICFLAGS = -Wl,-Ttext-segment=0x1000000
 
 .PHONY: default all clean inprogs pagers
 
-default: $(TARGET)
-pagers: default
+default: $(TARGET) $(INPROGS)
+pagers: $(TARGET)
 inprogs: $(INPROGS)
-all: default inprogs
+all: default
 
 SOURCES = $(wildcard $(PAGERDIR)/*.c) $(wildcard $(LSHDIR)/*.c) $(wildcard $(INDIR)/*.c)
 OBJECTS = $(patsubst %.c, %.o, $(SOURCES))
@@ -34,7 +34,7 @@ INCLUDES = -I$(LSHDIR) -I$(PAGERDIR) -I$(TOPDIR) -I$(INDIR)
 $(TARGET): $(OBJECTS)
 	$(CC) $(PAGERDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(PCFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
-$(INPROGS):  $(OBJECTSS)
+$(INPROGS):  $(OBJECTS)
 	$(CC) $(INDIR)/$@.o $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 clean:
