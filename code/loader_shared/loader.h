@@ -24,14 +24,12 @@ typedef struct {
   struct mem_bounds bounds;  // start of text segment + base of stack
   uint64_t sp;  // top of stack
   uint64_t entry_pt;  // entry point address 
-  //int argc;  // number of arguments
-  //int envc;  // number of environment variables
   const char* filename;  // name of executable
   int fd; // file descriptor for open file
 } Loadee_mgmt;
 
 Loadee_mgmt* loader_get_new_manager( char** argv );
-void loader_start_loadee( Loadee_mgmt* loadee );
+void loader_start_loadee( uint64_t sp, uint64_t entry_pt );
 
 
 #endif

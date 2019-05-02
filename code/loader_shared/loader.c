@@ -27,7 +27,6 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
 
   if (read( new_loadee->fd, (void*)(new_loadee->buf), HDR_BUF_SIZE ) < HDR_BUF_SIZE) {
     fprintf( stderr, "Input file may not be binary\n" );
-    // TODO: decide whether or not should fail here
     //close( new_loadee->fd );
     //free( new_loadee );
     //return NULL;
@@ -42,24 +41,18 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
 
 }
 
-void loader_start_loadee( Loadee_mgmt* loadee ) {
-  // set regs
-  // free loadee_mgmt (try not freeing first in case you accidentally refer to stuff in loadee_mgmt)
-  // maybe try memsetting all of loadee_mgmt with 0
-
-  // store entry point and stack pointer locally
-  uint64_t ept = loadee->entry_pt;
-  uint64_t sp = loadee->sp;
-
+void loader_start_loadee( uint64_t sp, uint64_t entry_pt ) {
+  // Set stack pointer to the top of the loadee stack
   asm( "movq %0, %%rsp;"
        :
        : "g" (sp)
        :  "rsp"
     );
-  
+
+  // Put the entry point into a register to jump to
   asm( "movq %0, %%rax;"
        :
-       : "g" (ept)
+       : "g" (entry_pt)
        : "rax"
     );
 
