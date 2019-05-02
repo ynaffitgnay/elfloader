@@ -134,12 +134,13 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_e
   rand_n_plat_ptr = (uint64_t)loader_auxv + auxv_size;
 
   printf ("rand_n_plat_ptr: 0x%lx\n", rand_n_plat_ptr );
-  printf ("rand: %s, plat cap: %s\n", (char*) rand_n_plat_ptr, (char*)(rand_n_plat_ptr + 16));
+  printf ("rand: %s, plat cap: %s\n", (char*) rand_n_plat_ptr, (char*)(rand_n_plat_ptr + 24));
 
-  loadee->sp -= 24;  // Subtract 24 bytes from stack pointer
+  printf(" strlen plat cap: %d\n", strlen((char*) rand_n_plat_ptr ));
+  loadee->sp -= 32;  // Subtract 24 bytes from stack pointer
 
   // Copy the random number and platform capability string to the loadee stack
-  if ((uint64_t)memcpy( (void*)loadee->sp, (void*)rand_n_plat_ptr, 24 ) != loadee->sp) {
+  if ((uint64_t)memcpy( (void*)loadee->sp, (void*)rand_n_plat_ptr, 32 ) != loadee->sp) {
     fprintf( stderr, "Error while memcpying platform cap string etc. into stack\n" );
   }
 
@@ -193,7 +194,7 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_e
     //  fprintf( stderr, "Unexpected a_type at aux vector entry %d\n", 15 );
     //}
     case AT_RANDOM:
-      auxv->a_un.a_val = loadee->sp + auxv_size + 1;
+      auxv->a_un.a_val = loadee->sp + auxv_size + 8 + 1;
       randBytesIdx = idx;
       break;
 
