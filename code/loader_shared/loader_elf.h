@@ -21,7 +21,7 @@ Elf64_Phdr*
 le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info );
 
 int
-le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info );
+le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info );
 
 int
 le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv );

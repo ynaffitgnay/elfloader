@@ -6,27 +6,123 @@
 #include <linux/auxvec.h>
 
 #include "loader.h"
-#include "loader_utils.h"
 #include "loader_elf.h"
+#include "loader_mem.h"
+#include "loader_stack.h"
+#include "loader_utils.h"
 
-int main( int argc, char** argv, char** envp )
-{
-/*
-  if (argc != 2) return 0;
+int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
+  Elf64_Phdr* phdr_it = ei->phdrs;
   
-  Loadee_mgmt* loadee = loader_get_new_manager( argv );
+  for (int i = 0; i < ei->hdr->e_phnum; ++i) {
+    int prot = 0;
+    int flags = MAP_PRIVATE;
+    if (phdr_it->p_type == PT_LOAD) {
+      struct mem_region file_backed_seg;
+      // Always map the file backed part
+      file_backed_seg.virt_address = phdr_it->p_vaddr;
+      file_backed_seg.length = phdr_it->p_filesz;
+      file_backed_seg.fd = loadee->fd;
+      file_backed_seg.offset = phdr_it->p_offset;
+      
+      if (phdr_it->p_flags & PF_X) prot = prot | PROT_EXEC;
+      if (phdr_it->p_flags & PF_W) prot = prot | PROT_WRITE;
+      if (phdr_it->p_flags & PF_R) prot = prot | PROT_READ;
 
+      flags = flags | MAP_POPULATE;
+
+      file_backed_seg.protection = prot;
+      file_backed_seg.flags = flags;
+
+      printf( "Mapping a file-backed segment\n" );
+      if ( lm_map_memregion( &file_backed_seg ) != 0 ) {
+        fprintf( stderr, "Failed to mmap file-backed segment\n" );
+        return -1;
+      }
+      
+      if (phdr_it->p_memsz > phdr_it->p_filesz) {
+        struct mem_region anonymous_seg;
+        size_t first_section_bytes;
+        size_t total_sector_bytes;
+        size_t last_section_bytes;
+
+        // Map the bss
+        // protection stays the same
+        flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
+
+        first_section_bytes = lm_calc_mmap_length( file_backed_seg.virt_address,
+                                                   file_backed_seg.length );
+        if (first_section_bytes != file_backed_seg.map_size)
+          fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
+        
+        total_sector_bytes = lm_calc_mmap_length( file_backed_seg.virt_address,
+                                                  phdr_it->p_memsz );
+        last_section_bytes = total_sector_bytes - first_section_bytes;
+
+        anonymous_seg.virt_address = (uint64_t)file_backed_seg.map_end;
+        anonymous_seg.length = last_section_bytes;
+        anonymous_seg.protection = file_backed_seg.protection;
+        anonymous_seg.flags = flags;
+        anonymous_seg.fd = -1;
+        anonymous_seg.offset = 0;
+
+        printf( "Mapping an anonymous segment\n" );
+        if (lm_map_memregion( &anonymous_seg ) != 0) {
+          fprintf( stderr, "Failed to map anonymous segment\n" );
+          return -1;
+        }
+      }
+      
+    }
+    
+    phdr_it++;  
+  }
+  return 0;
+}
+ 
+
+int all_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
   if (loadee == NULL) {
     printf ("Loadee failed, i guess\n");
-    return 1;
   }
 
   Elf_info ei;
   
   le_get_elfinfo( loadee, &ei );
-  
+
+  if ( all_load_segments( loadee, &ei ) != 0) {
+    fprintf( stderr, "Failed to load segments properly\n" );
+    return -1;
+  }
+
+  // Free program headers?
   return 0;
-*/
+}
+
+int main( int argc, char** argv, char** envp ) {
+  if (argc < 2) {
+    fprintf( stderr, "Please supply an additional argument\n" );
+    return 0;
+  }
+
+  Loadee_mgmt* loadee = loader_get_new_manager( argv );
+  struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
+
+  lu_print_maps();
+
+  // close file when you exit
+  
+  all_load_elf_binary( loadee );
+
+  ls_setup_stack( &apager_info, loadee ); 
+  lu_print_maps();
+  
+  
+  loader_start_loadee( loadee );
+
+    
+  return 0;
+
   Elf64_auxv_t *auxv = NULL;
   printf( "argv: %#" PRIx64
           "\t contents: %s\n", (uint64_t)argv, *argv );
@@ -91,6 +187,8 @@ int main( int argc, char** argv, char** envp )
     if (auxv->a_type == AT_EXECFN) {
       printf("    exec addr: %#" PRIx64 " \n contents: %s\n",
              (uint64_t)(auxv->a_un.a_val), (char*)(auxv->a_un.a_val));
+      int execfn_len = strlen( (char*)(auxv->a_un.a_val) );
+      printf("        strlen: %d\n", execfn_len );
     } else if (auxv->a_type == AT_PHDR) {
       printf("    phdr addr: %#" PRIx64 "\n", (uint64_t)(auxv->a_un.a_val) );
     }

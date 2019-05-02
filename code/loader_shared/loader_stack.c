@@ -8,27 +8,29 @@
 #include "loader_stack.h"
 #include "loader_elf.h"
 
+static Elf64_auxv_t* ls_get_auxv_addr( char** envp, int* num_env_vars );
 static int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
                                 char** out_argv, char** out_envp );
 static int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv );
 
 int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
+  uint64_t stack_map_start = loadee->sp - INITIAL_STACK_SIZE + 1;
   void* newstack = NULL;
   int argv_size;
   char** temp_argv = NULL;
   int num_env_vars;
   int envp_size;
-  char* auxv_addr = NULL;
+  Elf64_auxv_t* auxv_addr = NULL;
   char** temp_envp = NULL;
   int* argc_ptr = NULL;  
 
   // Allocate room for the stack
-  newstack = mmap( (void*)loadee->sp, INITIAL_STACK_SIZE,
+  newstack = mmap( (void*)(stack_map_start), INITIAL_STACK_SIZE,
                    (PROT_READ | PROT_WRITE),
                    (MAP_PRIVATE | MAP_ANONYMOUS | MAP_GROWSDOWN), -1, 0 );
 
   // TODO: maybe allow stack to move? just have to update bounds and sp in loadee
-  if ((uint64_t)newstack != loadee->sp) {
+  if ((uint64_t)newstack != (stack_map_start)) {
     fprintf( stderr, "Unable to allocate stack in correct location\n" );
     munmap( newstack, INITIAL_STACK_SIZE );
     return -1;
@@ -46,6 +48,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   // Make sure envp isn't getting changed by this function inadverdently 
   printf( "Original envp: %#" PRIx64 " ", (uint64_t)lsinfo->envp );
   auxv_addr = ls_get_auxv_addr( lsinfo->envp, &num_env_vars );
+  lsinfo->auxv = auxv_addr;
   printf( "Final envp: %#" PRIx64 " \n", (uint64_t)lsinfo->envp);
 
   lsinfo->envc = num_env_vars;
@@ -110,7 +113,7 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   return 0;
 }
 
-char* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
+Elf64_auxv_t* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
   int envc = 0;
   
   while (*envp++ != NULL) ++envc;
@@ -119,7 +122,7 @@ char* ls_get_auxv_addr( char** envp, int* num_env_vars ) {
   
   if (num_env_vars != NULL) *num_env_vars = envc;
   
-  return (char*)envp;
+  return (Elf64_auxv_t*)envp;
 }
 
 

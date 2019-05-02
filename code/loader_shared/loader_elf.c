@@ -34,7 +34,7 @@ le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info ) {
     printf( "Successfully read in program headers\n" );
   }
 
-  if (le_check_section_addrs( loadee, info ) != 0) {
+  if (le_check_segment_addrs( loadee, info ) != 0) {
     fprintf( stderr, "Input program overlaps with loader\n" );
     exit(-1);
   }
@@ -86,7 +86,7 @@ le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info ) {
 }
 
 int
-le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
+le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
   Elf64_Phdr* phdr_it = info->phdrs;
   int first_load = 0;
    
@@ -94,7 +94,7 @@ le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
     if (phdr_it->p_type == PT_LOAD) {
       if (lm_validate_address( &(loadee->bounds), phdr_it->p_vaddr ) != 0 ||
           lm_validate_address( &(loadee->bounds), (phdr_it->p_vaddr + phdr_it->p_memsz)) != 0 ) {
-        fprintf( stderr, "Failed address verification on %dth section\n", i);
+        fprintf( stderr, "Failed address verification on %dth segment\n", i);
         return -1;
       }
 
@@ -112,7 +112,7 @@ le_check_section_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
   }
 
   if (!first_load) {
-    fprintf( stderr, "First load section never got set\n" );
+    fprintf( stderr, "First load segment never got set\n" );
   }
   
   return 0;
