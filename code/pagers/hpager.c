@@ -8,12 +8,11 @@
 
 #include "loader.h"
 #include "loader_elf.h"
+#include "loader_handler.h"
 #include "loader_mem.h"
 #include "loader_stack.h"
 #include "loader_utils.h"
 
-// TODO: put this at the top of loader_handler.h
-enum heuristics { MAP1, MAP2, MAP3 };
 static enum heuristics heuristic = 0;
 
 int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
