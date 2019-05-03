@@ -25,6 +25,7 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       // Always map the file backed part
       file_backed_seg.virt_address = phdr_it->p_vaddr;
       file_backed_seg.length = phdr_it->p_filesz;
+      file_backed_seg.real_end = phdr_it->p_vaddr + phdr_it->p_filesz; 
       file_backed_seg.fd = loadee->fd;
       file_backed_seg.offset = phdr_it->p_offset;
       

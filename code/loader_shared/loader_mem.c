@@ -47,7 +47,6 @@ int lm_define_memregion( struct mem_region* mappee, int create_mapping ) {
   off_t map_offset;
   size_t map_length;
   char* mapping = NULL;
-  uint64_t real_end_addr;
   uint64_t map_end_addr;
   uint64_t leftover_bytes;
 
@@ -56,10 +55,9 @@ int lm_define_memregion( struct mem_region* mappee, int create_mapping ) {
   map_length = lm_calc_mmap_length( mappee->virt_address, mappee->length );
 
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;
-  real_end_addr = mappee->virt_address + mappee->length;
 
-  //printf( "real_end_addr: %#" PRIx64 "\n", real_end_addr );
-  
+  //printf( "real_end_addr: %#" PRIx64 "\n", mappee->real_end );
+
   mappee->map_start = (char*)map_start;
   mappee->map_offset = map_offset;
   mappee->map_size = map_length;
@@ -81,15 +79,15 @@ int lm_define_memregion( struct mem_region* mappee, int create_mapping ) {
     
     // Can't memset unwritable region
     if (mappee->protection & PROT_WRITE) {
-      leftover_bytes = map_end_addr - real_end_addr; 
+      leftover_bytes = map_end_addr - mappee->real_end; 
       //printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
 
       // Zero out data that should not be file-backed
       if (leftover_bytes) {
         printf( "Memsetting %" PRIu64 " bytes (0x%lx) to 0 starting at 0x%lx\n",
-                leftover_bytes, leftover_bytes,  real_end_addr);
+                leftover_bytes, leftover_bytes,  mappee->real_end);
         // Part of mapped region should not be populated by file
-        memset( (void*)real_end_addr, 0, leftover_bytes );
+        memset( (void*)mappee->real_end, 0, leftover_bytes );
       } else if (mappee->flags & MAP_ANONYMOUS) {
         memset( (void*)map_start, 0, map_length );
       }

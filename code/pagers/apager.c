@@ -22,6 +22,7 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       // Always map the file backed part
       file_backed_seg.virt_address = phdr_it->p_vaddr;
       file_backed_seg.length = phdr_it->p_filesz;
+      file_backed_seg.real_end = phdr_it->p_vaddr + phdr_it->p_filesz; 
       file_backed_seg.fd = loadee->fd;
       file_backed_seg.offset = phdr_it->p_offset;
       
@@ -61,6 +62,7 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
 
         anonymous_seg.virt_address = (uint64_t)file_backed_seg.map_end;
         anonymous_seg.length = last_section_bytes;
+        anonymous_seg.real_end = (uint64_t)file_backed_seg.map_end + last_section_bytes;
         anonymous_seg.protection = file_backed_seg.protection;
         anonymous_seg.flags = flags;
         anonymous_seg.fd = -1;

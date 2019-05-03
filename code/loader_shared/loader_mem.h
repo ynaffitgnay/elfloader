@@ -15,16 +15,17 @@
 #define DEFAULT_FLAGS ( MAP_PRIVATE | MAP_POPULATE )
 
 struct mem_region {
-  uint64_t virt_address;
-  size_t length;
-  int protection;
-  int flags;
-  int fd;
-  off_t offset;
-  char* map_start;
-  off_t map_offset;
-  size_t map_size;
-  char* map_end;  
+  uint64_t virt_address;  // filled by caller
+  size_t length;          // filled by caller
+  uint64_t real_end;      // filled by caller
+  int protection;         // filled by caller
+  int flags;              // filled by caller
+  int fd;                 // filled by caller
+  off_t offset;           // filled by caller
+  char* map_start;        // filled by mapper
+  off_t map_offset;       // filled by mapper
+  size_t map_size;        // filled by mapper
+  char* map_end;          // filled by mapper
 };
 
 int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr );

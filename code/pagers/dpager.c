@@ -22,6 +22,7 @@ int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       // Always map the file backed part
       file_backed_seg.virt_address = phdr_it->p_vaddr;
       file_backed_seg.length = phdr_it->p_filesz;
+      file_backed_seg.real_end = phdr_it->p_vaddr + phdr_it->p_filesz; 
       file_backed_seg.fd = loadee->fd;
       file_backed_seg.offset = phdr_it->p_offset;
       
@@ -35,7 +36,7 @@ int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       file_backed_seg.flags = flags;
 
       //printf( "Mapping a file-backed segment\n" );
-      if ( lm_map_memregion( &file_backed_seg ) != 0 ) {
+      if ( lm_define_memregion( &file_backed_seg, 0 ) != 0 ) {
         fprintf( stderr, "Failed to mmap file-backed segment\n" );
         return -1;
       }
@@ -67,7 +68,7 @@ int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         anonymous_seg.offset = 0;
 
         //printf( "Mapping an anonymous segment\n" );
-        if (lm_map_memregion( &anonymous_seg ) != 0) {
+        if (lm_define_memregion( &anonymous_seg, 0 ) != 0) {
           fprintf( stderr, "Failed to map anonymous segment\n" );
           return -1;
         }
