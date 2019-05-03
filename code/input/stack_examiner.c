@@ -2,9 +2,12 @@
 #include <elf.h>
 #include <inttypes.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/mman.h>
 #include <linux/auxvec.h>
+
+#include "utils.h"
 
 #define HDR_BUF_SIZE 128
 #define NUM_AUXV 20
@@ -14,6 +17,16 @@ int main( int argc, char** argv, char** envp )
   char** orig_argv = argv;
   Elf64_auxv_t *auxv = NULL;
   int argvIdx = 0;
+
+  struct rusage usage_start, usage_end;
+  
+  if (getrusage( RUSAGE_SELF, &usage_start ) < 0)
+  {
+    perror( "getrusage unsuccessful.");
+    exit( -1 );
+  }
+
+  
   do {
     printf( "argv[%d]: %#" PRIx64
             "\t contents: %s\n", argvIdx++, (uint64_t)argv, *argv );
@@ -97,6 +110,17 @@ int main( int argc, char** argv, char** envp )
   sp += 16;
   printf("sp: %#" PRIx64 " capability string? %s \n", (uint64_t)sp, sp);
   //printf("capability string now? %s \n", *(char*)(auxv++));
+
+
+  if (getrusage( RUSAGE_SELF, &usage_end ) < 0)
+  {
+    perror( "getrusage unsuccessful.");
+    exit( -1 );
+  }
+
+  lu_print_rusage_diff( &usage_start, &usage_end );
+  lu_print_maps();
+
   
   return 0;
 }
