@@ -46,10 +46,6 @@ Loadable_segment* lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* ph
     return NULL;
   }
 
-  if (PG_RND_DOWN( file_backed_seg->mmr.map.start_addr ) != file_backed_seg->mmr.map.start_addr ) {
-    fprintf( stderr, "UNEXPECTED PG_RND_DOWN BHVR\n\n" );
-    exit( -1 );
-  }
   file_backed_seg->first_page_addr = file_backed_seg->mmr.map.start_addr;
   file_backed_seg->last_page_addr = PG_RND_DOWN(file_backed_seg->mmr.map.end_addr - 1);
     
