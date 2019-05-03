@@ -29,7 +29,7 @@ lu_print_maps( void ) {
 }
 
 void
-lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
+lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
 {
   long utime_s, utime_us, stime_s, stime_us;
   printf ("Diff fields of interest: \n");
@@ -58,7 +58,6 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%ld.%06ld\n", utime_s, utime_us);
   
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
   printf( "utime | %ld.%06ld | %ld.%06ld | %ld.%06ld", 
          s_usage->ru_utime.tv_sec, s_usage->ru_utime.tv_usec,
          e_usage->ru_utime.tv_sec, e_usage->ru_utime.tv_usec,
@@ -71,7 +70,6 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%ld.%06ld\n", stime_s, stime_us);
   
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
   printf( "stime | %ld.%06ld | %ld.%06ld | %ld.%06ld", 
          s_usage->ru_stime.tv_sec, s_usage->ru_stime.tv_usec,
          e_usage->ru_stime.tv_sec, e_usage->ru_stime.tv_usec,
@@ -81,7 +79,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tmaxrss:\t%8ld\t%8ld", s_usage->ru_maxrss, e_usage->ru_maxrss);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_maxrss - s_usage->ru_maxrss);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "maxrss | %ld | %ld | %ld",  s_usage->ru_maxrss,
          e_usage->ru_maxrss, e_usage->ru_maxrss - s_usage->ru_maxrss);
   
@@ -89,7 +87,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tminflt:\t%8ld\t%8ld", s_usage->ru_minflt, e_usage->ru_minflt);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_minflt - s_usage->ru_minflt);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "minflt | %ld | %ld | %ld",  s_usage->ru_minflt,
          e_usage->ru_minflt, e_usage->ru_minflt - s_usage->ru_minflt);
   
@@ -98,7 +96,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tmajflt:\t%8ld\t%8ld", s_usage->ru_majflt, e_usage->ru_majflt);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_majflt - s_usage->ru_majflt);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "majflt | %ld | %ld | %ld",  s_usage->ru_majflt,
          e_usage->ru_majflt, e_usage->ru_majflt - s_usage->ru_majflt);
   
@@ -106,7 +104,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tinblock:\t%4ld\t%8ld", s_usage->ru_inblock, e_usage->ru_inblock);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_inblock - s_usage->ru_inblock);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "inblock | %ld | %ld | %ld",  s_usage->ru_inblock,
          e_usage->ru_inblock, e_usage->ru_inblock - s_usage->ru_inblock);
   
@@ -115,7 +113,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\toublock:\t%4ld\t%8ld", s_usage->ru_oublock, e_usage->ru_oublock);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_oublock - s_usage->ru_oublock);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "oublock | %ld | %ld | %ld",  s_usage->ru_oublock,
          e_usage->ru_oublock, e_usage->ru_oublock - s_usage->ru_oublock);
   
@@ -125,7 +123,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
           e_usage->ru_nvcsw);
   printf ("\tdiff:\t%8ld\n", e_usage->ru_nvcsw - s_usage->ru_nvcsw);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "nvcsw | %ld | %ld | %ld",  s_usage->ru_nvcsw,
          e_usage->ru_nvcsw, e_usage->ru_nvcsw - s_usage->ru_nvcsw);
   
@@ -136,7 +134,7 @@ lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n",
           e_usage->ru_nivcsw - s_usage->ru_nivcsw);
   
-  (mode == 0) ? (printf("L1D ")) : ((mode == 1) ? printf( "DTLB " ) : printf( "?? " ));
+
   printf( "nivcsw | %ld | %ld | %ld",  s_usage->ru_nivcsw,
          e_usage->ru_nivcsw, e_usage->ru_nivcsw - s_usage->ru_nivcsw);
   

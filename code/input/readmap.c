@@ -4,6 +4,8 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
+#include "utils.h"
+
 #define MAXLINE 1000
 #define PG_SIZE 4096
 
@@ -35,7 +37,15 @@ read_maps( void ) {
 
 int
 main( ) {
-  size_t size = (uint64_t)1024 * (uint64_t)1024 * (uint64_t)1024 * (uint64_t)4; 
+  size_t size = (uint64_t)1024 * (uint64_t)1024 * (uint64_t)1024 * (uint64_t)4;
+  struct rusage usage_start, usage_end;
+  
+  if (getrusage( RUSAGE_SELF, &usage_start ) < 0)
+  {
+    perror( "getrusage unsuccessful.");
+    exit( -1 );
+  }
+
   read_maps();
   
   printf( "mallocing small (less than 1GB) region.\n" );
@@ -53,7 +63,15 @@ main( ) {
     return -1;
 }
   read_maps();
-  
+
+  if (getrusage( RUSAGE_SELF, &usage_end ) < 0)
+  {
+    perror( "getrusage unsuccessful.");
+    exit( -1 );
+  }
+
+  lu_print_rusage_diff( &usage_start, &usage_end );
+  lu_print_maps();
   
   return 0;
 }

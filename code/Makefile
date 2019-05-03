@@ -21,9 +21,10 @@ all: default
 SOURCES = $(wildcard $(PAGERDIR)/*.c) $(wildcard $(LSHDIR)/*.c) $(wildcard $(INDIR)/*.c)
 OBJECTS = $(patsubst %.c, %.o, $(SOURCES))
 IN_SRC = $(wildcard $(INDIR)/*.c)
+IN_OBJS = $(INDIR)/utils.o
 SHARED_SRC = $(wildcard $(LSHDIR)/*.c)
 SHARED_OBJS = $(patsubst %.c, %.o, $(SHARED_SRC))
-HEADERS = $(wildcard $(PAGERDIR)/*.h) $(wildcard $(LSHDIR)/*.h) $(wildcard $(INDIR)/*.c)
+HEADERS = $(wildcard $(PAGERDIR)/*.h) $(wildcard $(LSHDIR)/*.h) $(wildcard $(INDIR)/*.h)
 INCLUDES = -I$(LSHDIR) -I$(PAGERDIR) -I$(TOPDIR) -I$(INDIR) 
 
 %.o: %.c $(HEADERS)
@@ -35,7 +36,7 @@ $(TARGET): $(OBJECTS)
 	$(CC) $(PAGERDIR)/$@.o $(SHARED_OBJS) $(SCFLAGS) $(PCFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 $(INPROGS):  $(OBJECTS)
-	$(CC) $(INDIR)/$@.o $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
+	$(CC) $(INDIR)/$@.o $(IN_OBJS) $(SCFLAGS) $(ICFLAGS) -Wall $(LIBS) -o $@ $(INCLUDES)
 
 clean:
 	-rm -f *.o

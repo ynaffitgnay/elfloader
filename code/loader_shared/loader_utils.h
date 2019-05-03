@@ -10,12 +10,9 @@ int
 lu_read_maps( void );  /* UNIMPLEMENTED */
 
 int
-lu_validate_addrs( );
-
-int
 lu_print_maps( void );
 
 void
-lu_print_rusage_diff( int mode, struct rusage* s_usage, struct rusage* e_usage );
+lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage );
 
 #endif
