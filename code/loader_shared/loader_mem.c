@@ -10,7 +10,7 @@
 static void print_mapping( struct mappable_mem_region* mmr);
 static void print_mem_region( struct mappable_mem_region* mmr);
 
-int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr ) {
+int lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
 
   //printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
@@ -33,7 +33,8 @@ size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   //        ((start_addr % PG_SIZE) && 1), ((start_addr % PG_SIZE) && 1),
   //        ((end_addr % PG_SIZE) && 1), ((end_addr % PG_SIZE) && 1));
   
-  num_pages = (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
+  num_pages =
+    (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
 
   //TODO
   //printf("num_pages: %d\n", num_pages);
@@ -50,18 +51,19 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
   uint64_t map_end_addr;
   uint64_t leftover_bytes;
 
-  map_start = (uint64_t)(mappee->real_start) & ~((uint64_t)PG_SIZE - 1);
+  map_start = (uint64_t)(mappee->real.start_addr) & ~((uint64_t)PG_SIZE - 1);
   map_offset = ((uint64_t)mappee->offset) & ~((uint64_t)PG_SIZE - 1);
-  map_length = lm_calc_mmap_length( mappee->real_start, mappee->length );
+  map_length = lm_calc_mmap_length( mappee->real.start_addr, mappee->length );
 
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;
 
-  //printf( "real_end_addr: %#" PRIx64 "\n", mappee->real_end );
+  //printf( "real_end_addr: %#" PRIx64 "\n", mappee->real.end_addr );
 
-  mappee->map_start = (char*)map_start;
+  mappee->map.start_addr = map_start;
+  mappee->map.end_addr = map_end_addr;
   mappee->map_offset = map_offset;
   mappee->map_size = map_length;
-  mappee->map_end = (char*)map_end_addr;
+  
 
   
   if (create_mapping) {
@@ -79,15 +81,15 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
     
     // Can't memset unwritable region
     if (mappee->protection & PROT_WRITE) {
-      leftover_bytes = map_end_addr - mappee->real_end; 
+      leftover_bytes = map_end_addr - mappee->real.end_addr; 
       //printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
 
       // Zero out data that should not be file-backed
       if (leftover_bytes) {
         printf( "Memsetting %" PRIu64 " bytes (0x%lx) to 0 starting at 0x%lx\n",
-                leftover_bytes, leftover_bytes,  mappee->real_end);
+                leftover_bytes, leftover_bytes,  mappee->real.end_addr);
         // Part of mapped region should not be populated by file
-        memset( (void*)mappee->real_end, 0, leftover_bytes );
+        memset( (void*)mappee->real.end_addr, 0, leftover_bytes );
       } else if (mappee->flags & MAP_ANONYMOUS) {
         memset( (void*)map_start, 0, map_length );
       }
@@ -110,11 +112,11 @@ void print_mapping( struct mappable_mem_region* mmr ) {
   if ( mmr->fd != -1 ) {
     fprintf(stderr, "mapping created at address: %#" PRIx64
             "\toffset: %ld\tsize: %lu (0x%lx)\n",
-            (uint64_t)mmr->map_start, mmr->map_offset, mmr->map_size, mmr->map_size);
+            mmr->map.start_addr, mmr->map_offset, mmr->map_size, mmr->map_size);
   } else {  
     fprintf(stderr, "mapping created at address: %#" PRIx64
             "\toffset: N/A \tsize: %lu (0x%lx)\n",
-            (uint64_t)mmr->map_start, mmr->map_size, mmr->map_size);
+            mmr->map.start_addr, mmr->map_size, mmr->map_size);
   }
 }
 
@@ -123,12 +125,12 @@ void print_mem_region( struct mappable_mem_region* mmr ) {
          "\n\tlength: %lu (0x%lx)\n\tprotection: %s %s %s\n\tflags: %d\n\tfd: %d\n\t"
           "offset: %ld\n\tmap_start: %#" PRIx64
           "\n\tmap_offset: %ld\n\tmap_size: %lu (0x%lx)\n\tmap_end: %#" PRIx64 "\n",
-          (uint64_t)mmr->real_start, mmr->length, mmr->length,
+          mmr->real.start_addr, mmr->length, mmr->length,
           (mmr->protection & PROT_EXEC) ? "PROT_EXEC |" : "",
           (mmr->protection & PROT_READ) ? "PROT_READ |" : "",
           (mmr->protection & PROT_WRITE) ? "PROT_WRITE" : "",mmr->flags,
-          mmr->fd, mmr->offset, (uint64_t)mmr->map_start, mmr->map_offset,
-          mmr->map_size, mmr->map_size, (uint64_t)mmr->map_end);            
+          mmr->fd, mmr->offset, mmr->map.start_addr, mmr->map_offset,
+          mmr->map_size, mmr->map_size, mmr->map.end_addr);            
 }
 
 

@@ -23,9 +23,10 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
     if (phdr_it->p_type == PT_LOAD) {
       struct mappable_mem_region file_backed_seg;
       // Always map the file backed part
-      file_backed_seg.real_start = phdr_it->p_vaddr;
+      file_backed_seg.real.start_addr = phdr_it->p_vaddr;
       file_backed_seg.length = phdr_it->p_filesz;
-      file_backed_seg.real_end = phdr_it->p_vaddr + phdr_it->p_filesz; 
+      file_backed_seg.real.end_addr =
+        file_backed_seg.real.start_addr + file_backed_seg.length;
       file_backed_seg.fd = loadee->fd;
       file_backed_seg.offset = phdr_it->p_offset;
       
@@ -44,7 +45,7 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         return -1;
       }
 
-      // HYBRID SHOULDN'T DO THIS!!
+      // HYBRID SHOULDN'T DO THIS
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
         struct mappable_mem_region anonymous_seg;
         size_t first_section_bytes;
@@ -55,16 +56,20 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         // protection stays the same
         flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
 
-        first_section_bytes = lm_calc_mmap_length( file_backed_seg.real_start,
-                                                   file_backed_seg.length );
+        first_section_bytes =
+          lm_calc_mmap_length( file_backed_seg.real.start_addr,
+                               file_backed_seg.length );
         if (first_section_bytes != file_backed_seg.map_size)
           fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
         
-        total_sector_bytes = lm_calc_mmap_length( file_backed_seg.real_start,
-                                                  phdr_it->p_memsz );
+        total_sector_bytes =
+          lm_calc_mmap_length( file_backed_seg.real.start_addr,
+                               phdr_it->p_memsz );
         last_section_bytes = total_sector_bytes - first_section_bytes;
 
-        anonymous_seg.real_start = (uint64_t)file_backed_seg.map_end;
+        anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
+        anonymous_seg.real.end_addr = 
+          anonymous_seg.real.start_addr + last_section_bytes;
         anonymous_seg.length = last_section_bytes;
         anonymous_seg.protection = file_backed_seg.protection;
         anonymous_seg.flags = flags;
@@ -85,7 +90,7 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
 
   return 0;
 }
- 
+
 
 int hybrid_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
   if (loadee == NULL) {

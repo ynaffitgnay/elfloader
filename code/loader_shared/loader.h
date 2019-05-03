@@ -12,16 +12,16 @@
 
 #define HDR_BUF_SIZE (128)
 
-struct mem_bounds {
+typedef struct {
   uint64_t start_addr;  // start of mem region
   uint64_t end_addr;    // end of mem region
-};
+} Mem_bounds;
 
 // TODO: SOMEONE MUST CLEAN  THIS STRUCT UP (free prog headers, close file)
 
 typedef struct {
   char buf[HDR_BUF_SIZE];  // buffer to hold elf header
-  struct mem_bounds bounds;  // start of text segment + base of stack
+  Mem_bounds bounds;  // start of text segment + base of stack
   uint64_t sp;  // top of stack
   uint64_t entry_pt;  // entry point address 
   const char* filename;  // name of executable
