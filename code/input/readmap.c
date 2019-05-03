@@ -5,8 +5,9 @@
 #include <sys/resource.h>
 
 #define MAXLINE 1000
+#define PG_SIZE 4096
 
-int two_page_array[2570];
+int hundred_page_array[102400];
 
 int
 read_maps( void ) {
