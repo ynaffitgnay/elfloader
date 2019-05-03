@@ -29,6 +29,7 @@ struct mem_region {
 
 int lm_validate_address( struct mem_bounds* loadee_mem, uint64_t addr );
 size_t lm_calc_mmap_length( uint64_t start_addr, size_t size );
-int lm_map_memregion(struct mem_region* mappee);
+int lm_define_memregion( struct mem_region* mappee, int create_mapping );
+int lm_map_memregion( struct mem_region* mappee );
 
 #endif
