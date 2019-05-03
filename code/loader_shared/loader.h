@@ -17,8 +17,6 @@ typedef struct {
   uint64_t end_addr;    // end of mem region
 } Mem_bounds;
 
-// TODO: SOMEONE MUST CLEAN  THIS STRUCT UP (free prog headers, close file)
-
 typedef struct {
   char buf[HDR_BUF_SIZE];  // buffer to hold elf header
   Mem_bounds bounds;  // start of text segment + base of stack

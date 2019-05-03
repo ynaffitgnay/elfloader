@@ -51,8 +51,21 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
   uint64_t map_end_addr;
   uint64_t leftover_bytes;
 
-  map_start = (uint64_t)(mappee->real.start_addr) & ~((uint64_t)PG_SIZE - 1);
-  map_offset = ((uint64_t)mappee->offset) & ~((uint64_t)PG_SIZE - 1);
+  uint64_t old_map_start = (uint64_t)(mappee->real.start_addr) & ~((uint64_t)PG_SIZE - 1);
+  map_start = PG_RND_DOWN(mappee->real.start_addr);
+  if (old_map_start != map_start) {
+    fprintf( stderr, "PG_RND_DOWN MACRO NOT WORKING PROPERLY ON START!!!\n" );
+    exit( -1 );
+  }
+  
+  uint64_t old_map_offset = ((uint64_t)mappee->offset) & ~((uint64_t)PG_SIZE - 1);
+  map_offset = PG_RND_DOWN(mappee->offset);
+  if (old_map_offset != map_offset) {
+    fprintf( stderr, "PG_RND_DOWN MACRO NOT WORKING PROPERLY ON OFFSET!!!\n" );
+    exit( -1 );
+  }
+
+  
   map_length = lm_calc_mmap_length( mappee->real.start_addr, mappee->length );
 
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;

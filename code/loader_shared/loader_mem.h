@@ -13,15 +13,16 @@
 
 #define PG_SIZE (4096)
 #define DEFAULT_FLAGS ( MAP_PRIVATE | MAP_POPULATE )
+#define PG_RND_DOWN(x) (((uint64_t)(x)) & ~((uint64_t)PG_SIZE - 1))
 
 struct mappable_mem_region {
-  Mem_bounds real;  // filled by caller
+  Mem_bounds real;         // filled by caller
   off_t offset;            // filled by caller
   size_t length;           // filled by caller
   int protection;          // filled by caller
   int flags;               // filled by caller
   int fd;                  // filled by caller
-  Mem_bounds map;   // filled by mapper
+  Mem_bounds map;          // filled by mapper
   off_t map_offset;        // filled by mapper
   size_t map_size;         // filled by mapper
 };
