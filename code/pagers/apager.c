@@ -18,9 +18,9 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
     int prot = 0;
     int flags = MAP_PRIVATE;
     if (phdr_it->p_type == PT_LOAD) {
-      struct mem_region file_backed_seg;
+      struct mappable_mem_region file_backed_seg;
       // Always map the file backed part
-      file_backed_seg.virt_address = phdr_it->p_vaddr;
+      file_backed_seg.real_start = phdr_it->p_vaddr;
       file_backed_seg.length = phdr_it->p_filesz;
       file_backed_seg.real_end = phdr_it->p_vaddr + phdr_it->p_filesz; 
       file_backed_seg.fd = loadee->fd;
@@ -42,7 +42,7 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       }
       
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
-        struct mem_region anonymous_seg;
+        struct mappable_mem_region anonymous_seg;
         size_t first_section_bytes;
         size_t total_sector_bytes;
         size_t last_section_bytes;
@@ -51,16 +51,16 @@ int all_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         // protection stays the same
         flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
 
-        first_section_bytes = lm_calc_mmap_length( file_backed_seg.virt_address,
+        first_section_bytes = lm_calc_mmap_length( file_backed_seg.real_start,
                                                    file_backed_seg.length );
         if (first_section_bytes != file_backed_seg.map_size)
           fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
         
-        total_sector_bytes = lm_calc_mmap_length( file_backed_seg.virt_address,
+        total_sector_bytes = lm_calc_mmap_length( file_backed_seg.real_start,
                                                   phdr_it->p_memsz );
         last_section_bytes = total_sector_bytes - first_section_bytes;
 
-        anonymous_seg.virt_address = (uint64_t)file_backed_seg.map_end;
+        anonymous_seg.real_start = (uint64_t)file_backed_seg.map_end;
         anonymous_seg.length = last_section_bytes;
         anonymous_seg.real_end = (uint64_t)file_backed_seg.map_end + last_section_bytes;
         anonymous_seg.protection = file_backed_seg.protection;
