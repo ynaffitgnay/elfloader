@@ -19,9 +19,6 @@ int main( int argc, char** argv, char** envp )
             "\t contents: %s\n", argvIdx++, (uint64_t)argv, *argv );
   } while ( *argv++ != NULL );
     
-  //printf( "++argv: %#" PRIx64
-  //        "\t contents: %s\n", (uint64_t)argv, *argv );
-
   FILE * fp = NULL;
   char buf[HDR_BUF_SIZE];
   if (argc > 1) {
