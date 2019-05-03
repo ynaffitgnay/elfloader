@@ -75,8 +75,7 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
   mappee->map.start_addr = map_start;
   mappee->map.end_addr = map_end_addr;
   mappee->map_offset = map_offset;
-  mappee->map_size = map_length;
-  
+  mappee->map_size = map_length;  
 
   
   if (create_mapping) {
@@ -91,16 +90,21 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
  
       return -1;
     }
-    
+
     // Can't memset unwritable region
     if (mappee->protection & PROT_WRITE) {
       leftover_bytes = map_end_addr - mappee->real.end_addr; 
       //printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
+      if (leftover_bytes >= PG_SIZE) {
+        fprintf(stderr, "\n\n     CALCULATING TOTAL NUMBER OF NECESSARY BYTES INCORRECTLY  \n\n");
+        return -1;
+      }
 
       // Zero out data that should not be file-backed
       if (leftover_bytes) {
-        printf( "Memsetting %" PRIu64 " bytes (0x%lx) to 0 starting at 0x%lx\n",
-                leftover_bytes, leftover_bytes,  mappee->real.end_addr);
+        //printf( "Memsetting %" PRIu64 " bytes (0x%lx) to 0 starting at 0x%lx\n",
+        //        leftover_bytes, leftover_bytes,  mappee->real.end_addr);
+        
         // Part of mapped region should not be populated by file
         memset( (void*)mappee->real.end_addr, 0, leftover_bytes );
       } else if (mappee->flags & MAP_ANONYMOUS) {

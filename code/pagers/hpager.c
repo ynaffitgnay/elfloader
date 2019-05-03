@@ -14,6 +14,7 @@
 
 // TODO: put this at the top of loader_handler.h
 enum heuristics { MAP1, MAP2, MAP3 };
+static enum heuristics heuristic = 0;
 
 int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
   Elf64_Phdr* phdr_it = ei->phdrs;
@@ -112,7 +113,6 @@ int hybrid_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, cha
 }
 
 int main( int argc, char** argv, char** envp ) {
-  enum heuristics heuristic;
   Loadee_mgmt* loadee = NULL;
   uint64_t sp;
   uint64_t ept;

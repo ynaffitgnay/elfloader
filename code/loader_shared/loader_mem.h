@@ -16,15 +16,16 @@
 #define PG_RND_DOWN(x) (((uint64_t)(x)) & ~((uint64_t)PG_SIZE - 1))
 
 struct mappable_mem_region {
-  Mem_bounds real;         // filled by caller
-  off_t offset;            // filled by caller
-  size_t length;           // filled by caller
-  int protection;          // filled by caller
-  int flags;               // filled by caller
-  int fd;                  // filled by caller
-  Mem_bounds map;          // filled by mapper
-  off_t map_offset;        // filled by mapper
-  size_t map_size;         // filled by mapper
+  Mem_bounds real;  // non-page-aligned start + end address. caller provided.
+  size_t length;    // non-aligned length of mapping. caller provided.
+  off_t offset;     // non-aligned offset into file. caller provided.
+  int protection;   // access protection of mapping. caller provided.
+  int flags;        // access flags. caller provided.
+  int fd;           // file descriptor of open backing file. caller provided.
+  Mem_bounds map;   // page-aligned start + end addresses of mapping. filled by mapper.
+  size_t map_size;  // total size of page-aligned mapping. filled by mapper.
+  off_t map_offset; // page-aligned offset into file. filled by mapper
+  
 };
 
 
