@@ -8,87 +8,37 @@
 
 #include "loader.h"
 #include "loader_elf.h"
+#include "loader_handler.h"
 #include "loader_mem.h"
 #include "loader_stack.h"
 #include "loader_utils.h"
 
+static Loadable_segment* load_list_head = NULL;
+
 int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
+  Loadable_segment* inserted_segment = NULL;
   Elf64_Phdr* phdr_it = ei->phdrs;
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
-    int prot = 0;
-    int flags = MAP_PRIVATE;
     if (phdr_it->p_type == PT_LOAD) {
-      struct mappable_mem_region file_backed_seg;
-      // Always map the file backed part
-      file_backed_seg.real.start_addr = phdr_it->p_vaddr;
-      file_backed_seg.length = phdr_it->p_filesz;
-      file_backed_seg.real.end_addr =
-        file_backed_seg.real.start_addr + file_backed_seg.length;
-      file_backed_seg.fd = loadee->fd;
-      file_backed_seg.offset = phdr_it->p_offset;
+      inserted_segment = lh_insert_segment( load_list_head, phdr_it, loadee );
       
-      if (phdr_it->p_flags & PF_X) prot = prot | PROT_EXEC;
-      if (phdr_it->p_flags & PF_W) prot = prot | PROT_WRITE;
-      if (phdr_it->p_flags & PF_R) prot = prot | PROT_READ;
+      if (!load_list_head) load_list_head = inserted_segment;
 
-      flags = flags | MAP_POPULATE;
-
-      file_backed_seg.protection = prot;
-      file_backed_seg.flags = flags;
-
-      //printf( "Mapping a file-backed segment\n" );
-      if ( lm_define_memregion( &file_backed_seg, 0 ) != 0 ) {
-        fprintf( stderr, "Failed to mmap file-backed segment\n" );
+      if (inserted_segment == NULL) {
+        fprintf( stderr, "Error inserting load segment into load_list\n" );
         return -1;
       }
-      
-      if (phdr_it->p_memsz > phdr_it->p_filesz) {
-        struct mappable_mem_region anonymous_seg;
-        size_t first_section_bytes;
-        size_t total_sector_bytes;
-        size_t last_section_bytes;
-
-        // Map the bss
-        // protection stays the same
-        flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
-
-        first_section_bytes =
-          lm_calc_mmap_length( file_backed_seg.real.start_addr,
-                               file_backed_seg.length );
-        if (first_section_bytes != file_backed_seg.map_size)
-          fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
-        
-        total_sector_bytes =
-          lm_calc_mmap_length( file_backed_seg.real.start_addr,
-                               phdr_it->p_memsz );
-        last_section_bytes = total_sector_bytes - first_section_bytes;
-
-        anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
-        anonymous_seg.real.end_addr =
-          anonymous_seg.real.start_addr + last_section_bytes;
-        anonymous_seg.length = last_section_bytes;
-        anonymous_seg.protection = file_backed_seg.protection;
-        anonymous_seg.flags = flags;
-        anonymous_seg.fd = -1;
-        anonymous_seg.offset = 0;
-
-        //printf( "Mapping an anonymous segment\n" );
-        if (lm_define_memregion( &anonymous_seg, 0 ) != 0) {
-          fprintf( stderr, "Failed to map anonymous segment\n" );
-          return -1;
-        }
-      }
-      
     }
     
     phdr_it++;  
   }
 
+  lh_print_load_list( load_list_head, 1 );
   return 0;
 }
  
 
-int demand_get_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
+int demand_process_elf_binary( Loadee_mgmt* loadee ) { 
   if (loadee == NULL) {
     printf ("Invalid loadee\n");
     return -1;
@@ -99,7 +49,7 @@ int demand_get_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char
   le_get_elfinfo( loadee, &ei );
 
   if ( demand_get_segments( loadee, &ei ) != 0) {
-    fprintf( stderr, "Failed to load segments properly\n" );
+    fprintf( stderr, "Failed to process segments properly\n" );
     exit( -1 );
   }
 
@@ -123,7 +73,7 @@ int main( int argc, char** argv, char** envp ) {
 
   //lu_print_maps();
 
-  if (demand_get_elf_binary( loadee ) != 0) {
+  if (demand_process_elf_binary( loadee ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
   }
@@ -136,12 +86,12 @@ int main( int argc, char** argv, char** envp ) {
   //lu_print_maps();
 
   // Clean up data structures
-  close( loadee->fd );
+  //close( loadee->fd );  // don't close file b/c still need to perform mappings
   sp = loadee->sp;
   ept = loadee->entry_pt;
   free( loadee );
   
-  loader_start_loadee( sp, ept );
+  //loader_start_loadee( sp, ept );
     
   return 0;
   

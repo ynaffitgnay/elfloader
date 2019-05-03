@@ -8,7 +8,6 @@
 #include "loader_utils.h"
 
 static void print_mapping( struct mappable_mem_region* mmr);
-static void print_mem_region( struct mappable_mem_region* mmr);
 
 int lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr ) {
   // todo: maybe replace this with something mmap related
@@ -137,7 +136,7 @@ void print_mapping( struct mappable_mem_region* mmr ) {
   }
 }
 
-void print_mem_region( struct mappable_mem_region* mmr ) {
+void lm_print_mem_region( struct mappable_mem_region* mmr ) {
   fprintf(stderr, "mapping at virtual address: %#" PRIx64
          "\n\tlength: %lu (0x%lx)\n\tprotection: %s %s %s\n\tflags: %d\n\tfd: %d\n\t"
           "offset: %ld\n\tmap_start: %#" PRIx64
