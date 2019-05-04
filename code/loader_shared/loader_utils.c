@@ -53,13 +53,13 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
     stime_us += 1000000;
   }
 
-  printf ("\tutime:\t%ld.%06ld\t%ld.%06ld",
+  printf ("utime:\t%ld.%06ld\t%ld.%06ld",
           s_usage->ru_utime.tv_sec, s_usage->ru_utime.tv_usec,
           e_usage->ru_utime.tv_sec, e_usage->ru_utime.tv_usec);
   printf ("\tdiff:\t%ld.%06ld\n", utime_s, utime_us);
   
   
-  printf( "utime | %ld.%06ld | %ld.%06ld | %ld.%06ld", 
+  printf( "utime | %ld.%06ld | %ld.%06ld | %ld.%06ld\n", 
          s_usage->ru_utime.tv_sec, s_usage->ru_utime.tv_usec,
          e_usage->ru_utime.tv_sec, e_usage->ru_utime.tv_usec,
          utime_s, utime_us);
@@ -71,7 +71,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%ld.%06ld\n", stime_s, stime_us);
   
   
-  printf( "stime | %ld.%06ld | %ld.%06ld | %ld.%06ld", 
+  printf( "stime | %ld.%06ld | %ld.%06ld | %ld.%06ld\n", 
          s_usage->ru_stime.tv_sec, s_usage->ru_stime.tv_usec,
          e_usage->ru_stime.tv_sec, e_usage->ru_stime.tv_usec,
          stime_s, stime_us);
@@ -81,7 +81,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_maxrss - s_usage->ru_maxrss);
   
 
-  printf( "maxrss | %ld | %ld | %ld",  s_usage->ru_maxrss,
+  printf( "maxrss | %ld | %ld | %ld\n",  s_usage->ru_maxrss,
          e_usage->ru_maxrss, e_usage->ru_maxrss - s_usage->ru_maxrss);
   
 
@@ -89,7 +89,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_minflt - s_usage->ru_minflt);
   
 
-  printf( "minflt | %ld | %ld | %ld",  s_usage->ru_minflt,
+  printf( "minflt | %ld | %ld | %ld\n",  s_usage->ru_minflt,
          e_usage->ru_minflt, e_usage->ru_minflt - s_usage->ru_minflt);
   
 
@@ -98,7 +98,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_majflt - s_usage->ru_majflt);
   
 
-  printf( "majflt | %ld | %ld | %ld",  s_usage->ru_majflt,
+  printf( "majflt | %ld | %ld | %ld\n",  s_usage->ru_majflt,
          e_usage->ru_majflt, e_usage->ru_majflt - s_usage->ru_majflt);
   
 
@@ -106,7 +106,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_inblock - s_usage->ru_inblock);
   
 
-  printf( "inblock | %ld | %ld | %ld",  s_usage->ru_inblock,
+  printf( "inblock | %ld | %ld | %ld\n",  s_usage->ru_inblock,
          e_usage->ru_inblock, e_usage->ru_inblock - s_usage->ru_inblock);
   
 
@@ -115,7 +115,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_oublock - s_usage->ru_oublock);
   
 
-  printf( "oublock | %ld | %ld | %ld",  s_usage->ru_oublock,
+  printf( "oublock | %ld | %ld | %ld\n",  s_usage->ru_oublock,
          e_usage->ru_oublock, e_usage->ru_oublock - s_usage->ru_oublock);
   
 
@@ -125,7 +125,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf ("\tdiff:\t%8ld\n", e_usage->ru_nvcsw - s_usage->ru_nvcsw);
   
 
-  printf( "nvcsw | %ld | %ld | %ld",  s_usage->ru_nvcsw,
+  printf( "nvcsw | %ld | %ld | %ld\n",  s_usage->ru_nvcsw,
          e_usage->ru_nvcsw, e_usage->ru_nvcsw - s_usage->ru_nvcsw);
   
 
@@ -136,7 +136,7 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
           e_usage->ru_nivcsw - s_usage->ru_nivcsw);
   
 
-  printf( "nivcsw | %ld | %ld | %ld",  s_usage->ru_nivcsw,
+  printf( "nivcsw | %ld | %ld | %ld\n",  s_usage->ru_nivcsw,
          e_usage->ru_nivcsw, e_usage->ru_nivcsw - s_usage->ru_nivcsw);
   
 }

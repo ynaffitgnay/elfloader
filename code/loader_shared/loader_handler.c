@@ -184,13 +184,15 @@ map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
   int bytes_left_in_page;
   
   if (parent == NULL) {
-    child.real.start_addr = PG_RND_DOWN( start_addr );
-    child.length = PG_SIZE * num_pages;
-    child.real.end_addr = child.real.start_addr + child.length;
-    child.offset = 0;
-    child.protection = (PROT_READ | PROT_WRITE);
-    child.flags = (MAP_PRIVATE | MAP_ANONYMOUS);
-    child.fd = -1;
+    fprintf( stderr, "Memory access out of range\n" );
+    exit( -1 );
+    //child.real.start_addr = PG_RND_DOWN( start_addr );
+    //child.length = PG_SIZE * num_pages;
+    //child.real.end_addr = child.real.start_addr + child.length;
+    //child.offset = 0;
+    //child.protection = (PROT_READ | PROT_WRITE);
+    //child.flags = (MAP_PRIVATE | MAP_ANONYMOUS);
+    //child.fd = -1;
   } else {
     if ( PG_RND_DOWN( start_addr ) == parent->last_page_addr ) {
       child.real.start_addr = PG_RND_DOWN( start_addr );

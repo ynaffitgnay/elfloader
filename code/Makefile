@@ -3,7 +3,7 @@ PAGERDIR = $(TOPDIR)/pagers
 LSHDIR = $(TOPDIR)/loader_shared
 INDIR = $(TOPDIR)/input
 TARGET = apager dpager hpager
-INPROGS = readmap hello stack_examiner
+INPROGS = readmap hello stack_examiner nullprog
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall --std=gnu99
