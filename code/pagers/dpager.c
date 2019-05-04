@@ -15,49 +15,18 @@
 
 static Loadable_segment* load_list_head = NULL;
 
-int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
-  Loadable_segment* inserted_segment = NULL;
-  Elf64_Phdr* phdr_it = ei->phdrs;
-  for (int i = 0; i < ei->hdr->e_phnum; ++i) {
-    if (phdr_it->p_type == PT_LOAD) {
-      inserted_segment = lh_insert_segment( load_list_head, phdr_it, loadee, 0 );
-      
-      if (!load_list_head) load_list_head = inserted_segment;
+int
+demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei );
 
-      if (inserted_segment == NULL) {
-        fprintf( stderr, "Error inserting load segment into load_list\n" );
-        return -1;
-      }
-    }
-    
-    phdr_it++;  
-  }
+int
+demand_process_elf_binary( Loadee_mgmt* loadee );
 
-  lh_print_load_list( load_list_head, 1 );
-  return 0;
-}
- 
+void
+demand_map_first_page( Loadee_mgmt* loadee );
 
-int demand_process_elf_binary( Loadee_mgmt* loadee ) { 
-  if (loadee == NULL) {
-    printf ("Invalid loadee\n");
-    return -1;
-  }
-
-  Elf_info ei;
-  
-  le_get_elfinfo( loadee, &ei );
-
-  if ( demand_get_segments( loadee, &ei ) != 0) {
-    fprintf( stderr, "Failed to process segments properly\n" );
-    exit( -1 );
-  }
-
-  free (ei.phdrs);
-  return 0;
-}
-
-int main( int argc, char** argv, char** envp ) {
+int
+main( int argc, char** argv, char** envp )
+{
   
   if (argc < 2) {
     fprintf( stderr, "Please supply an additional argument\n" );
@@ -85,6 +54,8 @@ int main( int argc, char** argv, char** envp ) {
   }
   //lu_print_maps();
 
+  demand_map_first_page( loadee );
+
   // Clean up data structures
   //close( loadee->fd );  // don't close file b/c still need to perform mappings
   sp = loadee->sp;
@@ -96,3 +67,54 @@ int main( int argc, char** argv, char** envp ) {
   return 0;
   
 }
+
+int
+demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei )
+{
+  Loadable_segment* inserted_segment = NULL;
+  Elf64_Phdr* phdr_it = ei->phdrs;
+  for (int i = 0; i < ei->hdr->e_phnum; ++i) {
+    if (phdr_it->p_type == PT_LOAD) {
+      inserted_segment = lh_insert_segment( phdr_it, load_list_head, loadee, 0 );
+      
+      if (!load_list_head) load_list_head = inserted_segment;
+
+      if (inserted_segment == NULL) {
+        fprintf( stderr, "Error inserting load segment into load_list\n" );
+        return -1;
+      }
+    }
+    
+    phdr_it++;  
+  }
+
+  //lh_print_load_list( load_list_head, 1 );
+  return 0;
+} 
+
+int
+demand_process_elf_binary( Loadee_mgmt* loadee )
+{ 
+  if (loadee == NULL) {
+    printf ("Invalid loadee\n");
+    return -1;
+  }
+
+  Elf_info ei;
+  
+  le_get_elfinfo( loadee, &ei );
+
+  if ( demand_get_segments( loadee, &ei ) != 0) {
+    fprintf( stderr, "Failed to process segments properly\n" );
+    exit( -1 );
+  }
+
+  free (ei.phdrs);
+  return 0;
+}
+
+void
+demand_map_first_page( Loadee_mgmt* loadee ) {
+  lh_map_one( (void*)loadee->entry_pt, load_list_head );
+}
+

@@ -30,9 +30,6 @@ Loadable_segment*
 lh_insert_segment( Elf64_Phdr* phdr, Loadable_segment* load_list,
                    Loadee_mgmt* loadee, int anon_only  );
 
-int
-lh_map_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages );
-
 void
 lh_map_one( void* fault_addr, Loadable_segment* load_list );
 

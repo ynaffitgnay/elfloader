@@ -10,6 +10,10 @@ find_parent_segment( uint64_t addr, Loadable_segment* load_list );
 static void*
 get_next_addr( uint64_t start_addr, Loadable_segment* parent );
 
+static int
+map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages );
+
+
 static void*
 get_next_stack_addr( void );
 
@@ -174,7 +178,7 @@ find_parent_segment( uint64_t addr, Loadable_segment* load_list )
 }
 
 int
-lh_map_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
+map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
 {
   struct mappable_mem_region child;
   int bytes_left_in_page;
@@ -220,8 +224,8 @@ lh_map_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
 void
 lh_map_one( void* fault_addr, Loadable_segment* load_list )
 {
-  Loadable_segment* parent = find_parent_segment( fault_addr, load_list );
-  if (lh_map_pages( fault_addr, parent, 1) != 0) {
+  Loadable_segment* parent = find_parent_segment( (uint64_t)fault_addr, load_list );
+  if (map_n_pages( (uint64_t)fault_addr, parent, 1) != 0) {
     fprintf( stderr, "Failed to map page\n" );
     exit( -1 );
   }
