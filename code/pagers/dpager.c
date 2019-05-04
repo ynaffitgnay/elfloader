@@ -1,10 +1,9 @@
-#define _GNU_SOURCE  // to get mmap macrosx
+#define _GNU_SOURCE
 #include <inttypes.h>
+#include <signal.h>
 #include <stdio.h>
 #include <string.h>
-#include <sys/mman.h>
 #include <unistd.h>
-#include <linux/auxvec.h>
 
 #include "loader.h"
 #include "loader_elf.h"
@@ -14,35 +13,40 @@
 #include "loader_utils.h"
 
 static Loadable_segment* load_list_head = NULL;
+static Loadee_mgmt* loadee = NULL;
 
 int
-demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei );
+demand_get_segments( Elf_info* ei );
 
 int
-demand_process_elf_binary( Loadee_mgmt* loadee );
+demand_process_elf_binary( void );
 
 void
-demand_map_first_page( Loadee_mgmt* loadee );
+demand_map_first_page( void );
+
+static void
+demand_segv_handler( int sig, siginfo_t* si, void* unused );
 
 int
 main( int argc, char** argv, char** envp )
-{
-  
+{  
   if (argc < 2) {
     fprintf( stderr, "Please supply an additional argument\n" );
     return 0;
   }
 
-  Loadee_mgmt* loadee = loader_get_new_manager( argv );
+  struct sigaction sa;
   uint64_t sp;
   uint64_t ept;
+
+  loadee = loader_get_new_manager( argv );
   
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
   struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
 
   //lu_print_maps();
 
-  if (demand_process_elf_binary( loadee ) != 0) {
+  if (demand_process_elf_binary( ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
   }
@@ -54,7 +58,17 @@ main( int argc, char** argv, char** envp )
   }
   //lu_print_maps();
 
-  demand_map_first_page( loadee );
+  demand_map_first_page( );
+
+  // Set up signal handler
+  sa.sa_flags = SA_SIGINFO;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_sigaction = demand_segv_handler;
+
+  if ( sigaction( SIGSEGV, &sa, NULL ) == -1 ) {
+    perror( "Failed to install signal handler" );
+    return -1;
+  }
 
   // Clean up data structures
   //close( loadee->fd );  // don't close file b/c still need to perform mappings
@@ -69,7 +83,7 @@ main( int argc, char** argv, char** envp )
 }
 
 int
-demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei )
+demand_get_segments( Elf_info* ei )
 {
   Loadable_segment* inserted_segment = NULL;
   Elf64_Phdr* phdr_it = ei->phdrs;
@@ -93,7 +107,7 @@ demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei )
 } 
 
 int
-demand_process_elf_binary( Loadee_mgmt* loadee )
+demand_process_elf_binary( void )
 { 
   if (loadee == NULL) {
     printf ("Invalid loadee\n");
@@ -104,7 +118,7 @@ demand_process_elf_binary( Loadee_mgmt* loadee )
   
   le_get_elfinfo( loadee, &ei );
 
-  if ( demand_get_segments( loadee, &ei ) != 0) {
+  if ( demand_get_segments( &ei ) != 0) {
     fprintf( stderr, "Failed to process segments properly\n" );
     exit( -1 );
   }
@@ -114,7 +128,15 @@ demand_process_elf_binary( Loadee_mgmt* loadee )
 }
 
 void
-demand_map_first_page( Loadee_mgmt* loadee ) {
+demand_map_first_page( void ) {
   lh_map_one( (void*)loadee->entry_pt, load_list_head );
 }
 
+
+static void
+demand_segv_handler( int sig, siginfo_t* si, void* unused )
+{
+  //printf( "Got SIGSEGV at address: 0x%lx\n", (long) si->si_addr );
+  
+  exit( -1 );
+}
