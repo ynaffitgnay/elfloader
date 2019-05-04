@@ -4,15 +4,24 @@
 #include "loader_handler.h"
 #include "loader_mem.h"
 
-static void* get_next_addr( uint64_t start_addr, Loadable_segment* parent );
-static void* get_next_stack_addr( void );
-static void print_loadable_segment( Loadable_segment* ls, int print_mmr );
+static void*
+get_next_addr( uint64_t start_addr, Loadable_segment* parent );
+
+static void*
+get_next_stack_addr( void );
+
+static void
+print_loadable_segment( Loadable_segment* ls, int print_mmr );
 
 // Returns a pointer to the first newly created Loadable_segment
-Loadable_segment* lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* phdr, Loadee_mgmt* loadee ) {
+Loadable_segment*
+lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* phdr,
+                   Loadee_mgmt* loadee, int anon_only )
+{
   Loadable_segment* file_backed_seg = NULL;
   Loadable_segment* anonymous_seg = NULL;
   Loadable_segment* curr_seg = NULL;
+  Loadable_segment* return_seg = NULL;
 
   int prot = 0;
   int flags = MAP_PRIVATE;
@@ -58,31 +67,10 @@ Loadable_segment* lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* ph
   file_backed_seg->pages_mapped = 0;
   file_backed_seg->next = NULL;
   file_backed_seg->prev = NULL;
-
-  
-  // Insert it into list
-  if (load_list != NULL) {
-    for ( curr_seg = load_list; curr_seg->next != NULL; curr_seg++ ) {
-      if ( curr_seg->first_page_addr > file_backed_seg->first_page_addr ) break;
-    }
-
-    
-    if (curr_seg->next == NULL) {
-      // Insert behind curr_seg
-      curr_seg->next = file_backed_seg;
-      file_backed_seg->prev = curr_seg;
-    } else {
-      // Insert in front of curr_seg
-      file_backed_seg->prev = curr_seg->prev;
-      if (file_backed_seg->prev != NULL) file_backed_seg->prev->next = file_backed_seg;
-      file_backed_seg->next = curr_seg;
-      curr_seg->prev = file_backed_seg;
-    }
-  }
     
   if (phdr->p_memsz > phdr->p_filesz) {
     size_t first_section_bytes;
-    size_t total_sector_bytes;
+    size_t total_segment_bytes;
     size_t last_section_bytes;
 
     anonymous_seg = (Loadable_segment*)malloc( sizeof( Loadable_segment ) );
@@ -95,10 +83,10 @@ Loadable_segment* lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* ph
       lm_calc_mmap_length( file_backed_seg->mmr.real.start_addr,
                            file_backed_seg->mmr.length );
            
-    total_sector_bytes =
+    total_segment_bytes =
       lm_calc_mmap_length( file_backed_seg->mmr.real.start_addr,
                            phdr->p_memsz );
-    last_section_bytes = total_sector_bytes - first_section_bytes;
+    last_section_bytes = total_segment_bytes - first_section_bytes;
 
     anonymous_seg->mmr.real.start_addr = file_backed_seg->mmr.map.end_addr;
     anonymous_seg->mmr.real.end_addr =
@@ -123,21 +111,53 @@ Loadable_segment* lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* ph
     //       anonymous_seg->last_page_addr);
 
     anonymous_seg->pages_to_map = (anonymous_seg->mmr.map_size / PG_SIZE);
-    anonymous_seg->pages_mapped = 0;
+    anonymous_seg->pages_mapped = 0;    
+  }
 
-    // anonymous always goes on the end of file-backed
+  return_seg = anon_only ? anonymous_seg : file_backed_seg;
+
+  if ( return_seg != NULL ) {  
+    // Insert segment into list
+    if (load_list != NULL) {
+      for ( curr_seg = load_list; curr_seg->next != NULL; curr_seg++ ) {
+        if ( curr_seg->first_page_addr > return_seg->first_page_addr ) break;
+      }
+    
+      
+      if (curr_seg->next == NULL) {
+        // Insert behind curr_seg
+        curr_seg->next = return_seg;
+        return_seg->prev = curr_seg;
+      } else {
+        // Insert in front of curr_seg
+        return_seg->prev = curr_seg->prev;
+        if (return_seg->prev != NULL) return_seg->prev->next = return_seg;
+        return_seg->next = curr_seg;
+        curr_seg->prev = return_seg;
+      }
+    }
+  }
+
+  if ( !anon_only && anonymous_seg ) {
+    // anonymous goes on the end of file-backed
     anonymous_seg->next = file_backed_seg->next;
     if ( anonymous_seg->next != NULL ) anonymous_seg->next->prev = anonymous_seg;
     anonymous_seg->prev = file_backed_seg;
     file_backed_seg->next = anonymous_seg;
-    
+  } else if (anon_only) {
+    free( file_backed_seg );
   }
+
+    
+
   
-  return file_backed_seg;
+  return return_seg;
   
 }
 
-Loadable_segment* lh_find_parent_segment( Loadable_segment* load_list, uint64_t addr ) {
+Loadable_segment*
+lh_find_parent_segment( Loadable_segment* load_list, uint64_t addr )
+{
   Loadable_segment* curr_seg = load_list;
 
   while( curr_seg != NULL) {
@@ -149,39 +169,88 @@ Loadable_segment* lh_find_parent_segment( Loadable_segment* load_list, uint64_t 
 }
 
 int lh_map_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages ) {
-  Loadable_segment child;
+  struct mappable_mem_region child;
+  int bytes_left_in_page;
+  
   if (parent == NULL) {
-    child.mmr.real.start_addr = PG_RND_DOWN( start_addr );
+    child.real.start_addr = PG_RND_DOWN( start_addr );
+    child.length = PG_SIZE * num_pages;
+    child.real.end_addr = child.real.start_addr + child.length;
+    child.offset = 0;
+    child.protection = (PROT_READ | PROT_WRITE);
+    child.flags = (MAP_PRIVATE | MAP_ANONYMOUS);
+    child.fd = -1;
+  } else {
+    if ( PG_RND_DOWN( start_addr ) == parent->last_page_addr ) {
+      child.real.start_addr = PG_RND_DOWN( start_addr );
+      child.real.end_addr = parent->mmr.real.end_addr;
+      child.length = ( parent->mmr.real.end_addr % PG_SIZE );
+    } else {
+      child.real.start_addr = start_addr;
+      bytes_left_in_page = PG_SIZE - ( start_addr % PG_SIZE );
+      child.length = bytes_left_in_page + (num_pages - 1) * PG_SIZE;
+      child.real.end_addr = child.real.start_addr + child.length;
+    }
+
+    child.offset =
+      parent->mmr.map_offset + (child.real.start_addr - parent->mmr.map.start_addr);
+
+    child.protection = parent->mmr.protection;
+    child.flags = parent->mmr.flags;
+    child.fd = parent->mmr.fd;
   }
+  
+  if (lm_map_memregion( &child ) != 0) {
+    fprintf( stderr, "Error mapping page in\n" );
+    return -1;
+  }
+
+  parent->pages_mapped += num_pages;
+  
   return 0;
 }
 
-void lh_map_one( void* fault_addr, Loadable_segment* load_list ) {
+void
+lh_map_one( void* fault_addr, Loadable_segment* load_list )
+{
+  Loadable_segment* parent = NULL;
 }
 
-void lh_map_two( void* fault_addr, Loadable_segment* load_list ) {
+void
+lh_map_two( void* fault_addr, Loadable_segment* load_list )
+{
 }
 
-void lh_map_three( void* fault_addr, Loadable_segment* load_list ) {
+void
+lh_map_three( void* fault_addr, Loadable_segment* load_list )
+{
 }
 
-void* get_next_addr( uint64_t start_addr, Loadable_segment* parent ) {
+void*
+get_next_addr( uint64_t start_addr, Loadable_segment* parent )
+{
   return NULL;
 }
 
-void* get_next_stack_addr( void ) {
+void*
+get_next_stack_addr( void )
+{
   return NULL;
 }
 
-void print_loadable_segment( Loadable_segment* ls, int print_mmr ) {
+void
+print_loadable_segment( Loadable_segment* ls, int print_mmr )
+{
   if (print_mmr) lm_print_mem_region( &(ls->mmr) );
   fprintf( stderr, "first_page_addr: 0x%lx\tlast_page_addr: 0x%lx\n"
-           "\tpages_to_map: %lu\tpages_mapped:%lu\n",
+           "\tpages_to_map: %lu\tpages_mapped: %lu\n",
            ls->first_page_addr, ls->last_page_addr,
            ls->pages_to_map, ls->pages_mapped );
 }
 
-void lh_print_load_list( Loadable_segment* load_list, int print_mmr ) {
+void
+lh_print_load_list( Loadable_segment* load_list, int print_mmr )
+{
   Loadable_segment* curr_seg = load_list;
   int idx = 0;
   if (load_list == NULL) {
