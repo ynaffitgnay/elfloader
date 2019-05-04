@@ -171,7 +171,7 @@ find_parent_segment( uint64_t addr, Loadable_segment* load_list )
 
   while( curr_seg != NULL) {
     if( lm_validate_address( &(curr_seg->mmr.map), addr ) == 0 ) return curr_seg;      
-    curr_seg = load_list->next;
+    curr_seg = curr_seg->next;
   }
   
   return NULL;
@@ -196,6 +196,7 @@ map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
       child.real.start_addr = PG_RND_DOWN( start_addr );
       child.real.end_addr = parent->mmr.real.end_addr;
       child.length = ( parent->mmr.real.end_addr % PG_SIZE );
+      if (child.length == 0) child.length = PG_SIZE;
     } else {
       child.real.start_addr = start_addr;
       bytes_left_in_page = PG_SIZE - ( start_addr % PG_SIZE );

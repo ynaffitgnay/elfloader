@@ -89,9 +89,10 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
     mapping = mmap( (void*)map_start, map_length, mappee->protection,
                     (mappee->flags | DEFAULT_FLAGS), mappee->fd, map_offset );
     //lu_print_maps();
-    
+    //lm_print_mem_region( mappee );
     if ((uint64_t)mapping != map_start) {
-      fprintf( stderr, "Failed to map desired region\n" );
+      fprintf( stderr, "mapping: %lx, map_start: %lx\t", (uint64_t)mapping, map_start );
+      perror( "Failed to map desired region" );
       munmap( mapping, map_length );
  
       return -1;

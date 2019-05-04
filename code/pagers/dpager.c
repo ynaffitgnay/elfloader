@@ -74,9 +74,9 @@ main( int argc, char** argv, char** envp )
   //close( loadee->fd );  // don't close file b/c still need to perform mappings
   sp = loadee->sp;
   ept = loadee->entry_pt;
-  free( loadee );
+  //free( loadee );
   
-  //loader_start_loadee( sp, ept );
+  loader_start_loadee( sp, ept );
     
   return 0;
   
@@ -87,6 +87,7 @@ demand_get_segments( Elf_info* ei )
 {
   Loadable_segment* inserted_segment = NULL;
   Elf64_Phdr* phdr_it = ei->phdrs;
+  
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
     if (phdr_it->p_type == PT_LOAD) {
       inserted_segment = lh_insert_segment( phdr_it, load_list_head, loadee, 0 );
@@ -137,6 +138,11 @@ static void
 demand_segv_handler( int sig, siginfo_t* si, void* unused )
 {
   //printf( "Got SIGSEGV at address: 0x%lx\n", (long) si->si_addr );
+  // Make sure that the faulting address is within bounds
+  if ( lm_validate_address( &(loadee->bounds), (uint64_t)si->si_addr ) != 0 ) {
+    fprintf( stderr, "Segmentation fault caused by invalid address\n" );
+    exit( -1 );
+  }
   
-  exit( -1 );
+  lh_map_one( si->si_addr, load_list_head );
 }
