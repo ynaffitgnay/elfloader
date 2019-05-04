@@ -8,7 +8,8 @@
 
 #define INITIAL_STACK_SIZE (131072)
 
-struct loader_stack_info {
+struct loader_stack_info
+{
   uint64_t argc;
   char** argv;
   int envc;
@@ -17,7 +18,8 @@ struct loader_stack_info {
   Elf64_auxv_t* auxv;
 };
 
-int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee );
+int
+ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee );
 //char* ls_get_auxv_addr( char** envp, int* num_env_vars );
 
 

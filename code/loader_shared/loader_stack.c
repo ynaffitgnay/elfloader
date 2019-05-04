@@ -8,13 +8,22 @@
 #include "loader_stack.h"
 #include "loader_elf.h"
 
-static Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars );
-static int get_num_auxv_entries( Elf64_auxv_t* aux_table );
-static int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
-                                char** out_argv, char** out_envp );
-static int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv );
+static Elf64_auxv_t*
+get_auxv_addr( char** envp, int* num_env_vars );
 
-int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
+static int
+get_num_auxv_entries( Elf64_auxv_t* aux_table );
+
+static int
+populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
+                     char** out_argv, char** out_envp );
+
+static int
+copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv );
+
+int
+ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee )
+{
   uint64_t stack_map_start = loadee->sp - INITIAL_STACK_SIZE + 1;
   void* newstack = NULL;
   int argv_size;
@@ -129,7 +138,9 @@ int ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee ) {
   return 0;
 }
 
-Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars ) {
+Elf64_auxv_t*
+get_auxv_addr( char** envp, int* num_env_vars )
+{
   int envc = 0;
   
   while (*envp++ != NULL) ++envc;
@@ -141,7 +152,9 @@ Elf64_auxv_t* get_auxv_addr( char** envp, int* num_env_vars ) {
   return (Elf64_auxv_t*)envp;
 }
 
-int get_num_auxv_entries( Elf64_auxv_t* aux_table ) {
+int
+get_num_auxv_entries( Elf64_auxv_t* aux_table )
+{
   int entries = 1;
   while (aux_table->a_type != AT_NULL) {
     ++entries;
@@ -153,8 +166,10 @@ int get_num_auxv_entries( Elf64_auxv_t* aux_table ) {
 }
 
 
-int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
-                         char** out_argv, char** out_envp ) {
+int
+populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
+                     char** out_argv, char** out_envp )
+{
 
   // MAKE SURE WHEN CALLING COPY_ARGS WITH ARGV, INCREMENT ARGV BY 1 AND
   // DECREMENT ARGC BY 1
@@ -206,7 +221,9 @@ int populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
   return 0;
 }
   
-int copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv ) {
+int
+copy_args( char** in_argv, int argc, Loadee_mgmt* loadee, char** out_argv )
+{
   const char* str = NULL;
   size_t len;
   char* sp = (char*) loadee->sp;

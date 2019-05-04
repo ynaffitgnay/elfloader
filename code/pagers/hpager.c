@@ -49,7 +49,7 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
         struct mappable_mem_region anonymous_seg;
         size_t first_section_bytes;
-        size_t total_sector_bytes;
+        size_t total_segment_bytes;
         size_t last_section_bytes;
 
         // Map the bss
@@ -62,10 +62,10 @@ int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
         if (first_section_bytes != file_backed_seg.map_size)
           fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
         
-        total_sector_bytes =
+        total_segment_bytes =
           lm_calc_mmap_length( file_backed_seg.real.start_addr,
                                phdr_it->p_memsz );
-        last_section_bytes = total_sector_bytes - first_section_bytes;
+        last_section_bytes = total_segment_bytes - first_section_bytes;
 
         anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
         anonymous_seg.real.end_addr = 

@@ -6,7 +6,8 @@
 #include "loader_utils.h"
 
 int
-lu_print_maps( void ) {
+lu_print_maps( void )
+{
   FILE* fp = NULL;
   char str[MAXLINE];
   char* filename = "/proc/self/maps";
@@ -138,13 +139,4 @@ lu_print_rusage_diff( struct rusage* s_usage, struct rusage* e_usage )
   printf( "nivcsw | %ld | %ld | %ld",  s_usage->ru_nivcsw,
          e_usage->ru_nivcsw, e_usage->ru_nivcsw - s_usage->ru_nivcsw);
   
-
-  //printf ("Fields of less interest: \n");
-  //printf ("\tixrss diff: %ld\n", s_usage->ru_ixrss);
-  //printf ("\tidrss diff: %ld\n", s_usage->ru_idrss);
-  //printf ("\tisrss diff: %ld\n", s_usage->ru_isrss);
-  //printf ("\tnswap diff: %ld\n", s_usage->ru_nswap);
-  //printf ("\tmsgsnd diff: %ld\n", s_usage->ru_msgsnd);
-  //printf ("\tmsgrcv diff: %ld\n", s_usage->ru_msgrcv);
-  //printf ("\tnsignals diff: %ld\n", s_usage->ru_nsignals);
 }

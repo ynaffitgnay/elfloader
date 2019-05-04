@@ -10,7 +10,8 @@
 #include "loader_mem.h"
 
 int
-le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info ) {
+le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info )
+{
   info->hdr = (Elf64_Ehdr*)loadee->buf;
 
   if (memcmp( info->hdr->e_ident, ELFMAG, SELFMAG ) != 0) {
@@ -43,7 +44,8 @@ le_get_elfinfo( Loadee_mgmt* loadee, Elf_info* info ) {
 }
 
 Elf64_Phdr*
-le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info ) {
+le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info )
+{
   // Make sure to do checks here
   Elf64_Phdr* phdrs = NULL;
   int phdrs_size = -1;
@@ -84,7 +86,8 @@ le_load_elf_phdrs( Loadee_mgmt* loadee, Elf_info* info ) {
 }
 
 int
-le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
+le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info )
+{
   Elf64_Phdr* phdr_it = info->phdrs;
   int first_load = 0;
    
@@ -118,7 +121,9 @@ le_check_segment_addrs( Loadee_mgmt* loadee, Elf_info* info ) {
 
 
 int
-le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_entries ) {
+le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv,
+                      int auxv_entries )
+{
   uint64_t rand_n_plat_ptr;
   Elf64_auxv_t* loadee_stack_auxv = NULL;
   uint64_t auxv_size;
@@ -190,8 +195,7 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv, int auxv_e
     
 
   }
-  
-    
+      
   
   return 0;
 }

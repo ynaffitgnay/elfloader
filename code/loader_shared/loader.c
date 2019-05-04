@@ -6,7 +6,9 @@
 #include "loader.h"
 
 // Returns NULL if unsuccessful
-Loadee_mgmt* loader_get_new_manager( char** argv ) {
+Loadee_mgmt*
+loader_get_new_manager( char** argv )
+{
   Loadee_mgmt* new_loadee = NULL;
 
   new_loadee = (Loadee_mgmt*)malloc( sizeof( Loadee_mgmt ) );
@@ -41,7 +43,9 @@ Loadee_mgmt* loader_get_new_manager( char** argv ) {
 
 }
 
-void loader_start_loadee( uint64_t sp, uint64_t entry_pt ) {
+void
+loader_start_loadee( uint64_t sp, uint64_t entry_pt )
+{
   // Set stack pointer to the top of the loadee stack
   asm( "movq %0, %%rsp;"
        :

@@ -7,9 +7,12 @@
 #include "loader_mem.h"
 #include "loader_utils.h"
 
-static void print_mapping( struct mappable_mem_region* mmr);
+static void
+print_mapping( struct mappable_mem_region* mmr);
 
-int lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr ) {
+int
+lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr )
+{
   // todo: maybe replace this with something mmap related
 
   //printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
@@ -21,7 +24,9 @@ int lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr ) {
   return -1;
 }  
 
-size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
+size_t
+lm_calc_mmap_length( uint64_t start_addr, size_t size )
+{
   uint64_t end_addr;
   int num_pages;
   size_t num_bytes;
@@ -42,7 +47,9 @@ size_t lm_calc_mmap_length( uint64_t start_addr, size_t size ) {
   return num_bytes;
 }
 
-int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping ) {
+int
+lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
+{
   uint64_t map_start;
   off_t map_offset;
   size_t map_length;
@@ -119,12 +126,16 @@ int lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping 
   return 0;
 }
 
-int lm_map_memregion( struct mappable_mem_region* mappee ) {
+int
+lm_map_memregion( struct mappable_mem_region* mappee )
+{
   return lm_define_memregion( mappee, 1 );
 }
 
 
-void print_mapping( struct mappable_mem_region* mmr ) {
+void
+print_mapping( struct mappable_mem_region* mmr )
+{
   if ( mmr->fd != -1 ) {
     fprintf(stderr, "mapping created at address: %#" PRIx64
             "\toffset: %ld\tsize: %lu (0x%lx)\n",
@@ -136,7 +147,9 @@ void print_mapping( struct mappable_mem_region* mmr ) {
   }
 }
 
-void lm_print_mem_region( struct mappable_mem_region* mmr ) {
+void
+lm_print_mem_region( struct mappable_mem_region* mmr )
+{
   fprintf(stderr, "mapping at virtual address: %#" PRIx64
          "\n\tlength: %lu (0x%lx)\n\tprotection: %s %s %s\n\tflags: %d\n\tfd: %d\n\t"
           "offset: %ld\n\tmap_start: %#" PRIx64

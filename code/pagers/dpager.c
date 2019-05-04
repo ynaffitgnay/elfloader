@@ -20,7 +20,7 @@ int demand_get_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
   Elf64_Phdr* phdr_it = ei->phdrs;
   for (int i = 0; i < ei->hdr->e_phnum; ++i) {
     if (phdr_it->p_type == PT_LOAD) {
-      inserted_segment = lh_insert_segment( load_list_head, phdr_it, loadee );
+      inserted_segment = lh_insert_segment( load_list_head, phdr_it, loadee, 0 );
       
       if (!load_list_head) load_list_head = inserted_segment;
 
