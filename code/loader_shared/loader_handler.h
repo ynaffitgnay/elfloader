@@ -27,11 +27,8 @@ struct loadable_segment
 };
 
 Loadable_segment*
-lh_insert_segment( Loadable_segment* load_list, Elf64_Phdr* phdr,
+lh_insert_segment( Elf64_Phdr* phdr, Loadable_segment* load_list,
                    Loadee_mgmt* loadee, int anon_only  );
-
-Loadable_segment*
-lh_find_parent_segment( Loadable_segment* load_list, uint64_t addr );
 
 int
 lh_map_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages );
