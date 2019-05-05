@@ -82,7 +82,6 @@ all_load_segments( Loadee_mgmt* loadee, Elf_info* ei )
       file_backed_seg.protection = prot;
       file_backed_seg.flags = flags;
 
-      //printf( "Mapping a file-backed segment\n" );
       if ( lm_map_memregion( &file_backed_seg ) != 0 ) {
         fprintf( stderr, "Failed to mmap file-backed segment\n" );
         return -1;
@@ -118,7 +117,6 @@ all_load_segments( Loadee_mgmt* loadee, Elf_info* ei )
         anonymous_seg.fd = -1;
         anonymous_seg.offset = 0;
 
-        //printf( "Mapping an anonymous segment\n" );
         if (lm_map_memregion( &anonymous_seg ) != 0) {
           fprintf( stderr, "Failed to map anonymous segment\n" );
           return -1;

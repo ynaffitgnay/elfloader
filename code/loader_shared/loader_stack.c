@@ -55,16 +55,12 @@ ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee )
     return -1;
   }
 
-  //TODO: erase this
-  // Make sure envp isn't getting changed by this function inadverdently 
-  //printf( "Original envp: %#" PRIx64 " ", (uint64_t)lsinfo->envp );
   auxv_addr = get_auxv_addr( lsinfo->envp, &num_env_vars );
-  //printf( "num auxv entries: %d\n" , get_num_auxv_entries( auxv_addr ) );
+
   auxv_entries = get_num_auxv_entries( auxv_addr );
   
   lsinfo->auxv = auxv_addr;
   lsinfo->auxc = auxv_entries;
-  //printf( "Final envp: %#" PRIx64 " \n", (uint64_t)lsinfo->envp);
 
   lsinfo->envc = num_env_vars;
   
@@ -145,7 +141,6 @@ get_auxv_addr( char** envp, int* num_env_vars )
   
   while (*envp++ != NULL) ++envc;
 
-  //printf( "Number of environment vars: %d\n", envc );
   
   if (num_env_vars != NULL) *num_env_vars = envc;
   
@@ -161,7 +156,6 @@ get_num_auxv_entries( Elf64_auxv_t* aux_table )
     ++aux_table;
   }
  
-  //printf( "Number of aux entries: %d\n", entries );
   return entries;
 }
 
@@ -182,8 +176,6 @@ populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
   loadee_argv = lsinfo->argv + 1;
 
   // Copy the name of the program into the stack
-  // JK DON'T DO IT THIS WAY
-  //copy_args( loadee_argv, 1, loadee, execfn_addr );
   execfn_size = strlen( loadee->filename ) + 1;
   loadee->sp -= execfn_size;
     
@@ -205,7 +197,6 @@ populate_info_block( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee,
 
   // MAKE SURE TO DO ALIGNMENT
   alignment = ((loadee->sp % 8)) * ((loadee->sp % 8) && 1);
-  //printf("oldsp: %lu, new alignment: %d\n", loadee->sp, alignment);
   
   loadee->sp -= alignment;
 

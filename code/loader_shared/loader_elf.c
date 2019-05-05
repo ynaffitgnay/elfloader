@@ -182,7 +182,6 @@ le_create_elf_tables( Loadee_mgmt* loadee, Elf64_auxv_t* loader_auxv,
       
       case AT_EXECFN: 
         // Execfn is last value in the info block (so closest to the base of the stack)
-        //printf( "strlen( loadee->filename ): %d\n", strlen(loadee->filename) );
         auxv->a_un.a_val = loadee->bounds.end_addr - (strlen( loadee->filename ) + 1);
         break;
         

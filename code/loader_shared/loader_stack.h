@@ -20,7 +20,5 @@ struct loader_stack_info
 
 int
 ls_setup_stack( struct loader_stack_info* lsinfo, Loadee_mgmt* loadee );
-//char* ls_get_auxv_addr( char** envp, int* num_env_vars );
-
 
 #endif

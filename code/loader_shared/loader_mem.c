@@ -5,7 +5,6 @@
 #include <sys/mman.h>
 
 #include "loader_mem.h"
-#include "loader_utils.h"
 
 static void
 print_mapping( struct mappable_mem_region* mmr);
@@ -13,8 +12,6 @@ print_mapping( struct mappable_mem_region* mmr);
 int
 lm_validate_address( Mem_bounds* loadee_mem, uint64_t addr )
 {
-  // todo: maybe replace this with something mmap related
-
   //printf( "Comparing %#" PRIx64 " to start addr %#" PRIx64 " and end addr %#"
   //        PRIx64 "\n", addr, loadee_mem->start_addr, loadee_mem->end_addr );
   
@@ -32,16 +29,10 @@ lm_calc_mmap_length( uint64_t start_addr, size_t size )
   size_t num_bytes;
 
   end_addr = start_addr + (uint64_t)size;
-  //printf( " (size / PG_SIZE): %lu (%lx)\n ((start_addr % PG_SIZE) && 1): %lu (%lx)\n ((end_addr % PG_SIZE) && 1): %lu (%lx)\n",
-  //        (size / PG_SIZE), (size / PG_SIZE),
-  //        ((start_addr % PG_SIZE) && 1), ((start_addr % PG_SIZE) && 1),
-  //        ((end_addr % PG_SIZE) && 1), ((end_addr % PG_SIZE) && 1));
   
   num_pages =
     (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
 
-  //TODO
-  //printf("num_pages: %d\n", num_pages);
   num_bytes = num_pages * PG_SIZE;
   
   return num_bytes;
@@ -57,26 +48,14 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
   uint64_t map_end_addr;
   uint64_t leftover_bytes;
 
-  uint64_t old_map_start = (uint64_t)(mappee->real.start_addr) & ~((uint64_t)PG_SIZE - 1);
   map_start = PG_RND_DOWN(mappee->real.start_addr);
-  if (old_map_start != map_start) {
-    fprintf( stderr, "PG_RND_DOWN MACRO NOT WORKING PROPERLY ON START!!!\n" );
-    exit( -1 );
-  }
   
-  uint64_t old_map_offset = ((uint64_t)mappee->offset) & ~((uint64_t)PG_SIZE - 1);
   map_offset = PG_RND_DOWN(mappee->offset);
-  if (old_map_offset != map_offset) {
-    fprintf( stderr, "PG_RND_DOWN MACRO NOT WORKING PROPERLY ON OFFSET!!!\n" );
-    exit( -1 );
-  }
-
   
   map_length = lm_calc_mmap_length( mappee->real.start_addr, mappee->length );
 
   map_end_addr = (uint64_t)map_start + (uint64_t)map_length;
 
-  //printf( "real_end_addr: %#" PRIx64 "\n", mappee->real.end_addr );
 
   mappee->map.start_addr = map_start;
   mappee->map.end_addr = map_end_addr;
@@ -85,11 +64,9 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
 
   
   if (create_mapping) {
-    //lu_print_maps();  
     mapping = mmap( (void*)map_start, map_length, mappee->protection,
                     (mappee->flags | DEFAULT_FLAGS), mappee->fd, map_offset );
-    //lu_print_maps();
-    //lm_print_mem_region( mappee );
+
     if ((uint64_t)mapping != map_start) {
       //fprintf( stderr, "mapping: %lx, map_start: %lx\t", (uint64_t)mapping, map_start );
       fprintf( stderr, "Failed to create mapping at desired address. " );
@@ -106,7 +83,7 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
     // Can't memset unwritable region
     if (mappee->protection & PROT_WRITE) {
       leftover_bytes = map_end_addr - mappee->real.end_addr; 
-      //printf( "leftover bytes: %ld (0x%lx)\n", leftover_bytes, leftover_bytes );
+
       if (leftover_bytes >= PG_SIZE) {
         fprintf(stderr, "\n\n     CALCULATING TOTAL NUMBER OF NECESSARY BYTES INCORRECTLY  \n\n");
         return -1;
@@ -124,8 +101,6 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
       }
     }
 
-    //print_mem_region( mappee );
-  
     print_mapping( mappee );
   }
   

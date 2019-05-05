@@ -43,8 +43,6 @@ main( int argc, char** argv, char** envp )
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
   struct loader_stack_info dpager_info = { argc, argv, 0, envp, 19, NULL };
 
-  //lu_print_maps();
-
   if (demand_process_elf_binary( ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
@@ -55,7 +53,6 @@ main( int argc, char** argv, char** envp )
     fprintf( stderr, "Failed to set up stack\n" );
     return -1;
   }
-  //lu_print_maps();
 
   demand_map_first_page( );
 
@@ -134,7 +131,6 @@ demand_map_first_page( void ) {
 static void
 demand_segv_handler( int sig, siginfo_t* si, void* unused )
 {
-  //printf( "Got SIGSEGV at address: 0x%lx\n", (long) si->si_addr );
   // Make sure that the faulting address is within bounds
   if ( lm_validate_address( &(loadee->bounds), (uint64_t)si->si_addr ) != 0 ) {
     fprintf( stderr, "Segmentation fault caused by invalid address\n" );

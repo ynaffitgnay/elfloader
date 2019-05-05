@@ -67,11 +67,6 @@ lh_insert_segment( Elf64_Phdr* phdr, Loadable_segment* load_list,
   file_backed_seg->first_page_addr = file_backed_seg->mmr.map.start_addr;
   file_backed_seg->last_page_addr = PG_RND_DOWN(file_backed_seg->mmr.map.end_addr - 1);
     
-  //TODO
-  //printf("map end_addr: %lx, last_page_addr: %lx\n",
-  //       file_backed_seg->mmr.map.end_addr, 
-  //       file_backed_seg->last_page_addr);
-
   file_backed_seg->pages_to_map = (file_backed_seg->mmr.map_size / PG_SIZE);
   file_backed_seg->pages_mapped = 0;
   file_backed_seg->next = NULL;
@@ -114,11 +109,6 @@ lh_insert_segment( Elf64_Phdr* phdr, Loadable_segment* load_list,
     anonymous_seg->first_page_addr = anonymous_seg->mmr.map.start_addr;
     anonymous_seg->last_page_addr = PG_RND_DOWN(anonymous_seg->mmr.map.end_addr - 1);
     
-    //TODO
-    //printf("map end_addr: %lx, last_page_addr: %lx\n",
-    //       anonymous_seg->mmr.map.end_addr, 
-    //       anonymous_seg->last_page_addr);
-
     anonymous_seg->pages_to_map = (anonymous_seg->mmr.map_size / PG_SIZE);
     anonymous_seg->pages_mapped = 0;    
   }
@@ -157,9 +147,7 @@ lh_insert_segment( Elf64_Phdr* phdr, Loadable_segment* load_list,
     free( file_backed_seg );
   }
 
-    
-
-  
+      
   return return_seg;
   
 }
@@ -187,13 +175,6 @@ map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages )
   if (parent == NULL) {
     fprintf( stderr, "Memory access out of range\n" );
     exit( -1 );
-    //child.real.start_addr = PG_RND_DOWN( start_addr );
-    //child.length = PG_SIZE * num_pages;
-    //child.real.end_addr = child.real.start_addr + child.length;
-    //child.offset = 0;
-    //child.protection = (PROT_READ | PROT_WRITE);
-    //child.flags = (MAP_PRIVATE | MAP_ANONYMOUS);
-    //child.fd = -1;
   } else {
     if ( PG_RND_DOWN( start_addr ) == parent->last_page_addr ) {
       child.real.start_addr = PG_RND_DOWN( start_addr );
@@ -261,7 +242,6 @@ lh_map_two( void* fault_addr, Loadable_segment* load_list )
 
     // Check if next page is unmapped
     if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
-      printf( ">>>>>>>>>>>>>> Mapping next page \n" );
 
       if (map_n_pages( (uint64_t)fault_addr, parent, 2) != 0) {
         fprintf( stderr, "Failed to map page\n" );
@@ -277,7 +257,6 @@ lh_map_two( void* fault_addr, Loadable_segment* load_list )
 
     // Check if previous page is unmapped
     if (mincore( (void*)prev_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
-      printf( "<<<<<<<<<<<<<<<<<< Mapping prev page \n" );
 
       if (map_n_pages( (uint64_t)prev_page, parent, 2) != 0) {
         fprintf( stderr, "Failed to map page\n" );
@@ -326,7 +305,6 @@ lh_map_three( void* fault_addr, Loadable_segment* load_list )
 
     // Check if next page is unmapped
     if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
-      //printf( ">>>>>>>>>>>>>> Mapping next page \n" );
 
       // Check the page after that 
       if ( PG_RND_DOWN( next_page ) != parent->last_page_addr ) {
@@ -335,7 +313,6 @@ lh_map_three( void* fault_addr, Loadable_segment* load_list )
         // Check if next page is unmapped
         if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
           // Map 3 consecutive pages
-          printf( ">>>>>>>>>>>>>>>>>>>> MAPPING 3 CONSEC PAGES \n" );
           if (map_n_pages( (uint64_t)fault_addr, parent, 3) != 0) {
             fprintf( stderr, "Failed to map pages\n" );
             exit( -1 );
@@ -388,29 +365,23 @@ get_next_addr( uint64_t start_addr, Loadable_segment* parent )
   int wrapped_around = 0;
   unsigned char res[1];
   
-  printf( "\n\n\nPages checked: " );
-  
   for (int i = 0; i < PGS_TO_CHECK; ++i) {
-    printf( "%d ", i + 1 );
     if (next_page > parent->last_page_addr) {
       if (!wrapped_around) {
         wrapped_around = 1;
         next_page = parent->first_page_addr;
       } else {
-        printf( "\n" );
         return NULL;
       }
     }
 
     if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
-      printf( "\n" );
       return (void*)next_page;
     }
 
     next_page = PG_RND_DOWN( next_page + PG_SIZE );
   }
 
-  printf( "\n" );
   return NULL;
 }
 

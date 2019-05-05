@@ -28,10 +28,7 @@ loader_get_new_manager( char** argv )
   }
 
   if (read( new_loadee->fd, (void*)(new_loadee->buf), HDR_BUF_SIZE ) < HDR_BUF_SIZE) {
-    fprintf( stderr, "Input file may not be binary\n" );
-    //close( new_loadee->fd );
-    //free( new_loadee );
-    //return NULL;
+    fprintf( stderr, "Input file may be too small to be binary\n" );
   }
 
   // overshoot start_addr in order to set it in elf loader

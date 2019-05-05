@@ -120,43 +120,7 @@ hybrid_load_segments( Elf_info* ei )
         return -1;
       }
 
-      // HYBRID SHOULDN'T DO THIS
       if (phdr_it->p_memsz > phdr_it->p_filesz) {
-      //struct mappable_mem_region anonymous_seg;
-      //size_t first_section_bytes;
-      //size_t total_segment_bytes;
-      //size_t last_section_bytes;
-      //
-      //// Map the bss
-      //// protection stays the same
-      //flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
-      //
-      //first_section_bytes =
-      //  lm_calc_mmap_length( file_backed_seg.real.start_addr,
-      //                       file_backed_seg.length );
-      //if (first_section_bytes != file_backed_seg.map_size)
-      //  fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
-      //
-      //total_segment_bytes =
-      //  lm_calc_mmap_length( file_backed_seg.real.start_addr,
-      //                       phdr_it->p_memsz );
-      //last_section_bytes = total_segment_bytes - first_section_bytes;
-      //
-      //anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
-      //anonymous_seg.real.end_addr = 
-      //  anonymous_seg.real.start_addr + last_section_bytes;
-      //anonymous_seg.length = last_section_bytes;
-      //anonymous_seg.protection = file_backed_seg.protection;
-      //anonymous_seg.flags = flags;
-      //anonymous_seg.fd = -1;
-      //anonymous_seg.offset = 0;
-      //
-      ////printf( "Mapping an anonymous segment\n" );
-      //if (lm_map_memregion( &anonymous_seg ) != 0) {
-      //  fprintf( stderr, "Failed to map anonymous segment\n" );
-      //  return -1;
-      //}
-      //
         inserted_segment = lh_insert_segment( phdr_it, load_list_head, loadee, 1 );
         if (!load_list_head) load_list_head = inserted_segment;
 
@@ -164,14 +128,11 @@ hybrid_load_segments( Elf_info* ei )
           fprintf( stderr, "Error inserting load segment into load_list\n" );
           return -1;
         }
-      }
-      
+      }      
     }
     
     phdr_it++;  
   }
-
-  //lh_print_load_list( load_list_head, 1 );
 
   return 0;
 }
@@ -201,7 +162,6 @@ hybrid_load_elf_binary( void )
 static void
 hybrid_segv_handler( int sig, siginfo_t* si, void* unused )
 {
-  //printf( "Got SIGSEGV at address: 0x%lx\n", (long) si->si_addr );
   // Make sure that the faulting address is within bounds
   if ( lm_validate_address( &(loadee->bounds), (uint64_t)si->si_addr ) != 0 ) {
     fprintf( stderr, "Segmentation fault caused by invalid address\n" );

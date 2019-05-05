@@ -9,7 +9,6 @@ typedef struct
 {
   Elf64_Ehdr* hdr;  /* ELF header pointer */
   Elf64_Phdr* phdrs; /* Pointer to first entry in program header table */
-  //Elf64_Shdr* shdr; /* Pointer to first entry in section header table */
   
 } Elf_info;
 
