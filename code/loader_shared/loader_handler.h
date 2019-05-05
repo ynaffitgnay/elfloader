@@ -6,6 +6,8 @@
 #include "loader.h"
 #include "loader_mem.h"
 
+#define PGS_TO_CHECK 10
+
 enum heuristics
 {
   MAP1,

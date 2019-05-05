@@ -1,5 +1,8 @@
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
 
 #include "loader_handler.h"
 #include "loader_mem.h"
@@ -13,9 +16,6 @@ get_next_addr( uint64_t start_addr, Loadable_segment* parent );
 static int
 map_n_pages( uint64_t start_addr, Loadable_segment* parent, int num_pages );
 
-
-static void*
-get_next_stack_addr( void );
 
 static void
 print_loadable_segment( Loadable_segment* ls, int print_mmr );
@@ -170,7 +170,8 @@ find_parent_segment( uint64_t addr, Loadable_segment* load_list )
   Loadable_segment* curr_seg = load_list;
 
   while( curr_seg != NULL) {
-    if( lm_validate_address( &(curr_seg->mmr.map), addr ) == 0 ) return curr_seg;      
+    // Will return NULL if address is null
+    if (lm_validate_address( &(curr_seg->mmr.map), addr ) == 0 ) return curr_seg;      
     curr_seg = curr_seg->next;
   }
   
@@ -228,6 +229,11 @@ void
 lh_map_one( void* fault_addr, Loadable_segment* load_list )
 {
   Loadable_segment* parent = find_parent_segment( (uint64_t)fault_addr, load_list );
+  if (parent == NULL) {
+    fprintf( stderr, "Faulting region is out of memory range\n" );
+    exit( -1 );
+  }
+  
   if (map_n_pages( (uint64_t)fault_addr, parent, 1) != 0) {
     fprintf( stderr, "Failed to map page\n" );
     exit( -1 );
@@ -237,24 +243,177 @@ lh_map_one( void* fault_addr, Loadable_segment* load_list )
 void
 lh_map_two( void* fault_addr, Loadable_segment* load_list )
 {
+  uint64_t next_page = 0;
+  uint64_t prev_page = 0;
+  void* next_map = NULL;
+  
+  unsigned char res[1]; 
+  
+  Loadable_segment* parent = find_parent_segment( (uint64_t)fault_addr, load_list );
+  if (parent == NULL) {
+    fprintf( stderr, "Faulting region is out of memory range\n" );
+    exit( -1 );
+  }
+
+  // Check next page
+  if ( PG_RND_DOWN( fault_addr ) != parent->last_page_addr ) {
+    next_page = PG_RND_DOWN( fault_addr + PG_SIZE );
+
+    // Check if next page is unmapped
+    if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
+      printf( ">>>>>>>>>>>>>> Mapping next page \n" );
+
+      if (map_n_pages( (uint64_t)fault_addr, parent, 2) != 0) {
+        fprintf( stderr, "Failed to map page\n" );
+        exit( -1 );
+      }
+
+      return;
+    }
+  }
+
+  if ( PG_RND_DOWN( fault_addr ) != parent->first_page_addr ) {
+    prev_page = PG_RND_DOWN( fault_addr + PG_SIZE );
+
+    // Check if previous page is unmapped
+    if (mincore( (void*)prev_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
+      printf( "<<<<<<<<<<<<<<<<<< Mapping prev page \n" );
+
+      if (map_n_pages( (uint64_t)prev_page, parent, 2) != 0) {
+        fprintf( stderr, "Failed to map page\n" );
+        exit( -1 );
+      }
+
+      return;
+    }
+  }
+
+  // Map in this page
+  if (map_n_pages( (uint64_t)fault_addr, parent, 1) != 0) {
+    fprintf( stderr, "Failed to map page\n" );
+    exit( -1 );
+  }
+  
+  next_map = get_next_addr( (uint64_t)fault_addr, parent );
+
+  // Couldn't find page in desired region to map
+  if (next_map == NULL) return;
+  
+  if (map_n_pages( (uint64_t)next_map, parent, 1) != 0) {
+    fprintf( stderr, "Failed to map page\n" );
+    exit( -1 );
+  }
+
 }
 
 void
 lh_map_three( void* fault_addr, Loadable_segment* load_list )
 {
+  uint64_t next_page = 0;
+  void* next_map = NULL;
+  
+  unsigned char res[1]; 
+  
+  Loadable_segment* parent = find_parent_segment( (uint64_t)fault_addr, load_list );
+  if (parent == NULL) {
+    fprintf( stderr, "Faulting region is out of memory range\n" );
+    exit( -1 );
+  }
+
+  // Check next page
+  if ( PG_RND_DOWN( fault_addr ) != parent->last_page_addr ) {
+    next_page = PG_RND_DOWN( fault_addr + PG_SIZE );
+
+    // Check if next page is unmapped
+    if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
+      //printf( ">>>>>>>>>>>>>> Mapping next page \n" );
+
+      // Check the page after that 
+      if ( PG_RND_DOWN( next_page ) != parent->last_page_addr ) {
+        next_page = PG_RND_DOWN( fault_addr + PG_SIZE );
+
+        // Check if next page is unmapped
+        if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
+          // Map 3 consecutive pages
+          printf( ">>>>>>>>>>>>>>>>>>>> MAPPING 3 CONSEC PAGES \n" );
+          if (map_n_pages( (uint64_t)fault_addr, parent, 3) != 0) {
+            fprintf( stderr, "Failed to map pages\n" );
+            exit( -1 );
+          }
+          return;
+        }
+
+      }
+
+      // Either the second page is the last page or the page after it is mapped
+
+      // Map these two consecutive pages
+      if (map_n_pages( (uint64_t)fault_addr, parent, 2) != 0) {
+        fprintf( stderr, "Failed to map page\n" );
+        exit( -1 );
+      }
+
+      next_map = get_next_addr( (uint64_t)next_page, parent );
+
+      if (next_map == NULL) return;
+
+      if (map_n_pages( (uint64_t)next_map, parent, 1) != 0) {
+        fprintf( stderr, "Failed to map page\n" );
+        exit( -1 );
+      }
+    }
+  }
+
+  // Map in this page
+  if (map_n_pages( (uint64_t)fault_addr, parent, 1) != 0) {
+    fprintf( stderr, "Failed to map page\n" );
+    exit( -1 );
+  }
+
+  // Find start of next mappable region
+  next_map = get_next_addr( (uint64_t)fault_addr, parent );
+
+  // Couldn't find page in desired region to map
+  if (next_map == NULL) return;
+
+  // Can pass parent into load_list so that it is immediately found when looking
+  // for parent
+  lh_map_two( next_map, parent );
 }
 
 void*
 get_next_addr( uint64_t start_addr, Loadable_segment* parent )
 {
+  uint64_t next_page = PG_RND_DOWN( start_addr + PG_SIZE );
+  int wrapped_around = 0;
+  unsigned char res[1];
+  
+  printf( "\n\n\nPages checked: " );
+  
+  for (int i = 0; i < PGS_TO_CHECK; ++i) {
+    printf( "%d ", i + 1 );
+    if (next_page > parent->last_page_addr) {
+      if (!wrapped_around) {
+        wrapped_around = 1;
+        next_page = parent->first_page_addr;
+      } else {
+        printf( "\n" );
+        return NULL;
+      }
+    }
+
+    if (mincore( (void*)next_page, PG_SIZE, res ) == -1 && errno == ENOMEM ) {
+      printf( "\n" );
+      return (void*)next_page;
+    }
+
+    next_page = PG_RND_DOWN( next_page + PG_SIZE );
+  }
+
+  printf( "\n" );
   return NULL;
 }
 
-void*
-get_next_stack_addr( void )
-{
-  return NULL;
-}
 
 void
 print_loadable_segment( Loadable_segment* ls, int print_mmr )
