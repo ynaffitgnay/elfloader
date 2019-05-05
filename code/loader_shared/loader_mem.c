@@ -91,9 +91,14 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
     //lu_print_maps();
     //lm_print_mem_region( mappee );
     if ((uint64_t)mapping != map_start) {
-      fprintf( stderr, "mapping: %lx, map_start: %lx\t", (uint64_t)mapping, map_start );
-      perror( "Failed to map desired region" );
-      munmap( mapping, map_length );
+      //fprintf( stderr, "mapping: %lx, map_start: %lx\t", (uint64_t)mapping, map_start );
+      fprintf( stderr, "Failed to create mapping at desired address. " );
+      if (mapping  == (void*)-1) {
+        perror( "" );
+      } else {
+        fprintf( stderr, "Please try loading the same program again. \n" );
+        munmap( mapping, map_length );
+      } 
  
       return -1;
     }

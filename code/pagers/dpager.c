@@ -10,7 +10,6 @@
 #include "loader_handler.h"
 #include "loader_mem.h"
 #include "loader_stack.h"
-#include "loader_utils.h"
 
 static Loadable_segment* load_list_head = NULL;
 static Loadee_mgmt* loadee = NULL;

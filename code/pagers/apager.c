@@ -10,7 +10,6 @@
 #include "loader_elf.h"
 #include "loader_mem.h"
 #include "loader_stack.h"
-#include "loader_utils.h"
 
 int
 all_load_segments( Loadee_mgmt* loadee, Elf_info* ei );
@@ -34,7 +33,6 @@ main( int argc, char** argv, char** envp )
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
   struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
 
-  //lu_print_maps();
 
   if (all_load_elf_binary( loadee ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
@@ -45,7 +43,6 @@ main( int argc, char** argv, char** envp )
     fprintf( stderr, "Failed to set up stack\n" );
     return -1;
   }
-  //lu_print_maps();
 
   // Clean up data structures
   close( loadee->fd );
