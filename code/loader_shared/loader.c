@@ -38,7 +38,7 @@ loader_get_new_manager( char** argv )
   new_loadee->bounds.start_addr = (uint64_t)LOAD_START;
   new_loadee->bounds.end_addr = (uint64_t)STACK_BASE - 1;
   new_loadee->sp = (uint64_t)STACK_BASE - 1;  
-  
+
   return new_loadee;
 
 }

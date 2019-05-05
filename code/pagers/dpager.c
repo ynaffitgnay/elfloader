@@ -42,7 +42,7 @@ main( int argc, char** argv, char** envp )
   loadee = loader_get_new_manager( argv );
   
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
-  struct loader_stack_info apager_info = { argc, argv, 0, envp, 19, NULL };
+  struct loader_stack_info dpager_info = { argc, argv, 0, envp, 19, NULL };
 
   //lu_print_maps();
 
@@ -52,7 +52,7 @@ main( int argc, char** argv, char** envp )
   }
 
 
-  if (ls_setup_stack( &apager_info, loadee ) != 0 ) {
+  if (ls_setup_stack( &dpager_info, loadee ) != 0 ) {
     fprintf( stderr, "Failed to set up stack\n" );
     return -1;
   }
@@ -71,10 +71,9 @@ main( int argc, char** argv, char** envp )
   }
 
   // Clean up data structures
-  //close( loadee->fd );  // don't close file b/c still need to perform mappings
+  // don't close file b/c still need to perform mappings
   sp = loadee->sp;
   ept = loadee->entry_pt;
-  //free( loadee );
   
   loader_start_loadee( sp, ept );
     
@@ -103,7 +102,6 @@ demand_get_segments( Elf_info* ei )
     phdr_it++;  
   }
 
-  //lh_print_load_list( load_list_head, 1 );
   return 0;
 } 
 

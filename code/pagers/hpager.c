@@ -1,10 +1,9 @@
-#define _GNU_SOURCE  // to get mmap macrosx
+#define _GNU_SOURCE
 #include <inttypes.h>
+#include <signal.h>
 #include <stdio.h>
 #include <string.h>
-#include <sys/mman.h>
 #include <unistd.h>
-#include <linux/auxvec.h>
 
 #include "loader.h"
 #include "loader_elf.h"
@@ -14,105 +13,21 @@
 #include "loader_utils.h"
 
 static enum heuristics heuristic = 0;
+static Loadable_segment* load_list_head = NULL;
+static Loadee_mgmt* loadee = NULL;
 
-int hybrid_load_segments( Loadee_mgmt* loadee, Elf_info* ei ) {
-  Elf64_Phdr* phdr_it = ei->phdrs;
-  for (int i = 0; i < ei->hdr->e_phnum; ++i) {
-    int prot = 0;
-    int flags = MAP_PRIVATE;
-    if (phdr_it->p_type == PT_LOAD) {
-      struct mappable_mem_region file_backed_seg;
-      // Always map the file backed part
-      file_backed_seg.real.start_addr = phdr_it->p_vaddr;
-      file_backed_seg.length = phdr_it->p_filesz;
-      file_backed_seg.real.end_addr =
-        file_backed_seg.real.start_addr + file_backed_seg.length;
-      file_backed_seg.fd = loadee->fd;
-      file_backed_seg.offset = phdr_it->p_offset;
-      
-      if (phdr_it->p_flags & PF_X) prot = prot | PROT_EXEC;
-      if (phdr_it->p_flags & PF_W) prot = prot | PROT_WRITE;
-      if (phdr_it->p_flags & PF_R) prot = prot | PROT_READ;
+int
+hybrid_load_segments( Elf_info* ei ); 
 
-      flags = flags | MAP_POPULATE;
+int
+hybrid_load_elf_binary( void );
 
-      file_backed_seg.protection = prot;
-      file_backed_seg.flags = flags;
+static void
+hybrid_segv_handler( int sig, siginfo_t* si, void* unused );
 
-      //printf( "Mapping a file-backed segment\n" );
-      if ( lm_map_memregion( &file_backed_seg ) != 0 ) {
-        fprintf( stderr, "Failed to mmap file-backed segment\n" );
-        return -1;
-      }
-
-      // HYBRID SHOULDN'T DO THIS
-      if (phdr_it->p_memsz > phdr_it->p_filesz) {
-        struct mappable_mem_region anonymous_seg;
-        size_t first_section_bytes;
-        size_t total_segment_bytes;
-        size_t last_section_bytes;
-
-        // Map the bss
-        // protection stays the same
-        flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
-
-        first_section_bytes =
-          lm_calc_mmap_length( file_backed_seg.real.start_addr,
-                               file_backed_seg.length );
-        if (first_section_bytes != file_backed_seg.map_size)
-          fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
-        
-        total_segment_bytes =
-          lm_calc_mmap_length( file_backed_seg.real.start_addr,
-                               phdr_it->p_memsz );
-        last_section_bytes = total_segment_bytes - first_section_bytes;
-
-        anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
-        anonymous_seg.real.end_addr = 
-          anonymous_seg.real.start_addr + last_section_bytes;
-        anonymous_seg.length = last_section_bytes;
-        anonymous_seg.protection = file_backed_seg.protection;
-        anonymous_seg.flags = flags;
-        anonymous_seg.fd = -1;
-        anonymous_seg.offset = 0;
-
-        //printf( "Mapping an anonymous segment\n" );
-        if (lm_map_memregion( &anonymous_seg ) != 0) {
-          fprintf( stderr, "Failed to map anonymous segment\n" );
-          return -1;
-        }
-      }
-      
-    }
-    
-    phdr_it++;  
-  }
-
-  return 0;
-}
-
-
-int hybrid_load_elf_binary( Loadee_mgmt* loadee ) { //int argc, char** argv, char** envp ) {
-  if (loadee == NULL) {
-    printf ("Invalid loadee\n");
-    return -1;
-  }
-
-  Elf_info ei;
-  
-  le_get_elfinfo( loadee, &ei );
-
-  if ( hybrid_load_segments( loadee, &ei ) != 0) {
-    fprintf( stderr, "Failed to load segments properly\n" );
-    exit( -1 );
-  }
-
-  free (ei.phdrs);
-  return 0;
-}
-
-int main( int argc, char** argv, char** envp ) {
-  Loadee_mgmt* loadee = NULL;
+int
+main( int argc, char** argv, char** envp ) {
+  struct sigaction sa;
   uint64_t sp;
   uint64_t ept;
   
@@ -142,30 +57,173 @@ int main( int argc, char** argv, char** envp ) {
   
   
   // if number of aux_vectors is incorrect, it'll get reset in le_setup_stack
-  struct loader_stack_info apager_info = { argc - 1, argv + 1, 0, envp, 19, NULL };
+  struct loader_stack_info hpager_info = { argc - 1, argv + 1, 0, envp, 19, NULL };
 
-  //lu_print_maps();
-
-  if (hybrid_load_elf_binary( loadee ) != 0) {
+  if (hybrid_load_elf_binary( ) != 0) {
     fprintf( stderr, "Failed to load elf binary\n" );
     return -1;    
   }
 
-
-  if (ls_setup_stack( &apager_info, loadee ) != 0) {
+  if (ls_setup_stack( &hpager_info, loadee ) != 0) {
     fprintf( stderr, "Failed to set up stack\n" );
     return -1;
   }
-  //lu_print_maps();
+
+  // Set up signal handler
+  sa.sa_flags = SA_SIGINFO;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_sigaction = hybrid_segv_handler;
+
+  if ( sigaction( SIGSEGV, &sa, NULL ) == -1 ) {
+    perror( "Failed to install signal handler" );
+    return -1;
+  }
 
   // Clean up data structures
-  close( loadee->fd );
+  // don't close file b/c still need to perform mappings
   sp = loadee->sp;
   ept = loadee->entry_pt;
-  free( loadee );
   
   loader_start_loadee( sp, ept );
     
+  return 0;  
+}
+
+int
+hybrid_load_segments( Elf_info* ei )
+{
+  Elf64_Phdr* phdr_it = ei->phdrs;
+  Loadable_segment* inserted_segment = NULL;
+  for (int i = 0; i < ei->hdr->e_phnum; ++i) {
+    int prot = 0;
+    int flags = MAP_PRIVATE;
+    if (phdr_it->p_type == PT_LOAD) {
+      struct mappable_mem_region file_backed_seg;
+      // Always map the file backed part
+      file_backed_seg.real.start_addr = phdr_it->p_vaddr;
+      file_backed_seg.length = phdr_it->p_filesz;
+      file_backed_seg.real.end_addr =
+        file_backed_seg.real.start_addr + file_backed_seg.length;
+      file_backed_seg.fd = loadee->fd;
+      file_backed_seg.offset = phdr_it->p_offset;
+      
+      if (phdr_it->p_flags & PF_X) prot = prot | PROT_EXEC;
+      if (phdr_it->p_flags & PF_W) prot = prot | PROT_WRITE;
+      if (phdr_it->p_flags & PF_R) prot = prot | PROT_READ;
+
+      flags = flags | MAP_POPULATE;
+
+      file_backed_seg.protection = prot;
+      file_backed_seg.flags = flags;
+
+      if ( lm_map_memregion( &file_backed_seg ) != 0 ) {
+        fprintf( stderr, "Failed to mmap file-backed segment\n" );
+        return -1;
+      }
+
+      // HYBRID SHOULDN'T DO THIS
+      if (phdr_it->p_memsz > phdr_it->p_filesz) {
+      //struct mappable_mem_region anonymous_seg;
+      //size_t first_section_bytes;
+      //size_t total_segment_bytes;
+      //size_t last_section_bytes;
+      //
+      //// Map the bss
+      //// protection stays the same
+      //flags = MAP_PRIVATE | MAP_ANONYMOUS;  // re-initialize flags
+      //
+      //first_section_bytes =
+      //  lm_calc_mmap_length( file_backed_seg.real.start_addr,
+      //                       file_backed_seg.length );
+      //if (first_section_bytes != file_backed_seg.map_size)
+      //  fprintf( stderr, "Behavior you didn't expect from mapper...\n" );
+      //
+      //total_segment_bytes =
+      //  lm_calc_mmap_length( file_backed_seg.real.start_addr,
+      //                       phdr_it->p_memsz );
+      //last_section_bytes = total_segment_bytes - first_section_bytes;
+      //
+      //anonymous_seg.real.start_addr = file_backed_seg.map.end_addr;
+      //anonymous_seg.real.end_addr = 
+      //  anonymous_seg.real.start_addr + last_section_bytes;
+      //anonymous_seg.length = last_section_bytes;
+      //anonymous_seg.protection = file_backed_seg.protection;
+      //anonymous_seg.flags = flags;
+      //anonymous_seg.fd = -1;
+      //anonymous_seg.offset = 0;
+      //
+      ////printf( "Mapping an anonymous segment\n" );
+      //if (lm_map_memregion( &anonymous_seg ) != 0) {
+      //  fprintf( stderr, "Failed to map anonymous segment\n" );
+      //  return -1;
+      //}
+      //
+        inserted_segment = lh_insert_segment( phdr_it, load_list_head, loadee, 1 );
+        if (!load_list_head) load_list_head = inserted_segment;
+
+        if (inserted_segment == NULL) {
+          fprintf( stderr, "Error inserting load segment into load_list\n" );
+          return -1;
+        }
+      }
+      
+    }
+    
+    phdr_it++;  
+  }
+
+  //lh_print_load_list( load_list_head, 1 );
+
   return 0;
+}
+
+
+int
+hybrid_load_elf_binary( void )
+{
+  if (loadee == NULL) {
+    printf ("Invalid loadee\n");
+    return -1;
+  }
+
+  Elf_info ei;
   
+  le_get_elfinfo( loadee, &ei );
+
+  if ( hybrid_load_segments(  &ei ) != 0) {
+    fprintf( stderr, "Failed to load segments properly\n" );
+    exit( -1 );
+  }
+
+  free (ei.phdrs);
+  return 0;
+}
+
+static void
+hybrid_segv_handler( int sig, siginfo_t* si, void* unused )
+{
+  //printf( "Got SIGSEGV at address: 0x%lx\n", (long) si->si_addr );
+  // Make sure that the faulting address is within bounds
+  if ( lm_validate_address( &(loadee->bounds), (uint64_t)si->si_addr ) != 0 ) {
+    fprintf( stderr, "Segmentation fault caused by invalid address\n" );
+    exit( -1 );
+  }
+
+  switch( heuristic ) {
+    case MAP1: 
+      lh_map_one( si->si_addr, load_list_head );
+      break;
+    case MAP2:
+      lh_map_two( si->si_addr, load_list_head );
+      break;
+    case MAP3:
+      lh_map_three( si->si_addr, load_list_head );
+      break;
+    default:
+      fprintf( stderr, "Unexpected heuristic identifier. Exiting.\n ");
+      exit( -1 );
+  }
+
+  // See the pages that have been mapped
+  //lh_print_load_list( load_list_head, 0 );
 }
