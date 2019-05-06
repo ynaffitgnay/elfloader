@@ -38,13 +38,13 @@ main( int argc, char** argv, char** envp ) {
 
   // Determine which heuristic is desired
   if (strncmp( argv[1], "1", 1 ) == 0) {
-    printf( "Map 1 page\n" );
+    //printf( "Map 1 page\n" );
     heuristic = MAP1; 
   } else if (strncmp( argv[1], "2", 1 ) == 0) {
-    printf( "Map 2 pages\n" );
+    //printf( "Map 2 pages\n" );
     heuristic = MAP2; 
   } else if (strncmp( argv[1], "3", 1 ) == 0) {
-    printf( "Map 3 pages\n" );
+    //printf( "Map 3 pages\n" );
     heuristic = MAP3; 
   } else {
     fprintf( stderr, "Unexpected heuristic choice. Please use either 1, 2, or 3" );

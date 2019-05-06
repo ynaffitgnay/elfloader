@@ -40,12 +40,12 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? ïx86_64 
-utime | 0.000000 | 0.000000 | 0.000000
-stime | 0.000964 | 0.000988 | 0.000024
-ttime | 0.000024 | 0.000024 | 0.000024
-maxrss | 492 | 492 | 0
-minflt | 65 | 66 | 1
+sp: 0x5ffffffff310 capability string? dx86_64 
+utime | 0.000831 | 0.000854 | 0.000023
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 404 | 404 | 0
+minflt | 63 | 64 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -60,11 +60,11 @@ Mem usage !! 563 1 0 206 0 145 0
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
-018d3000-01919000 rw-p 00000000 00:00 0                                  [heap]
+0251e000-02564000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffd7f04a000-7ffd7f06b000 rw-p 00000000 00:00 0                          [stack]
-7ffd7f180000-7ffd7f183000 r--p 00000000 00:00 0                          [vvar]
-7ffd7f183000-7ffd7f185000 r-xp 00000000 00:00 0                          [vdso]
+7ffeed378000-7ffeed399000 rw-p 00000000 00:00 0                          [stack]
+7ffeed3e1000-7ffeed3e4000 r--p 00000000 00:00 0                          [vvar]
+7ffeed3e4000-7ffeed3e6000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -111,12 +111,12 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? x86_64 
-utime | 0.000869 | 0.000895 | 0.000026
+sp: 0x5ffffffff310 capability string? ìx86_64 
+utime | 0.000890 | 0.000915 | 0.000025
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000026 | 0.000026 | 0.000026
-maxrss | 412 | 412 | 0
-minflt | 65 | 66 | 1
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 476 | 476 | 0
+minflt | 63 | 64 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -131,11 +131,11 @@ Mem usage !! 563 1 0 206 0 145 0
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
-01d71000-01db7000 rw-p 00000000 00:00 0                                  [heap]
+02663000-026a9000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffc07cb3000-7ffc07cd4000 rw-p 00000000 00:00 0                          [stack]
-7ffc07cfb000-7ffc07cfe000 r--p 00000000 00:00 0                          [vvar]
-7ffc07cfe000-7ffc07d00000 r-xp 00000000 00:00 0                          [vdso]
+7ffd3e872000-7ffd3e893000 rw-p 00000000 00:00 0                          [stack]
+7ffd3e962000-7ffd3e965000 r--p 00000000 00:00 0                          [vvar]
+7ffd3e965000-7ffd3e967000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -182,12 +182,12 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? Èx86_64 
-utime | 0.000811 | 0.000835 | 0.000024
+sp: 0x5ffffffff310 capability string? x86_64 
+utime | 0.000812 | 0.000836 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
 ttime | 0.000024 | 0.000024 | 0.000024
-maxrss | 428 | 428 | 0
-minflt | 65 | 66 | 1
+maxrss | 488 | 488 | 0
+minflt | 66 | 67 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -199,14 +199,14 @@ Mem usage !! 563 1 0 206 0 145 0
 00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006d0000-006d2000 rw-p 00000000 00:00 0 
-00e30000-00e76000 rw-p 00000000 00:00 0                                  [heap]
+00920000-00966000 rw-p 00000000 00:00 0                                  [heap]
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7fff8157b000-7fff8159c000 rw-p 00000000 00:00 0                          [stack]
-7fff815f0000-7fff815f3000 r--p 00000000 00:00 0                          [vvar]
-7fff815f3000-7fff815f5000 r-xp 00000000 00:00 0                          [vdso]
+7fffe52d3000-7fffe52f4000 rw-p 00000000 00:00 0                          [stack]
+7fffe53b8000-7fffe53bb000 r--p 00000000 00:00 0                          [vvar]
+7fffe53bb000-7fffe53bd000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -253,11 +253,11 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? »x86_64 
-utime | 0.000733 | 0.000758 | 0.000025
+sp: 0x5ffffffff310 capability string? x86_64 
+utime | 0.000764 | 0.000787 | 0.000023
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 412 | 412 | 0
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 472 | 472 | 0
 minflt | 64 | 65 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -271,13 +271,13 @@ Mem usage !! 563 1 0 206 0 145 0
 006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006d0000-006d2000 rw-p 00000000 00:00 0 
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
-011bf000-01205000 rw-p 00000000 00:00 0                                  [heap]
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
+0215d000-021a3000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffd5a7ac000-7ffd5a7cd000 rw-p 00000000 00:00 0                          [stack]
-7ffd5a7d3000-7ffd5a7d6000 r--p 00000000 00:00 0                          [vvar]
-7ffd5a7d6000-7ffd5a7d8000 r-xp 00000000 00:00 0                          [vdso]
+7ffcb5ae8000-7ffcb5b09000 rw-p 00000000 00:00 0                          [stack]
+7ffcb5b68000-7ffcb5b6b000 r--p 00000000 00:00 0                          [vvar]
+7ffcb5b6b000-7ffcb5b6d000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -324,12 +324,12 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? »x86_64 
-utime | 0.000848 | 0.000871 | 0.000023
+sp: 0x5ffffffff310 capability string? Sx86_64 
+utime | 0.000753 | 0.000777 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000023 | 0.000023 | 0.000023
-maxrss | 392 | 392 | 0
-minflt | 64 | 65 | 1
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 476 | 476 | 0
+minflt | 65 | 66 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -344,11 +344,11 @@ Mem usage !! 563 1 0 206 0 145 0
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
-01dcc000-01e12000 rw-p 00000000 00:00 0                                  [heap]
+019a6000-019ec000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffdafa9d000-7ffdafabe000 rw-p 00000000 00:00 0                          [stack]
-7ffdafb26000-7ffdafb29000 r--p 00000000 00:00 0                          [vvar]
-7ffdafb29000-7ffdafb2b000 r-xp 00000000 00:00 0                          [vdso]
+7ffd0facd000-7ffd0faee000 rw-p 00000000 00:00 0                          [stack]
+7ffd0fbec000-7ffd0fbef000 r--p 00000000 00:00 0                          [vvar]
+7ffd0fbef000-7ffd0fbf1000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -395,11 +395,11 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? Êx86_64 
-utime | 0.000717 | 0.000739 | 0.000022
+sp: 0x5ffffffff310 capability string? x86_64 
+utime | 0.000885 | 0.000911 | 0.000026
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000022 | 0.000022 | 0.000022
-maxrss | 412 | 412 | 0
+ttime | 0.000026 | 0.000026 | 0.000026
+maxrss | 488 | 488 | 0
 minflt | 65 | 66 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -412,14 +412,14 @@ Mem usage !! 563 1 0 206 0 145 0
 00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006d0000-006d2000 rw-p 00000000 00:00 0 
-008a9000-008ef000 rw-p 00000000 00:00 0                                  [heap]
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0120c000-01252000 rw-p 00000000 00:00 0                                  [heap]
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffd3adbe000-7ffd3addf000 rw-p 00000000 00:00 0                          [stack]
-7ffd3ade6000-7ffd3ade9000 r--p 00000000 00:00 0                          [vvar]
-7ffd3ade9000-7ffd3adeb000 r-xp 00000000 00:00 0                          [vdso]
+7ffd43167000-7ffd43188000 rw-p 00000000 00:00 0                          [stack]
+7ffd431eb000-7ffd431ee000 r--p 00000000 00:00 0                          [vvar]
+7ffd431ee000-7ffd431f0000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -466,12 +466,12 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? ¢x86_64 
-utime | 0.000736 | 0.000757 | 0.000021
+sp: 0x5ffffffff310 capability string? âx86_64 
+utime | 0.000803 | 0.000827 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000021 | 0.000021 | 0.000021
-maxrss | 476 | 476 | 0
-minflt | 66 | 67 | 1
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 468 | 468 | 0
+minflt | 63 | 64 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -483,14 +483,14 @@ Mem usage !! 563 1 0 206 0 145 0
 00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006d0000-006d2000 rw-p 00000000 00:00 0 
-00e66000-00eac000 rw-p 00000000 00:00 0                                  [heap]
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
+02639000-0267f000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7fffa8038000-7fffa8059000 rw-p 00000000 00:00 0                          [stack]
-7fffa81f9000-7fffa81fc000 r--p 00000000 00:00 0                          [vvar]
-7fffa81fc000-7fffa81fe000 r-xp 00000000 00:00 0                          [vdso]
+7ffc60548000-7ffc60569000 rw-p 00000000 00:00 0                          [stack]
+7ffc605d6000-7ffc605d9000 r--p 00000000 00:00 0                          [vvar]
+7ffc605d9000-7ffc605db000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -537,10 +537,10 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? x86_64 
-utime | 0.000785 | 0.000810 | 0.000025
-stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
+sp: 0x5ffffffff310 capability string? x86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000679 | 0.000700 | 0.000021
+ttime | 0.000021 | 0.000021 | 0.000021
 maxrss | 492 | 492 | 0
 minflt | 66 | 67 | 1
 majflt | 0 | 0 | 0
@@ -557,11 +557,11 @@ Mem usage !! 563 1 0 206 0 145 0
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
-0169a000-016e0000 rw-p 00000000 00:00 0                                  [heap]
+01d3c000-01d82000 rw-p 00000000 00:00 0                                  [heap]
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffff776e000-7ffff778f000 rw-p 00000000 00:00 0                          [stack]
-7ffff77f5000-7ffff77f8000 r--p 00000000 00:00 0                          [vvar]
-7ffff77f8000-7ffff77fa000 r-xp 00000000 00:00 0                          [vdso]
+7ffd6f4b9000-7ffd6f4da000 rw-p 00000000 00:00 0                          [stack]
+7ffd6f5ed000-7ffd6f5f0000 r--p 00000000 00:00 0                          [vvar]
+7ffd6f5f0000-7ffd6f5f2000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 
@@ -569,17 +569,17 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
 ------------------------------------------------------------------
                        ITERATION 8                               
 ------------------------------------------------------------------
-mapping created at address: 0x1000000  offset: 0  size: 847872 (0xcf000)
-mapping created at address: 0x12ce000  offset: 843776  size: 12288 (0x3000)
-mapping created at address: 0x12d1000  offset: N/A   size: 4096 (0x1000)
-mapping created at address: 0x12d2000  offset: N/A   size: 4096 (0x1000)
-argv[0]: 0x5ffffffff020   contents: stack_examiner
-argv[1]: 0x5ffffffff028   contents: (null)
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
 contents: strlen of last value @ envp: 16
 address of final_string_addr + strlen = 5fffffffffef
 address of final_string_addr + strlen + 1 = 5ffffffffff0
 total number of environment variables: 49
-sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
 length of random bytes + cap string: 0
 aux type: 33
 aux type: 16
@@ -587,57 +587,55 @@ aux type: 6
 aux type: 17
 aux type: 3
     phdr addr: 0x1000040
-    aux type: 4
-    aux type: 5
-    aux type: 7
-    aux type: 8
-    aux type: 9
-    aux type: 11
-    aux type: 12
-    aux type: 13
-    aux type: 14
-    aux type: 23
-    aux type: 25
-        rand addr: 0x5ffffffff309
-        aux type: 26
-        aux type: 31
-            exec addr: 0x5ffffffffff0
-             contents: stack_examiner
-                     strlen: 14
-                     aux type: 15
-                         at_plat addr: 0x5ffffffff319
-                              and at_plat val:
-                              sp: 0x5ffffffff300 random bytes:
-                              sp: 0x5ffffffff310 capability string? x86_64
-                              utime | 0.000906 | 0.000932 | 0.000026
-                              stime | 0.000000 | 0.000000 | 0.000000
-                              ttime | 0.000026 | 0.000026 | 0.000026
-                              maxrss | 412 | 412 | 0
-                              minflt | 63 | 64 | 1
-                              majflt | 0 | 0 | 0
-                              inblock | 0 | 0 | 0
-                              oublock | 0 | 0 | 0
-                              nvcsw | 2 | 2 | 0
-                              nivcsw | 0 | 0 | 0
-                              Mem usage !! 563 1 0 206 0 145 0
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? ^x86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000846 | 0.000870 | 0.000024
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 396 | 396 | 0
+minflt | 62 | 63 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
 
 
-00400000-004ce000 r-xp 00000000 00:33 5479175
-/home/tiffanyyang/labs/lab3/code/hpager
-006cd000-006d0000 rw-p 000cd000 00:33 5479175
-/home/tiffanyyang/labs/lab3/code/hpager
-006d0000-006d2000 rw-p 00000000 00:00 0
-01000000-010cf000 r-xp 00000000 00:33 5479178
-/home/tiffanyyang/labs/lab3/code/stack_examiner
-012ce000-012d1000 rw-p 000ce000 00:33 5479178
-/home/tiffanyyang/labs/lab3/code/stack_examiner
-012d1000-012d3000 rw-p 00000000 00:00 0
-019ca000-01a10000 rw-p 00000000 00:00 0                                  [heap]
-5ffffffe0000-600000000000 rw-p 00000000 00:00 0
-7ffd40407000-7ffd40428000 rw-p 00000000 00:00 0                          [stack]
-7ffd404e0000-7ffd404e3000 r--p 00000000 00:00 0                          [vvar]
-7ffd404e3000-7ffd404e5000 r-xp 00000000 00:00 0                          [vdso]
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010df000-01125000 rw-p 00000000 00:00 0                                  [heap]
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fffddff4000-7fffde015000 rw-p 00000000 00:00 0                          [stack]
+7fffde127000-7fffde12a000 r--p 00000000 00:00 0                          [vvar]
+7fffde12a000-7fffde12c000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
 
 ------------------------------------------------------------------
                        ITERATION 9                               
@@ -681,11 +679,11 @@ aux type: 15
     at_plat addr: 0x5ffffffff319
      and at_plat val: 
 sp: 0x5ffffffff300 random bytes:   
-sp: 0x5ffffffff310 capability string? éx86_64 
-utime | 0.000880 | 0.000905 | 0.000025
-stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 472 | 472 | 0
+sp: 0x5ffffffff310 capability string? ,x86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000741 | 0.000763 | 0.000022
+ttime | 0.000022 | 0.000022 | 0.000022
+maxrss | 492 | 492 | 0
 minflt | 64 | 65 | 1
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -698,14 +696,724 @@ Mem usage !! 563 1 0 206 0 145 0
 00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
 006d0000-006d2000 rw-p 00000000 00:00 0 
-00cfa000-00d40000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+02490000-024d6000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffde58a5000-7ffde58c6000 rw-p 00000000 00:00 0                          [stack]
+7ffde59a5000-7ffde59a8000 r--p 00000000 00:00 0                          [vvar]
+7ffde59a8000-7ffde59aa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 10                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? ªx86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000916 | 0.000941 | 0.000025
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 468 | 468 | 0
+minflt | 65 | 66 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+018c0000-01906000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff43df1000-7fff43e12000 rw-p 00000000 00:00 0                          [stack]
+7fff43e73000-7fff43e76000 r--p 00000000 00:00 0                          [vvar]
+7fff43e76000-7fff43e78000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 11                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? Mx86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000861 | 0.000884 | 0.000023
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 492 | 492 | 0
+minflt | 65 | 66 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+022bf000-02305000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc92149000-7ffc9216a000 rw-p 00000000 00:00 0                          [stack]
+7ffc921ce000-7ffc921d1000 r--p 00000000 00:00 0                          [vvar]
+7ffc921d1000-7ffc921d3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 12                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? `x86_64 
+utime | 0.000782 | 0.000806 | 0.000024
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 464 | 464 | 0
+minflt | 63 | 64 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00edc000-00f22000 rw-p 00000000 00:00 0                                  [heap]
 01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
 012d1000-012d3000 rw-p 00000000 00:00 0 
 5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
-7ffcf223c000-7ffcf225d000 rw-p 00000000 00:00 0                          [stack]
-7ffcf23d6000-7ffcf23d9000 r--p 00000000 00:00 0                          [vvar]
-7ffcf23d9000-7ffcf23db000 r-xp 00000000 00:00 0                          [vdso]
+7ffea7ce8000-7ffea7d09000 rw-p 00000000 00:00 0                          [stack]
+7ffea7d11000-7ffea7d14000 r--p 00000000 00:00 0                          [vvar]
+7ffea7d14000-7ffea7d16000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 13                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string?  
+utime | 0.000864 | 0.000889 | 0.000025
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 396 | 396 | 0
+minflt | 64 | 65 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01baa000-01bf0000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff8d6db000-7fff8d6fc000 rw-p 00000000 00:00 0                          [stack]
+7fff8d7a9000-7fff8d7ac000 r--p 00000000 00:00 0                          [vvar]
+7fff8d7ac000-7fff8d7ae000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 14                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? Ex86_64 
+utime | 0.000789 | 0.000812 | 0.000023
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 492 | 492 | 0
+minflt | 65 | 66 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01be6000-01c2c000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffec367a000-7ffec369b000 rw-p 00000000 00:00 0                          [stack]
+7ffec36fe000-7ffec3701000 r--p 00000000 00:00 0                          [vvar]
+7ffec3701000-7ffec3703000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 15                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? ìx86_64 
+utime | 0.000761 | 0.000785 | 0.000024
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 492 | 492 | 0
+minflt | 64 | 65 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01222000-01268000 rw-p 00000000 00:00 0                                  [heap]
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff3e214000-7fff3e235000 rw-p 00000000 00:00 0                          [stack]
+7fff3e295000-7fff3e298000 r--p 00000000 00:00 0                          [vvar]
+7fff3e298000-7fff3e29a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 16                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? x86_64 
+utime | 0.000923 | 0.000953 | 0.000030
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000030 | 0.000030 | 0.000030
+maxrss | 456 | 456 | 0
+minflt | 65 | 66 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00ae0000-00b26000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fffa0aa7000-7fffa0ac8000 rw-p 00000000 00:00 0                          [stack]
+7fffa0be1000-7fffa0be4000 r--p 00000000 00:00 0                          [vvar]
+7fffa0be4000-7fffa0be6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 17                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? mx86_64 
+utime | 0.000815 | 0.000840 | 0.000025
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 404 | 404 | 0
+minflt | 64 | 65 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00e2b000-00e71000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffd4402a000-7ffd4404b000 rw-p 00000000 00:00 0                          [stack]
+7ffd440c4000-7ffd440c7000 r--p 00000000 00:00 0                          [vvar]
+7ffd440c7000-7ffd440c9000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 18                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? Ôx86_64 
+utime | 0.000810 | 0.000835 | 0.000025
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 476 | 476 | 0
+minflt | 63 | 64 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+007b6000-007fc000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc56452000-7ffc56473000 rw-p 00000000 00:00 0                          [stack]
+7ffc564d9000-7ffc564dc000 r--p 00000000 00:00 0                          [vvar]
+7ffc564dc000-7ffc564de000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 19                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 847872 (0xcf000)
+mapping created at address: 0x12ce000	offset: 843776	size: 12288 (0x3000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: 
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? /x86_64 
+utime | 0.000825 | 0.000849 | 0.000024
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 408 | 408 | 0
+minflt | 64 | 65 | 1
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 563 1 0 206 0 145 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479175                            /home/tiffanyyang/labs/lab3/code/hpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cf000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d1000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01d96000-01ddc000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffd42958000-7ffd42979000 rw-p 00000000 00:00 0                          [stack]
+7ffd429d5000-7ffd429d8000 r--p 00000000 00:00 0                          [vvar]
+7ffd429d8000-7ffd429da000 r-xp 00000000 00:00 0                          [vdso]
 ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 
 

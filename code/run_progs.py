@@ -1,36 +1,21 @@
 import subprocess
 import argparse
 import os
+import statistics
 
-path = '.'
-iterations = '10'
-
-parser = argparse.ArgumentParser()
-
-#parser.add_argument('--sp', action='store_true',
-#                    help='run standard perf calcs with malloc')
-#
-#parser.add_argument('--big', action='store_true',
-#                    help='run big speriment')
-#
-#parser.add_argument('--bvm', action='store_true',
-#                    help='run big speriment')
-#
-#parser.add_argument('--bvmbp', action='store_true',
-#                    help='run big speriment')
-#
-#parser.add_argument('-r', '--runs', action='store', dest='r',
-#                    type=int, help='number of trials to run');
-
-#parser.add_argument('-o', '--outfile', action='store',
-#                    dest='o', help='name of output file');
-
+iterations = 20
 pagers = ["./apager", "./dpager", "./hpager 1", "./hpager 2", "./hpager 3"]
 progs = ["stack_examiner", "readmap", "lessmem", "fastmem"]
+#pagers = ["./hpager 1"]
+#progs = ["fastmem"]
 s = '_'
 
-for pager in pagers:        
-    for prog in progs:
+fields_of_interest = ["utime", "stime", "ttime", "maxrss", "minflt"]
+
+stats_dict = {}
+command_order = []
+for prog in progs:
+    for pager in pagers:        
         command = [pager, prog]
         
         filename = pager.strip("./").split()
@@ -38,21 +23,25 @@ for pager in pagers:
         filename = s.join(filename) + ".txt"
         pathname = "./results/" + filename
 
-        print(pathname)
-
-        print(command)
-        
         command = " ".join(command)
+        command_order.append(command)
+
+        these_stats = {}
+        for field in fields_of_interest:
+            these_stats[field] = []
+            
+        these_stats[ "mem" ] = []
         
         with open( pathname, "w+") as tf:
-            for i in range( 10 ):
+            for i in range( iterations ):
                 tf.write("------------------------------------------------------------------\n")
                 tf.write("                       ITERATION %d                               \n" % (i))
                 tf.write("------------------------------------------------------------------\n")
                 
-                print("------------------------------------------------------------------")
-                print("                       ITERATION %d                               " % (i))
-                print("------------------------------------------------------------------")
+                #print("------------------------------------------------------------------")
+                #print("                       ITERATION %d                               " % (i))
+                #print("------------------------------------------------------------------")
+
                 p = subprocess.Popen(command, \
                                      shell=True, \
                                      cwd=os.path.dirname(os.path.realpath(__file__)), \
@@ -63,117 +52,94 @@ for pager in pagers:
                 (std,_) = p.communicate()
                     
                 outstr = std.decode('latin-1')
-                
-                print('%d, %s' % (i, outstr))
-                
-                tf.write(outstr)
-                
+
                 # kill the process
                 p.kill()
-        
+                
+                # Retry when initial fixed mapping fails for additional data point
+                while "Failed" in outstr:
+                    #print( "Trying again" )
+                    p = subprocess.Popen(command, \
+                                         shell=True, \
+                                         cwd=os.path.dirname(os.path.realpath(__file__)), \
+                                         stdout=subprocess.PIPE, \
+                                         stderr=subprocess.STDOUT, \
+                                         preexec_fn=os.setsid)
+                    
+                    (std,_) = p.communicate()
+                    
+                    outstr = std.decode('latin-1')
+                    
+                    # kill the process
+                    p.kill()
 
+                #print("%s" % (outstr))
 
-#if args['big'] == True:
-#    commands = ["-o 0 -b 0 -s 1 -u 17", "-o 0 -b 1 -s 1 -u 17", "-o 0 -b 0 -s 0 -u 17", "-o 0 -b 0 -s 0 -p -u 17", "-o 0 -b 0 -s 0 -p -u 17", "-o 0 -b 0 -s 1 -m -u 17", "-o 0 -b 1 -s 1 -m -u 17", "-o 0 -b 0 -s 0 -m -u 17", "-o 0 -b 0 -s 0 -p -m -u 17", "-o 0 -b 0 -s 0 -p -m -u 17", "-o 1 -b 0 -s 1 -u 17", "-o 1 -b 1 -s 1 -u 17", "-o 1 -b 0 -s 0 -u 17", "-o 1 -b 0 -s 0 -p -u 17", "-o 1 -b 0 -s 0 -p -u 17", "-o 1 -b 0 -s 1 -m -u 17", "-o 1 -b 1 -s 1 -m -u 17", "-o 1 -b 0 -s 0 -m -u 17", "-o 1 -b 0 -s 0 -p -m -u 17", "-o 1 -b 0 -s 0 -p -m -u 17"]
-#    print("num commands: %d" % (len(commands)))
-#    for j in range(args['r'] or 10):        
-#        with open("../outputs/big_out.txt", "a+") as tf:
-#            tf.write("------------------------------------------------------------------\n")
-#            tf.write("                       ITERATION %d                               \n" % (j))
-#            tf.write("------------------------------------------------------------------\n")
-#        print("------------------------------------------------------------------")
-#        print("                       ITERATION %d                               " % (j))
-#        print("------------------------------------------------------------------")
-#        for i in range (len(commands)):
-#            curr_l1 = []
-#            curr_tlb = []
-#            """ Do perf stuff """
-#            command = "./speriment.o " + commands[i] 
-#            p = subprocess.Popen(command, \
-#                                 shell=True, \
-#                                 cwd=os.path.dirname(os.path.realpath(__file__)), \
-#                                 stdout=subprocess.PIPE, \
-#                                 stderr=subprocess.STDOUT, \
-#                                 preexec_fn=os.setsid)
-#            
-#            (std,_) = p.communicate()
-#                
-#            outstr = std.decode('utf-8')
-#        
-#            print('%d, %s' % (i,outstr))
-#            with open("../outputs/big_out.txt", "a+") as tf:
-#                tf.write(outstr)
-#                
-#            # kill the process
-#            p.kill()
-#
-#if args['bvm'] == True:
-#    commands = ["-o 0 -b 0 -s 1 -c 0", "-o 0 -b 1 -s 1 -c 0", "-o 0 -b 0 -s 0 -c 0", "-o 0 -b 0 -s 0 -p -c 0", "-o 0 -b 0 -s 0 -p -c 0", "-o 0 -b 0 -s 1 -m -c 0", "-o 0 -b 1 -s 1 -m -c 0", "-o 0 -b 0 -s 0 -m -c 0", "-o 0 -b 0 -s 0 -p -m -c 0", "-o 0 -b 0 -s 0 -p -m -c 0", "-o 1 -b 0 -s 1 -c 0", "-o 1 -b 1 -s 1 -c 0", "-o 1 -b 0 -s 0 -c 0", "-o 1 -b 0 -s 0 -p -c 0", "-o 1 -b 0 -s 0 -p -c 0", "-o 1 -b 0 -s 1 -m -c 0", "-o 1 -b 1 -s 1 -m -c 0", "-o 1 -b 0 -s 0 -m -c 0", "-o 1 -b 0 -s 0 -p -m -c 0", "-o 1 -b 0 -s 0 -p -m -c 0", "-o 0 -b 0 -s 1 -c 1", "-o 0 -b 1 -s 1 -c 1", "-o 0 -b 0 -s 0 -c 1", "-o 0 -b 0 -s 0 -p -c 1", "-o 0 -b 0 -s 0 -p -c 1", "-o 0 -b 0 -s 1 -m -c 1", "-o 0 -b 1 -s 1 -m -c 1", "-o 0 -b 0 -s 0 -m -c 1", "-o 0 -b 0 -s 0 -p -m -c 1", "-o 0 -b 0 -s 0 -p -m -c 1", "-o 1 -b 0 -s 1 -c 1", "-o 1 -b 1 -s 1 -c 1", "-o 1 -b 0 -s 0 -c 1", "-o 1 -b 0 -s 0 -p -c 1", "-o 1 -b 0 -s 0 -p -c 1", "-o 1 -b 0 -s 1 -m -c 1", "-o 1 -b 1 -s 1 -m -c 1", "-o 1 -b 0 -s 0 -m -c 1", "-o 1 -b 0 -s 0 -p -m -c 1", "-o 1 -b 0 -s 0 -p -m -c 1"]
-#
-#    print("num commands: %d" % (len(commands)))
-#    for j in range(args['r'] or 5):
-#        with open("../outputs/vm_try.txt", "a+") as tf:
-#            tf.write("------------------------------------------------------------------\n")
-#            tf.write("                       ITERATION %d                               \n" % (j))
-#            tf.write("------------------------------------------------------------------\n")
-#
-#        print("------------------------------------------------------------------")
-#        print("                       ITERATION %d                               " % (j))
-#        print("------------------------------------------------------------------")
-#        for i in range (len(commands)):
-#            curr_l1 = []
-#            curr_tlb = []
-#            command = "./speriment.o " + commands[i] 
-#            p = subprocess.Popen(command, \
-#                                 shell=True, \
-#                                 cwd=os.path.dirname(os.path.realpath(__file__)), \
-#                                 stdout=subprocess.PIPE, \
-#                                 stderr=subprocess.STDOUT, \
-#                                 preexec_fn=os.setsid)
-#            
-#            (std,_) = p.communicate()
-#                
-#            outstr = std.decode('utf-8')
-#        
-#            print('%d, %s' % (i,outstr))
-#            with open("../outputs/vm_try.txt", "a+") as tf:
-#                tf.write(outstr)
-#            
-#            # kill the process
-#            p.kill()
-#            
-#if args['bvmbp'] == True:
-#    commands = ["-o 0 -b 0 -s 1 -c 0", "-o 0 -b 1 -s 1 -c 0", "-o 0 -b 0 -s 0 -c 0", "-o 0 -b 0 -s 0 -p -c 0", "-o 0 -b 0 -s 0 -p -c 0", "-o 0 -b 0 -s 1 -m -c 0", "-o 0 -b 1 -s 1 -m -c 0", "-o 0 -b 0 -s 0 -m -c 0", "-o 0 -b 0 -s 0 -p -m -c 0", "-o 0 -b 0 -s 0 -p -m -c 0", "-o 1 -b 0 -s 1 -c 0", "-o 1 -b 1 -s 1 -c 0", "-o 1 -b 0 -s 0 -c 0", "-o 1 -b 0 -s 0 -p -c 0", "-o 1 -b 0 -s 0 -p -c 0", "-o 1 -b 0 -s 1 -m -c 0", "-o 1 -b 1 -s 1 -m -c 0", "-o 1 -b 0 -s 0 -m -c 0", "-o 1 -b 0 -s 0 -p -m -c 0", "-o 1 -b 0 -s 0 -p -m -c 0", "-o 0 -b 0 -s 1 -c 1", "-o 0 -b 1 -s 1 -c 1", "-o 0 -b 0 -s 0 -c 1", "-o 0 -b 0 -s 0 -p -c 1", "-o 0 -b 0 -s 0 -p -c 1", "-o 0 -b 0 -s 1 -m -c 1", "-o 0 -b 1 -s 1 -m -c 1", "-o 0 -b 0 -s 0 -m -c 1", "-o 0 -b 0 -s 0 -p -m -c 1", "-o 0 -b 0 -s 0 -p -m -c 1", "-o 1 -b 0 -s 1 -c 1", "-o 1 -b 1 -s 1 -c 1", "-o 1 -b 0 -s 0 -c 1", "-o 1 -b 0 -s 0 -p -c 1", "-o 1 -b 0 -s 0 -p -c 1", "-o 1 -b 0 -s 1 -m -c 1", "-o 1 -b 1 -s 1 -m -c 1", "-o 1 -b 0 -s 0 -m -c 1", "-o 1 -b 0 -s 0 -p -m -c 1", "-o 1 -b 0 -s 0 -p -m -c 1"]
-#
-#    print("num commands: %d" % (len(commands)))
-#    for j in range(args['r'] or 5):
-#        with open("../outputs/vm_try_bp.txt", "a+") as tf:
-#            tf.write("------------------------------------------------------------------\n")
-#            tf.write("                       ITERATION %d                               \n" % (j))
-#            tf.write("------------------------------------------------------------------\n")
-#        print("------------------------------------------------------------------")
-#        print("                       ITERATION %d                               " % (j))
-#        print("------------------------------------------------------------------")
-#        for i in range (len(commands)):
-#            curr_l1 = []
-#            curr_tlb = []
-#            """ Do perf stuff """
-#            command = "./speriment.o " + commands[i] 
-#            p = subprocess.Popen(command, \
-#                                 shell=True, \
-#                                 cwd=os.path.dirname(os.path.realpath(__file__)), \
-#                                 stdout=subprocess.PIPE, \
-#                                 stderr=subprocess.STDOUT, \
-#                                 preexec_fn=os.setsid)
-#            
-#            (std,_) = p.communicate()
-#                
-#            outstr = std.decode('utf-8')
-#        
-#            print('%d, %s' % (i,outstr))
-#            with open("../outputs/vm_try_bp.txt", "a+") as tf:
-#                tf.write(outstr)
-#            
-#            # kill the process
-#            p.kill()
-#            
+                # Only write the correct value for this iteration to the file
+                tf.write(outstr)
+                
+                for line in outstr.splitlines():
+                    if "mapping created at" in line:
+                        continue
+                    
+                    if "utime" in line:
+                        line = line.split(" | ")
+                        val = float(line[-1])
+                        
+                        these_stats["utime"].append(val)
+                    elif "stime" in line:
+                        line = line.split(" | ")
+                        val = float(line[-1])
+                        
+                        these_stats["stime"].append(val)
+                        
+                    elif "ttime" in line:
+                        line = line.split(" | ")
+                        val = float(line[-1])
+                        
+                        these_stats["ttime"].append(val)
+
+                    elif "minflt" in line:
+                        line = line.split(" | ")
+                        val = float(line[-1])
+                        
+                        these_stats["minflt"].append(val)
+                        
+                    #elif "majflt" in line:
+                    #    line = line.split(" | ")
+                    #    val = float(line[-1])
+                    #    
+                    #    these_stats["majflt"].append(val)
+
+                    elif "maxrss" in line:
+                        line = line.split(" | ")
+                        val = float(line[-2])
+                        
+                        these_stats["maxrss"].append(val)
+
+                    elif "Mem" in line:
+                        line = line.split(" !! ")
+                        line = line[-1].split()
+                        val = float(line[0])
+
+                        these_stats["mem"].append(val)
+            
+        stats_dict[command] = these_stats
+
+print("AVERAGES")
+print("  utime\t\tstime\t\tttime\t\tmaxrss\t\tminflt\tmem")
+for command in command_order:
+    
+    print(command)
+
+    print("  %f\t%f\t%f\t%.2f\t\t%.2f\t%.2f"
+          % (statistics.mean(stats_dict[command]["utime"]),
+             statistics.mean(stats_dict[command]["stime"]),
+             statistics.mean(stats_dict[command]["ttime"]),
+             statistics.mean(stats_dict[command]["maxrss"]),
+             statistics.mean(stats_dict[command]["minflt"]),
+             #statistics.mean(stats_dict[command]["majflt"]),
+             statistics.mean(stats_dict[command]["mem"])))
+
+                    
+                
