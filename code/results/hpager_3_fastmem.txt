@@ -271,34 +271,28 @@ Mem usage !! 659 500 394 206 0 245 0
 ------------------------------------------------------------------
                        ITERATION 5                               
 ------------------------------------------------------------------
-mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
-mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
-mapping created at address: 0x12cd000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12d0000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12d3000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12d6000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12d9000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12dc000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12df000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12e2000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12e5000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12e8000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12eb000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12ee000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12f1000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12f4000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12f7000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12fa000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x12fd000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x1300000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x1303000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x1309000	offset: N/A 	size: 12288 (0x3000)
-mapping created at address: 0x130c000	offset: N/A 	size: 12288 (0x3000)
-Failed to create mapping at desired address. Please try loading the same program again. 
-Error mapping page in
-Failed to map pages
-Segmentation fault (core dumped)
+mapping created at address: 0x1000000  offset: 0  size: 831488 (0xcb000)
+mapping created at address: 0x12ca000  offset: 827392  size: 12288 (0x3000)
+mapping created at address: 0x12cd000  offset: N/A   size: 12288 (0x3000)
+mapping created at address: 0x1332000  offset: N/A   size: 4096 (0x1000)
+mapping created at address: 0x12d0000  offset: N/A   size: 8192 (0x2000)
+mapping created at address: 0x1331000  offset: N/A   size: 4096 (0x1000)
+mapping created at address: 0x12d2000  offset: N/A   size: 8192 (0x2000)
+mapping created at address: 0x1306000  offset: N/A   size: 12288 (0x3000)
+utime | 0.000724 | 0.000749 | 0.000025
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 460 | 460 | 0
+minflt | 71 | 74 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 569 1 0 206 0 155 0
+
+
+
 ------------------------------------------------------------------
                        ITERATION 6                               
 ------------------------------------------------------------------
