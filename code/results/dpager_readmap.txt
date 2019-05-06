@@ -1,0 +1,1789 @@
+------------------------------------------------------------------
+                       ITERATION 0                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+007ca000-0080f000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffeaf552000-7ffeaf573000 rw-p 00000000 00:00 0                          [stack]
+7ffeaf588000-7ffeaf58b000 r--p 00000000 00:00 0                          [vvar]
+7ffeaf58b000-7ffeaf58d000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+007ca000-0080f000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffeaf552000-7ffeaf573000 rw-p 00000000 00:00 0                          [stack]
+7ffeaf588000-7ffeaf58b000 r--p 00000000 00:00 0                          [vvar]
+7ffeaf58b000-7ffeaf58d000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+007ca000-0080f000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /homapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+me/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7efeb373c000-7effb373d000 rw-p 00000000 00:00 0 
+7ffeaf552000-7ffeaf573000 rw-p 00000000 00:00 0                          [stack]
+7ffeaf588000-7ffeaf58b000 r--p 00000000 00:00 0                          [vvar]
+7ffeaf58b000-7ffeaf58d000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.001324 | 0.002067 | 0.000743
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000743 | 0.000743 | 0.000743
+maxrss | 808 | 1068 | 260
+minflt | 92 | 115 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 244 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 1                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01e00000-01e45000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff4fa96000-7fff4fab7000 rw-p 00000000 00:00 0                          [stack]
+7fff4fb97000-7fff4fb9a000 r--p 00000000 00:00 0                          [vvar]
+7fff4fb9a000-7fff4fb9c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01e00000-01e45000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff4fa96000-7fff4fab7000 rw-p 00000000 00:00 0                          [stack]
+7fff4fb97000-7fff4fb9a000 r--p 00000000 00:00 0                          [vvar]
+7fff4fb9a000-7fff4fb9c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01e00000-01e45000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f047cd0e000-7f057cd0f000 rw-p 00000000 00:00 0 
+7fff4fa96000-7fff4fab7000 rw-p 00000000 00:00 0                          [stack]
+7fff4fb97000-7fff4fb9a000 r--p 00000000 00:00 0                          [vvar]
+7fff4fb9a000-7fff4fb9c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001299 | 0.002040 | 0.000741
+ttime | 0.000741 | 0.000741 | 0.000741
+maxrss | 808 | 1068 | 260
+minflt | 91 | 114 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 244 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 2                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f24000-00f69000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffdae374000-7ffdae395000 rw-p 00000000 00:00 0                          [stack]
+7ffdae3bd000-7ffdae3c0000 r--p 00000000 00:00 0                          [vvar]
+7ffdae3c0000-7ffdae3c2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f24000-00f69000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffdae374000-7ffdae395000 rw-p 00000000 00:00 0                          [stack]
+7ffdae3bd000-7ffdae3c0000 r--p 00000000 00:00 0                          [vvar]
+7ffdae3c0000-7ffdae3c2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f24000-00f69000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /homapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+me/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f9bc34e3000-7f9cc34e4000 rw-p 00000000 00:00 0 
+7ffdae374000-7ffdae395000 rw-p 00000000 00:00 0                          [stack]
+7ffdae3bd000-7ffdae3c0000 r--p 00000000 00:00 0                          [vvar]
+7ffdae3c0000-7ffdae3c2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.001223 | 0.001906 | 0.000683
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000683 | 0.000683 | 0.000683
+maxrss | 808 | 1068 | 260
+minflt | 93 | 116 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 243 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 3                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0218e000-021d3000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff0fa0c000-7fff0fa2d000 rw-p 00000000 00:00 0                          [stack]
+7fff0fa5f000-7fff0fa62000 r--p 00000000 00:00 0                          [vvar]
+7fff0fa62000-7fff0fa64000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0218e000-021d3000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff0fa0c000-7fff0fa2d000 rw-p 00000000 00:00 0                          [stack]
+7fff0fa5f000-7fff0fa62000 r--p 00000000 00:00 0                          [vvar]
+7fff0fa62000-7fff0fa64000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0218e000-021d3000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f04d9b37000-7f05d9b38000 rw-p 00000000 00:00 0 
+7fff0fa0c000-7fff0fa2d000 rw-p 00000000 00:00 0                          [stack]
+7fff0fa5f000-7fff0fa62000 r--p 00000000 00:00 0                          [vvar]
+7fff0fa62000-7fff0fa64000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001325 | 0.002066 | 0.000741
+ttime | 0.000741 | 0.000741 | 0.000741
+maxrss | 808 | 1068 | 260
+minflt | 91 | 114 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 244 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 4                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01ddb000-01e20000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc832ef000-7ffc83310000 rw-p 00000000 00:00 0                          [stack]
+7ffc833ed000-7ffc833f0000 r--p 00000000 00:00 0                          [vvar]
+7ffc833f0000-7ffc833f2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01ddb000-01e20000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc832ef000-7ffc83310000 rw-p 00000000 00:00 0                          [stack]
+7ffc833ed000-7ffc833f0000 r--p 00000000 00:00 0                          [vvar]
+7ffc833f0000-7ffc833f2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01ddb000-01e20000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f0f5a9b1000-7f105a9b2000 rw-p 00000000 00:00 0 
+7ffc832ef000-7ffc83310000 rw-p 00000000 00:00 0                          [stack]
+7ffc833ed000-7ffc833f0000 r--p 00000000 00:00 0                          [vvar]
+7ffc833f0000-7ffc833f2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.001303 | 0.001303 | 0.000000
+stime | 0.000000 | 0.000777 | 0.000777
+ttime | 0.000777 | 0.000777 | 0.000777
+maxrss | 808 | 1068 | 260
+minflt | 90 | 113 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 244 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 5                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+016c6000-0170b000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffdfbfaa000-7ffdfbfcb000 rw-p 00000000 00:00 0                          [stack]
+7ffdfbff1000-7ffdfbff4000 r--p 00000000 00:00 0                          [vvar]
+7ffdfbff4000-7ffdfbff6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+016c6000-0170b000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffdfbfaa000-7ffdfbfcb000 rw-p 00000000 00:00 0                          [stack]
+7ffdfbff1000-7ffdfbff4000 r--p 00000000 00:00 0                          [vvar]
+7ffdfbff4000-7ffdfbff6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+016c6000-0170b000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7feef7c8f000-7feff7c90000 rw-p 00000000 00:00 0 
+7ffdfbfaa000-7ffdfbfcb000 rw-p 00000000 00:00 0                          [stack]
+7ffdfbff1000-7ffdfbff4000 r--p 00000000 00:00 0                          [vvar]
+7ffdfbff4000-7ffdfbff6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.001268 | 0.002005 | 0.000737
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000737 | 0.000737 | 0.000737
+maxrss | 812 | 1072 | 260
+minflt | 93 | 116 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 268 243 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 6                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bb000-01100000 rw-p 00000000 00:00 0                                  [heap]
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fffc8c5a000-7fffc8c7b000 rw-p 00000000 00:00 0                          [stack]
+7fffc8d1a000-7fffc8d1d000 r--p 00000000 00:00 0                          [vvar]
+7fffc8d1d000-7fffc8d1f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bb000-01100000 rw-p 00000000 00:00 0                                  [heap]
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fffc8c5a000-7fffc8c7b000 rw-p 00000000 00:00 0                          [stack]
+7fffc8d1a000-7fffc8d1d000 r--p 00000000 00:00 0                          [vvar]
+7fffc8d1d000-7fffc8d1f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+Segmentation fault caused by invalid address
+------------------------------------------------------------------
+                       ITERATION 7                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+Segmentation fault caused by invalid address
+------------------------------------------------------------------
+                       ITERATION 8                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0181d000-01862000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff29140000-7fff29161000 rw-p 00000000 00:00 0                          [stack]
+7fff291be000-7fff291c1000 r--p 00000000 00:00 0                          [vvar]
+7fff291c1000-7fff291c3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0181d000-01862000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff29140000-7fff29161000 rw-p 00000000 00:00 0                          [stack]
+7fff291be000-7fff291c1000 r--p 00000000 00:00 0                          [vvar]
+7fff291c1000-7fff291c3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+0181d000-01862000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f87a5523000-7f88a5524000 rw-p 00000000 00:00 0 
+7fff29140000-7fff29161000 rw-p 00000000 00:00 0                          [stack]
+7fff291be000-7fff291c1000 r--p 00000000 00:00 0                          [vvar]
+7fff291c1000-7fff291c3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.001256 | 0.001997 | 0.000741
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000741 | 0.000741 | 0.000741
+maxrss | 808 | 1068 | 260
+minflt | 92 | 115 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 244 206 0 1048721 0
+
+
+------------------------------------------------------------------
+                       ITERATION 9                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12cc000	offset: 835584	size: 4096 (0x1000)
+mapping created at address: 0x12ca000	offset: 827392	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x106b000	offset: 438272	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cb000	offset: 831488	size: 4096 (0x1000)
+mapping created at address: 0x1092000	offset: 598016	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1041000	offset: 266240	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x1071000	offset: 462848	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x103e000	offset: 253952	size: 4096 (0x1000)
+mapping created at address: 0x1072000	offset: 466944	size: 4096 (0x1000)
+mapping created at address: 0x101e000	offset: 122880	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1074000	offset: 475136	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x10b6000	offset: 745472	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x1066000	offset: 417792	size: 4096 (0x1000)
+mapping created at address: 0x1050000	offset: 327680	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x109e000	offset: 647168	size: 4096 (0x1000)
+mapping created at address: 0x10bf000	offset: 782336	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a4000	offset: 671744	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x10a1000	offset: 659456	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x1012000	offset: 73728	size: 4096 (0x1000)
+mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+mapping created at address: 0x1064000	offset: 409600	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x1055000	offset: 348160	size: 4096 (0x1000)
+mapping created at address: 0x1056000	offset: 352256	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10b4000	offset: 737280	size: 4096 (0x1000)
+mapping created at address: 0x1058000	offset: 360448	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01017000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-0101a000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0101b000-01021000 r-xp 0001b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+015a5000-015ea000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc84e1c000-7ffc84e3d000 rw-p 00000000 00:00 0                          [stack]
+7ffc84e46000-7ffc84e49000 r--p 00000000 00:00 0                          [vvar]
+7ffc84e49000-7ffc84e4b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+015a5000-015ea000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc84e1c000-7ffc84e3d000 rw-p 00000000 00:00 0                          [stack]
+7ffc84e46000-7ffc84e49000 r--p 00000000 00:00 0                          [vvar]
+7ffc84e49000-7ffc84e4b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01002000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0100e000-01011000 r-xp 0000e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01012000-01018000 r-xp 00012000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01019000-01021000 r-xp 00019000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01022000-01023000 r-xp 00022000 00:33 5479mapping created at address: 0x10b3000	offset: 733184	size: 4096 (0x1000)
+mapping created at address: 0x1053000	offset: 339968	size: 4096 (0x1000)
+mapping created at address: 0x109f000	offset: 651264	size: 4096 (0x1000)
+176                            /home/tiffanyyang/labs/lab3/code/readmap
+01024000-01025000 r-xp 00024000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01027000-01029000 r-xp 00027000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0102d000-0102f000 r-xp 0002d000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0103e000-01042000 r-xp 0003e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01043000-01046000 r-xp 00043000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01050000-01051000 r-xp 00050000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01055000-01059000 r-xp 00055000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01064000-01065000 r-xp 00064000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01066000-01067000 r-xp 00066000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106b000-0106c000 r-xp 0006b000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0106f000-01070000 r-xp 0006f000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01071000-01076000 r-xp 00071000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+01092000-01093000 r-xp 00092000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+0109e000-0109f000 r-xp 0009e000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010a1000-010a8000 r-xp 000a1000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b4000-010b5000 r-xp 000b4000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010b6000-010b9000 r-xp 000b6000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+010bf000-010c0000 r-xp 000bf000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cc000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cc000-012cd000 rw-p 000cc000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+015a5000-015ea000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f0b92459000-7f0c9245a000 rw-p 00000000 00:00 0 
+7ffc84e1c000-7ffc84e3d000 rw-p 00000000 00:00 0                          [stack]
+7ffc84e46000-7ffc84e49000 r--p 00000000 00:00 0                          [vvar]
+7ffc84e49000-7ffc84e4b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001384 | 0.002129 | 0.000745
+ttime | 0.000745 | 0.000745 | 0.000745
+maxrss | 808 | 1068 | 260
+minflt | 94 | 117 | 23
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1048994 267 243 206 0 1048721 0
+
+

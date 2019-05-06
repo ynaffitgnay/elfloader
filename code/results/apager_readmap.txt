@@ -1,0 +1,670 @@
+------------------------------------------------------------------
+                       ITERATION 0                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01813000-01859000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffe9be05000-7ffe9be26000 rw-p 00000000 00:00 0                          [stack]
+7ffe9bfaa000-7ffe9bfad000 r--p 00000000 00:00 0                          [vvar]
+7ffe9bfad000-7ffe9bfaf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01813000-01859000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffe9be05000-7ffe9be26000 rw-p 00000000 00:00 0                          [stack]
+7ffe9bfaa000-7ffe9bfad000 r--p 00000000 00:00 0                          [vvar]
+7ffe9bfad000-7ffe9bfaf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01813000-01859000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f1b4a77a000-7f1c4a77b000 rw-p 00000000 00:00 0 
+7ffe9be05000-7ffe9be26000 rw-p 00000000 00:00 0                          [stack]
+7ffe9bfaa000-7ffe9bfad000 r--p 00000000 00:00 0                          [vvar]
+7ffe9bfad000-7ffe9bfaf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000879 | 0.001090 | 0.000211
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000211 | 0.000211 | 0.000211
+maxrss | 488 | 488 | 0
+minflt | 63 | 66 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 1                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020cb000-02111000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffca1ae1000-7ffca1b02000 rw-p 00000000 00:00 0                          [stack]
+7ffca1b11000-7ffca1b14000 r--p 00000000 00:00 0                          [vvar]
+7ffca1b14000-7ffca1b16000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020cb000-02111000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffca1ae1000-7ffca1b02000 rw-p 00000000 00:00 0                          [stack]
+7ffca1b11000-7ffca1b14000 r--p 00000000 00:00 0                          [vvar]
+7ffca1b14000-7ffca1b16000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020cb000-02111000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fa471c82000-7fa571c83000 rw-p 00000000 00:00 0 
+7ffca1ae1000-7ffca1b02000 rw-p 00000000 00:00 0                          [stack]
+7ffca1b11000-7ffca1b14000 r--p 00000000 00:00 0                          [vvar]
+7ffca1b14000-7ffca1b16000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000795 | 0.001000 | 0.000205
+ttime | 0.000205 | 0.000205 | 0.000205
+maxrss | 492 | 492 | 0
+minflt | 64 | 67 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 2                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f03000-00f49000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffff8cc1000-7ffff8ce2000 rw-p 00000000 00:00 0                          [stack]
+7ffff8cf7000-7ffff8cfa000 r--p 00000000 00:00 0                          [vvar]
+7ffff8cfa000-7ffff8cfc000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f03000-00f49000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffff8cc1000-7ffff8ce2000 rw-p 00000000 00:00 0                          [stack]
+7ffff8cf7000-7ffff8cfa000 r--p 00000000 00:00 0                          [vvar]
+7ffff8cfa000-7ffff8cfc000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00f03000-00f49000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f8a6d04b000-7f8b6d04c000 rw-p 00000000 00:00 0 
+7ffff8cc1000-7ffff8ce2000 rw-p 00000000 00:00 0                          [stack]
+7ffff8cf7000-7ffff8cfa000 r--p 00000000 00:00 0                          [vvar]
+7ffff8cfa000-7ffff8cfc000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000831 | 0.001029 | 0.000198
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000198 | 0.000198 | 0.000198
+maxrss | 472 | 472 | 0
+minflt | 64 | 67 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 3                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+023c1000-02407000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc53ed0000-7ffc53ef1000 rw-p 00000000 00:00 0                          [stack]
+7ffc53f23000-7ffc53f26000 r--p 00000000 00:00 0                          [vvar]
+7ffc53f26000-7ffc53f28000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+023c1000-02407000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc53ed0000-7ffc53ef1000 rw-p 00000000 00:00 0                          [stack]
+7ffc53f23000-7ffc53f26000 r--p 00000000 00:00 0                          [vvar]
+7ffc53f26000-7ffc53f28000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+023c1000-02407000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f7d4301e000-7f7e4301f000 rw-p 00000000 00:00 0 
+7ffc53ed0000-7ffc53ef1000 rw-p 00000000 00:00 0                          [stack]
+7ffc53f23000-7ffc53f26000 r--p 00000000 00:00 0                          [vvar]
+7ffc53f26000-7ffc53f28000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000802 | 0.001001 | 0.000199
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000199 | 0.000199 | 0.000199
+maxrss | 460 | 460 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 4                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+014b4000-014fa000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffd735d9000-7ffd735fa000 rw-p 00000000 00:00 0                          [stack]
+7ffd735fb000-7ffd735fe000 r--p 00000000 00:00 0                          [vvar]
+7ffd735fe000-7ffd73600000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+014b4000-014fa000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffd735d9000-7ffd735fa000 rw-p 00000000 00:00 0                          [stack]
+7ffd735fb000-7ffd735fe000 r--p 00000000 00:00 0                          [vvar]
+7ffd735fe000-7ffd73600000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+014b4000-014fa000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ff0ba2cb000-7ff1ba2cc000 rw-p 00000000 00:00 0 
+7ffd735d9000-7ffd735fa000 rw-p 00000000 00:00 0                          [stack]
+7ffd735fb000-7ffd735fe000 r--p 00000000 00:00 0                          [vvar]
+7ffd735fe000-7ffd73600000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000837 | 0.001032 | 0.000195
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000195 | 0.000195 | 0.000195
+maxrss | 412 | 412 | 0
+minflt | 61 | 64 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 5                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01fb9000-01fff000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffef3837000-7ffef3858000 rw-p 00000000 00:00 0                          [stack]
+7ffef39eb000-7ffef39ee000 r--p 00000000 00:00 0                          [vvar]
+7ffef39ee000-7ffef39f0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01fb9000-01fff000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffef3837000-7ffef3858000 rw-p 00000000 00:00 0                          [stack]
+7ffef39eb000-7ffef39ee000 r--p 00000000 00:00 0                          [vvar]
+7ffef39ee000-7ffef39f0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01fb9000-01fff000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fda45382000-7fdb45383000 rw-p 00000000 00:00 0 
+7ffef3837000-7ffef3858000 rw-p 00000000 00:00 0                          [stack]
+7ffef39eb000-7ffef39ee000 r--p 00000000 00:00 0                          [vvar]
+7ffef39ee000-7ffef39f0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000771 | 0.000966 | 0.000195
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000195 | 0.000195 | 0.000195
+maxrss | 476 | 476 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 6                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00df0000-00e36000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffcc6471000-7ffcc6492000 rw-p 00000000 00:00 0                          [stack]
+7ffcc6545000-7ffcc6548000 r--p 00000000 00:00 0                          [vvar]
+7ffcc6548000-7ffcc654a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00df0000-00e36000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffcc6471000-7ffcc6492000 rw-p 00000000 00:00 0                          [stack]
+7ffcc6545000-7ffcc6548000 r--p 00000000 00:00 0                          [vvar]
+7ffcc6548000-7ffcc654a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00df0000-00e36000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f22616a8000-7f23616a9000 rw-p 00000000 00:00 0 
+7ffcc6471000-7ffcc6492000 rw-p 00000000 00:00 0                          [stack]
+7ffcc6545000-7ffcc6548000 r--p 00000000 00:00 0                          [vvar]
+7ffcc6548000-7ffcc654a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000768 | 0.000964 | 0.000196
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000196 | 0.000196 | 0.000196
+maxrss | 460 | 460 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 7                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00be0000-00c26000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc699a8000-7ffc699c9000 rw-p 00000000 00:00 0                          [stack]
+7ffc699e5000-7ffc699e8000 r--p 00000000 00:00 0                          [vvar]
+7ffc699e8000-7ffc699ea000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00be0000-00c26000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc699a8000-7ffc699c9000 rw-p 00000000 00:00 0                          [stack]
+7ffc699e5000-7ffc699e8000 r--p 00000000 00:00 0                          [vvar]
+7ffc699e8000-7ffc699ea000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00be0000-00c26000 rw-p 00000000 00:00 0                                  [heap]
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fd6371e3000-7fd7371e4000 rw-p 00000000 00:00 0 
+7ffc699a8000-7ffc699c9000 rw-p 00000000 00:00 0                          [stack]
+7ffc699e5000-7ffc699e8000 r--p 00000000 00:00 0                          [vvar]
+7ffc699e8000-7ffc699ea000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000896 | 0.000896 | 0.000000
+stime | 0.000000 | 0.000224 | 0.000224
+ttime | 0.000224 | 0.000224 | 0.000224
+maxrss | 476 | 476 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 8                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01695000-016db000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffcf73d9000-7ffcf73fa000 rw-p 00000000 00:00 0                          [stack]
+7ffcf73fb000-7ffcf73fe000 r--p 00000000 00:00 0                          [vvar]
+7ffcf73fe000-7ffcf7400000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01695000-016db000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffcf73d9000-7ffcf73fa000 rw-p 00000000 00:00 0                          [stack]
+7ffcf73fb000-7ffcf73fe000 r--p 00000000 00:00 0                          [vvar]
+7ffcf73fe000-7ffcf7400000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+01695000-016db000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7f2db5cab000-7f2eb5cac000 rw-p 00000000 00:00 0 
+7ffcf73d9000-7ffcf73fa000 rw-p 00000000 00:00 0                          [stack]
+7ffcf73fb000-7ffcf73fe000 r--p 00000000 00:00 0                          [vvar]
+7ffcf73fe000-7ffcf7400000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000833 | 0.001030 | 0.000197
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000197 | 0.000197 | 0.000197
+maxrss | 456 | 456 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+
+------------------------------------------------------------------
+                       ITERATION 9                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 8192 (0x2000)
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020b0000-020f6000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff587fa000-7fff5881b000 rw-p 00000000 00:00 0                          [stack]
+7fff5894f000-7fff58952000 r--p 00000000 00:00 0                          [vvar]
+7fff58952000-7fff58954000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing small (less than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020b0000-020f6000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff587fa000-7fff5881b000 rw-p 00000000 00:00 0                          [stack]
+7fff5894f000-7fff58952000 r--p 00000000 00:00 0                          [vvar]
+7fff58952000-7fff58954000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+mallocing large (greater than 1GB) region.
+00400000-004ce000 r-xp 00000000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006cd000-006d0000 rw-p 000cd000 00:33 5479173                            /home/tiffanyyang/labs/lab3/code/apager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-010cb000 r-xp 00000000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012ca000-012cd000 rw-p 000ca000 00:33 5479176                            /home/tiffanyyang/labs/lab3/code/readmap
+012cd000-012cf000 rw-p 00000000 00:00 0 
+020b0000-020f6000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fde29390000-7fdf29391000 rw-p 00000000 00:00 0 
+7fff587fa000-7fff5881b000 rw-p 00000000 00:00 0                          [stack]
+7fff5894f000-7fff58952000 r--p 00000000 00:00 0                          [vvar]
+7fff58952000-7fff58954000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.000823 | 0.001026 | 0.000203
+ttime | 0.000203 | 0.000203 | 0.000203
+maxrss | 472 | 472 | 0
+minflt | 62 | 65 | 3
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 1049136 1 0 206 0 1048722 0
+
+

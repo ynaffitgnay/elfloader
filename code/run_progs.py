@@ -26,51 +26,53 @@ parser = argparse.ArgumentParser()
 #                    dest='o', help='name of output file');
 
 pagers = ["./apager", "./dpager", "./hpager 1", "./hpager 2", "./hpager 3"]
-progs = ["stack_examiner", "read_map", "less_mem", "fast_mem"]
-heuristics = [1,2,3]
-
+progs = ["stack_examiner", "readmap", "lessmem", "fastmem"]
+s = '_'
 
 for pager in pagers:        
     for prog in progs:
+        command = [pager, prog]
+        
+        filename = pager.strip("./").split()
+        filename.append(prog)
+        filename = s.join(filename) + ".txt"
+        pathname = "./results/" + filename
+
+        print(pathname)
+
+        print(command)
+        
+        command = " ".join(command)
+        
+        with open( pathname, "w+") as tf:
+            for i in range( 10 ):
+                tf.write("------------------------------------------------------------------\n")
+                tf.write("                       ITERATION %d                               \n" % (i))
+                tf.write("------------------------------------------------------------------\n")
+                
+                print("------------------------------------------------------------------")
+                print("                       ITERATION %d                               " % (i))
+                print("------------------------------------------------------------------")
+                p = subprocess.Popen(command, \
+                                     shell=True, \
+                                     cwd=os.path.dirname(os.path.realpath(__file__)), \
+                                     stdout=subprocess.PIPE, \
+                                     stderr=subprocess.STDOUT, \
+                                     preexec_fn=os.setsid)
+                
+                (std,_) = p.communicate()
+                    
+                outstr = std.decode('latin-1')
+                
+                print('%d, %s' % (i, outstr))
+                
+                tf.write(outstr)
+                
+                # kill the process
+                p.kill()
         
 
-#
-#
-#    # Run do_perf_stuff 10 times
-#    for i in range (args['r'] or 10):
-#        with open("../outputs/malloc_perf.txt", "a+") as tf:
-#            tf.write("------------------------------------------------------------------\n")
-#            tf.write("                       ITERATION %d                               \n" % (i))
-#            tf.write("------------------------------------------------------------------\n")
-#
-#        print("------------------------------------------------------------------")
-#        print("                       ITERATION %d                               " % (i))
-#        print("------------------------------------------------------------------")
-#        curr_l1 = []
-#        curr_tlb = []
-#        l1_getrusage = []
-#        tlb_getrusage =[]
-#        """ Do perf stuff """
-#        command = "./speriment.o -a 1"
-#        p = subprocess.Popen(command, \
-#                             shell=True, \
-#                             cwd=os.path.dirname(os.path.realpath(__file__)), \
-#                             stdout=subprocess.PIPE, \
-#                             stderr=subprocess.STDOUT, \
-#                             preexec_fn=os.setsid)
-#        
-#        (std,_) = p.communicate()
-#            
-#        outstr = std.decode('utf-8')
-#
-#        print('%d, %s' % (i, outstr))
-#        with open("../outputs/malloc_perf.txt", "a+") as tf:
-#            tf.write(outstr)
-#
-#        # kill the process
-#        p.kill()
-#        
-#
+
 #if args['big'] == True:
 #    commands = ["-o 0 -b 0 -s 1 -u 17", "-o 0 -b 1 -s 1 -u 17", "-o 0 -b 0 -s 0 -u 17", "-o 0 -b 0 -s 0 -p -u 17", "-o 0 -b 0 -s 0 -p -u 17", "-o 0 -b 0 -s 1 -m -u 17", "-o 0 -b 1 -s 1 -m -u 17", "-o 0 -b 0 -s 0 -m -u 17", "-o 0 -b 0 -s 0 -p -m -u 17", "-o 0 -b 0 -s 0 -p -m -u 17", "-o 1 -b 0 -s 1 -u 17", "-o 1 -b 1 -s 1 -u 17", "-o 1 -b 0 -s 0 -u 17", "-o 1 -b 0 -s 0 -p -u 17", "-o 1 -b 0 -s 0 -p -u 17", "-o 1 -b 0 -s 1 -m -u 17", "-o 1 -b 1 -s 1 -m -u 17", "-o 1 -b 0 -s 0 -m -u 17", "-o 1 -b 0 -s 0 -p -m -u 17", "-o 1 -b 0 -s 0 -p -m -u 17"]
 #    print("num commands: %d" % (len(commands)))
