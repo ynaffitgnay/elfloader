@@ -30,10 +30,13 @@ lm_calc_mmap_length( uint64_t start_addr, size_t size )
 
   end_addr = start_addr + (uint64_t)size;
   
-  num_pages =
-    (size / PG_SIZE) + ((start_addr % PG_SIZE) && 1) + ((end_addr % PG_SIZE) && 1);
+  num_pages = ((PG_RND_DOWN( end_addr ) - PG_RND_DOWN( start_addr )) / PG_SIZE)
+    + ((end_addr % PG_SIZE) && 1);
+
 
   num_bytes = num_pages * PG_SIZE;
+
+  
   
   return num_bytes;
 }
@@ -79,6 +82,8 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
  
       return -1;
     }
+    
+    //lm_print_mem_region( mappee );
 
     // Can't memset unwritable region
     if (mappee->protection & PROT_WRITE) {
@@ -86,6 +91,7 @@ lm_define_memregion( struct mappable_mem_region* mappee, int create_mapping )
 
       if (leftover_bytes >= PG_SIZE) {
         fprintf(stderr, "\n\n     CALCULATING TOTAL NUMBER OF NECESSARY BYTES INCORRECTLY  \n\n");
+        
         return -1;
       }
 
