@@ -1,0 +1,1641 @@
+------------------------------------------------------------------
+                       ITERATION 0                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? -©PÉÐgx86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001358 | 0.001628 | 0.000270
+ttime | 0.000270 | 0.000270 | 0.000270
+maxrss | 812 | 1072 | 260
+minflt | 93 | 113 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 268 243 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00e4c000-00e91000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-01mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+0ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffe9cfea000-7ffe9d00b000 rw-p 00000000 00:00 0                          [stack]
+7ffe9d119000-7ffe9d11c000 r--p 00000000 00:00 0                          [vvar]
+7ffe9d11c000-7ffe9d11e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 1                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? nd=?Ux86_64 
+utime | 0.001321 | 0.001590 | 0.000269
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000269 | 0.000269 | 0.000269
+maxrss | 808 | 1068 | 260
+minflt | 91 | 111 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 267 243 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00ae3000-00b28000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-01mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+0ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffec6a6d000-7ffec6a8e000 rw-p 00000000 00:00 0                          [stack]
+7ffec6ade000-7ffec6ae1000 r--p 00000000 00:00 0                          [vvar]
+7ffec6ae1000-7ffec6ae3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 2                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? ¢Áã×i,x86_64 
+utime | 0.001276 | 0.001540 | 0.000264
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000264 | 0.000264 | 0.000264
+maxrss | 812 | 1072 | 260
+minflt | 93 | 113 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 268 242 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01749000-0178e000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffebe16e000-7ffebe18f000 rw-p 00000000 00:00 0                          [stack]
+7ffebe1d9000-7ffebe1dc000 r--p 00000000 00:00 0                          [vvar]
+7ffebe1dc000-7ffebe1de000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 3                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? X@|·éÓUx86_64 
+utime | 0.001283 | 0.001548 | 0.000265
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000265 | 0.000265 | 0.000265
+maxrss | 808 | 1068 | 260
+minflt | 91 | 111 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 267 242 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+0144e000-01493000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffee2c27000-7ffee2c48000 rw-p 00000000 00:00 0                          [stack]
+7ffee2cfe000-7ffee2d01000 r--p 00000000 00:00 0                          [vvar]
+7ffee2d01000-7ffee2d03000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 4                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? jì«y¾x86_64 
+utime | 0.001241 | 0.001507 | 0.000266
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000266 | 0.000266 | 0.000266
+maxrss | 812 | 1072 | 260
+minflt | 91 | 111 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 268 243 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+00891000-008d6000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-01mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+0ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffe2fc38000-7ffe2fc59000 rw-p 00000000 00:00 0                          [stack]
+7ffe2fc93000-7ffe2fc96000 r--p 00000000 00:00 0                          [vvar]
+7ffe2fc96000-7ffe2fc98000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 5                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? Çûi¦8Xx86_64 
+utime | 0.001397 | 0.001725 | 0.000328
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000328 | 0.000328 | 0.000328
+maxrss | 812 | 1072 | 260
+minflt | 93 | 113 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 268 242 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+016e2000-01727000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fff4bc71000-7fff4bc92000 rw-p 00000000 00:00 0                          [stack]
+7fff4bd04000-7fff4bd07000 r--p 00000000 00:00 0                          [vvar]
+7fff4bd07000-7fff4bd09000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 6                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? Ï´¡5/ü¶Dx86_64 
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001169 | 0.001403 | 0.000234
+ttime | 0.000234 | 0.000234 | 0.000234
+maxrss | 812 | 1072 | 260
+minflt | 94 | 114 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 268 243 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01ad4000-01b19000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffeffa8e000-7ffeffaaf000 rw-p 00000000 00:00 0                          [stack]
+7ffeffbb0000-7ffeffbb3000 r--p 00000000 00:00 0                          [vvar]
+7ffeffbb3000-7ffeffbb5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 7                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? rPÃ6e÷ä±x86_64 
+utime | 0.001325 | 0.001325 | 0.000000
+stime | 0.000000 | 0.000310 | 0.000310
+ttime | 0.000310 | 0.000310 | 0.000310
+maxrss | 808 | 1068 | 260
+minflt | 92 | 112 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 1 | 1
+Mem usage !! 416 267 243 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+01619000-0165e000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffc0721d000-7ffc0723e000 rw-p 00000000 00:00 0                          [stack]
+7ffc07329000-7ffc0732c000 r--p 00000000 00:00 0                          [vvar]
+7ffc0732c000-7ffc0732e000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 8                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? ±Ë§¶WïCx86_64 
+utime | 0.001223 | 0.001492 | 0.000269
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000269 | 0.000269 | 0.000269
+maxrss | 808 | 1068 | 260
+minflt | 92 | 112 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 267 242 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+006de000-00723000 rw-p 00000000 00:00 0                                  [heap]
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-01mapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+0ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7ffca0787000-7ffca07a8000 rw-p 00000000 00:00 0                          [stack]
+7ffca07da000-7ffca07dd000 r--p 00000000 00:00 0                          [vvar]
+7ffca07dd000-7ffca07df000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
+------------------------------------------------------------------
+                       ITERATION 9                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 4096 (0x1000)
+mapping created at address: 0x1001000	offset: 4096	size: 4096 (0x1000)
+mapping created at address: 0x12d1000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x12d0000	offset: 851968	size: 4096 (0x1000)
+mapping created at address: 0x12ce000	offset: 843776	size: 4096 (0x1000)
+mapping created at address: 0x1048000	offset: 294912	size: 4096 (0x1000)
+mapping created at address: 0x12d2000	offset: N/A 	size: 4096 (0x1000)
+mapping created at address: 0x10aa000	offset: 696320	size: 4096 (0x1000)
+mapping created at address: 0x1049000	offset: 299008	size: 4096 (0x1000)
+mapping created at address: 0x106f000	offset: 454656	size: 4096 (0x1000)
+mapping created at address: 0x1022000	offset: 139264	size: 4096 (0x1000)
+mapping created at address: 0x12cf000	offset: 847872	size: 4096 (0x1000)
+mapping created at address: 0x1096000	offset: 614400	size: 4096 (0x1000)
+mapping created at address: 0x1027000	offset: 159744	size: 4096 (0x1000)
+mapping created at address: 0x1028000	offset: 163840	size: 4096 (0x1000)
+mapping created at address: 0x1026000	offset: 155648	size: 4096 (0x1000)
+mapping created at address: 0x1024000	offset: 147456	size: 4096 (0x1000)
+mapping created at address: 0x1002000	offset: 8192	size: 4096 (0x1000)
+mapping created at address: 0x1044000	offset: 278528	size: 4096 (0x1000)
+mapping created at address: 0x1045000	offset: 282624	size: 4096 (0x1000)
+mapping created at address: 0x102d000	offset: 184320	size: 4096 (0x1000)
+mapping created at address: 0x1079000	offset: 495616	size: 4096 (0x1000)
+mapping created at address: 0x100f000	offset: 61440	size: 4096 (0x1000)
+mapping created at address: 0x10bc000	offset: 770048	size: 4096 (0x1000)
+mapping created at address: 0x1075000	offset: 479232	size: 4096 (0x1000)
+mapping created at address: 0x101f000	offset: 126976	size: 4096 (0x1000)
+mapping created at address: 0x1020000	offset: 131072	size: 4096 (0x1000)
+mapping created at address: 0x101c000	offset: 114688	size: 4096 (0x1000)
+mapping created at address: 0x101d000	offset: 118784	size: 4096 (0x1000)
+mapping created at address: 0x1019000	offset: 102400	size: 4096 (0x1000)
+mapping created at address: 0x1042000	offset: 270336	size: 4096 (0x1000)
+mapping created at address: 0x1076000	offset: 483328	size: 4096 (0x1000)
+mapping created at address: 0x1073000	offset: 471040	size: 4096 (0x1000)
+mapping created at address: 0x1077000	offset: 487424	size: 4096 (0x1000)
+mapping created at address: 0x1078000	offset: 491520	size: 4096 (0x1000)
+mapping created at address: 0x10ba000	offset: 761856	size: 4096 (0x1000)
+mapping created at address: 0x10bb000	offset: 765952	size: 4096 (0x1000)
+mapping created at address: 0x1047000	offset: 290816	size: 4096 (0x1000)
+mapping created at address: 0x106a000	offset: 434176	size: 4096 (0x1000)
+mapping created at address: 0x1054000	offset: 344064	size: 4096 (0x1000)
+mapping created at address: 0x10ab000	offset: 700416	size: 4096 (0x1000)
+mapping created at address: 0x10a2000	offset: 663552	size: 4096 (0x1000)
+mapping created at address: 0x10c3000	offset: 798720	size: 4096 (0x1000)
+mapping created at address: 0x1043000	offset: 274432	size: 4096 (0x1000)
+mapping created at address: 0x10a9000	offset: 692224	size: 4096 (0x1000)
+mapping created at address: 0x100e000	offset: 57344	size: 4096 (0x1000)
+mapping created at address: 0x1059000	offset: 364544	size: 4096 (0x1000)
+mapping created at address: 0x102e000	offset: 188416	size: 4096 (0x1000)
+mapping created at address: 0x10a5000	offset: 675840	size: 4096 (0x1000)
+mapping created at address: 0x105a000	offset: 368640	size: 4096 (0x1000)
+mapping created at address: 0x10a7000	offset: 684032	size: 4096 (0x1000)
+mapping created at address: 0x1014000	offset: 81920	size: 4096 (0x1000)
+mapping created at address: 0x1015000	offset: 86016	size: 4096 (0x1000)
+mapping created at address: 0x1016000	offset: 90112	size: 4096 (0x1000)
+mapping created at address: 0x1068000	offset: 425984	size: 4096 (0x1000)
+mapping created at address: 0x1013000	offset: 77824	size: 4096 (0x1000)
+mapping created at address: 0x10b8000	offset: 753664	size: 4096 (0x1000)
+mapping created at address: 0x105b000	offset: 372736	size: 4096 (0x1000)
+mapping created at address: 0x1057000	offset: 356352	size: 4096 (0x1000)
+mapping created at address: 0x10b7000	offset: 749568	size: 4096 (0x1000)
+mapping created at address: 0x105c000	offset: 376832	size: 4096 (0x1000)
+mapping created at address: 0x10a6000	offset: 679936	size: 4096 (0x1000)
+mapping created at address: 0x103f000	offset: 258048	size: 4096 (0x1000)
+mapping created at address: 0x10a8000	offset: 688128	size: 4096 (0x1000)
+mapping created at address: 0x1040000	offset: 262144	size: 4096 (0x1000)
+mapping created at address: 0x1010000	offset: 65536	size: 4096 (0x1000)
+mapping created at address: 0x1017000	offset: 94208	size: 4096 (0x1000)
+mapping created at address: 0x101a000	offset: 106496	size: 4096 (0x1000)
+mapping created at address: 0x101b000	offset: 110592	size: 4096 (0x1000)
+mapping created at address: 0x1018000	offset: 98304	size: 4096 (0x1000)
+mapping created at address: 0x1011000	offset: 69632	size: 4096 (0x1000)
+argv[0]: 0x5ffffffff020	 contents: stack_examiner
+argv[1]: 0x5ffffffff028	 contents: (null)
+contents: strlen of last value @ envp: 16
+address of final_string_addr + strlen = 5fffffffffef
+address of final_string_addr + strlen + 1 = 5ffffffffff0
+total number of environment variables: 49
+sp: 0x5ffffffff1c0 end o auxv: 0x5ffffffff300 
+length of random bytes + cap string: 0
+aux type: 33
+aux type: 16
+aux type: 6
+aux type: 17
+aux type: 3
+    phdr addr: 0x1000040
+aux type: 4
+aux type: 5
+aux type: 7
+aux type: 8
+aux type: 9
+aux type: 11
+aux type: 12
+aux type: 13
+aux type: 14
+aux type: 23
+aux type: 25
+    rand addr: 0x5ffffffff309
+aux type: 26
+aux type: 31
+    exec addr: 0x5ffffffffff0 
+ contents: stack_examiner
+        strlen: 14
+aux type: 15
+    at_plat addr: 0x5ffffffff319
+     and at_plat val: x86_64
+sp: 0x5ffffffff300 random bytes:   
+sp: 0x5ffffffff310 capability string? 
+BÁµïð &x86_64 
+utime | 0.001308 | 0.001579 | 0.000271
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000271 | 0.000271 | 0.000271
+maxrss | 972 | 972 | 0
+minflt | 94 | 114 | 20
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 416 243 219 206 0 144 0
+
+
+00400000-004ce000 r-xp 00000000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006cd000-006d0000 rw-p 000cd000 00:33 5479174                            /home/tiffanyyang/labs/lab3/code/dpager
+006d0000-006d2000 rw-p 00000000 00:00 0 
+01000000-01003000 r-xp 00000000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0100e000-01012000 r-xp 0000e000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01013000-0101e000 r-xp 00013000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0101f000-01021000 r-xp 0001f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01022000-01023000 r-xp 00022000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01024000-01025000 r-xp 00024000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01026000-01029000 r-xp 00026000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0102d000-0102f000 r-xp 0002d000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0103f000-01041000 r-xp 0003f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01042000-01046000 r-xp 00042000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01047000-0104a000 r-xp 00047000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01054000-01055000 r-xp 00054000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01057000-01058000 r-xp 00057000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01059000-0105d000 r-xp 00059000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01068000-01069000 r-xp 00068000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106a000-0106b000 r-xp 0006a000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+0106f000-01070000 r-xp 0006f000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01073000-01074000 r-xp 00073000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01075000-0107a000 r-xp 00075000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+01096000-01097000 r-xp 00096000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a2000-010a3000 r-xp 000a2000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010a5000-010ac000 r-xp 000a5000 00:33 5479178                            /home/tiffanyyang/labmapping created at address: 0x10a3000	offset: 667648	size: 4096 (0x1000)
+s/lab3/code/stack_examiner
+010b7000-010b9000 r-xp 000b7000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010ba000-010bd000 r-xp 000ba000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+010c3000-010c4000 r-xp 000c3000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012ce000-012d0000 rw-p 000ce000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d0000-012d1000 rw-p 000d0000 00:33 5479178                            /home/tiffanyyang/labs/lab3/code/stack_examiner
+012d1000-012d3000 rw-p 00000000 00:00 0 
+017ee000-01833000 rw-p 00000000 00:00 0                                  [heap]
+5ffffffe0000-600000000000 rw-p 00000000 00:00 0 
+7fffa725f000-7fffa7280000 rw-p 00000000 00:00 0                          [stack]
+7fffa73dc000-7fffa73df000 r--p 00000000 00:00 0                          [vvar]
+7fffa73df000-7fffa73e1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+
