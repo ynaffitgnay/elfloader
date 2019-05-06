@@ -4,17 +4,17 @@
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.001091 | 0.001093 | 0.000002
+utime | 0.001050 | 0.001052 | 0.000002
 stime | 0.000000 | 0.000000 | 0.000000
 ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 163 | 163 | 0
+maxrss | 2044 | 2044 | 0
+minflt | 161 | 161 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 882 500 394 206 0 468 0
+Mem usage !! 658 511 394 206 0 244 0
 
 
 ------------------------------------------------------------------
@@ -23,17 +23,17 @@ Mem usage !! 882 500 394 206 0 468 0
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.000954 | 0.000956 | 0.000002
+utime | 0.000926 | 0.000928 | 0.000002
 stime | 0.000000 | 0.000000 | 0.000000
 ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
+maxrss | 2044 | 2044 | 0
 minflt | 163 | 163 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+Mem usage !! 658 511 394 206 0 244 0
 
 
 ------------------------------------------------------------------
@@ -42,17 +42,17 @@ Mem usage !! 659 500 394 206 0 245 0
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.000993 | 0.000995 | 0.000002
+utime | 0.001256 | 0.001259 | 0.000003
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
+ttime | 0.000003 | 0.000003 | 0.000003
+maxrss | 2048 | 2048 | 0
 minflt | 163 | 163 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+Mem usage !! 658 512 394 206 0 244 0
 
 
 ------------------------------------------------------------------
@@ -61,17 +61,17 @@ Mem usage !! 659 500 394 206 0 245 0
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.000979 | 0.000981 | 0.000002
+utime | 0.001116 | 0.001118 | 0.000002
 stime | 0.000000 | 0.000000 | 0.000000
 ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 164 | 164 | 0
+maxrss | 2040 | 2040 | 0
+minflt | 160 | 160 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+Mem usage !! 881 510 394 206 0 467 0
 
 
 ------------------------------------------------------------------
@@ -80,7 +80,64 @@ Mem usage !! 659 500 394 206 0 245 0
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.001008 | 0.001010 | 0.000002
+utime | 0.001044 | 0.001046 | 0.000002
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000002 | 0.000002 | 0.000002
+maxrss | 2044 | 2044 | 0
+minflt | 162 | 162 | 0
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 658 511 394 206 0 244 0
+
+
+------------------------------------------------------------------
+                       ITERATION 5                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
+utime | 0.001081 | 0.001084 | 0.000003
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000003 | 0.000003 | 0.000003
+maxrss | 2044 | 2044 | 0
+minflt | 164 | 164 | 0
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 658 511 394 206 0 244 0
+
+
+------------------------------------------------------------------
+                       ITERATION 6                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
+utime | 0.000946 | 0.000948 | 0.000002
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000002 | 0.000002 | 0.000002
+maxrss | 2044 | 2044 | 0
+minflt | 163 | 163 | 0
+majflt | 0 | 0 | 0
+inblock | 0 | 0 | 0
+oublock | 0 | 0 | 0
+nvcsw | 2 | 2 | 0
+nivcsw | 0 | 0 | 0
+Mem usage !! 658 511 394 206 0 244 0
+
+
+------------------------------------------------------------------
+                       ITERATION 7                               
+------------------------------------------------------------------
+mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
+mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
+mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
+utime | 0.001136 | 0.001138 | 0.000002
 stime | 0.000000 | 0.000000 | 0.000000
 ttime | 0.000002 | 0.000002 | 0.000002
 maxrss | 2000 | 2000 | 0
@@ -90,71 +147,26 @@ inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+Mem usage !! 658 500 394 206 0 244 0
 
 
-------------------------------------------------------------------
-                       ITERATION 5                               
-------------------------------------------------------------------
-mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
-mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
-mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.000955 | 0.000957 | 0.000002
-stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 162 | 162 | 0
-majflt | 0 | 0 | 0
-inblock | 0 | 0 | 0
-oublock | 0 | 0 | 0
-nvcsw | 2 | 2 | 0
-nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
-
-
-------------------------------------------------------------------
-                       ITERATION 6                               
-------------------------------------------------------------------
-mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
-mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
-mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.000000 | 0.000000 | 0.000000
-stime | 0.001206 | 0.001208 | 0.000002
-ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 164 | 164 | 0
-majflt | 0 | 0 | 0
-inblock | 0 | 0 | 0
-oublock | 0 | 0 | 0
-nvcsw | 2 | 2 | 0
-nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
-
-
-------------------------------------------------------------------
-                       ITERATION 7                               
-------------------------------------------------------------------
-Failed to create mapping at desired address. Please try loading the same program again. 
-Failed to mmap file-backed segment
-Failed to load segments properly
-Argc: 2, argv[0]: ./apager, argv[1]: lessmem
 ------------------------------------------------------------------
                        ITERATION 8                               
 ------------------------------------------------------------------
 mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
-utime | 0.001161 | 0.001163 | 0.000002
-stime | 0.000000 | 0.000000 | 0.000000
+utime | 0.000000 | 0.000000 | 0.000000
+stime | 0.001165 | 0.001167 | 0.000002
 ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 164 | 164 | 0
+maxrss | 2044 | 2044 | 0
+minflt | 163 | 163 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
-nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+nivcsw | 1 | 1 | 0
+Mem usage !! 658 511 394 206 0 244 0
 
 
 ------------------------------------------------------------------
@@ -164,15 +176,15 @@ mapping created at address: 0x1000000	offset: 0	size: 831488 (0xcb000)
 mapping created at address: 0x12ca000	offset: 827392	size: 12288 (0x3000)
 mapping created at address: 0x12cd000	offset: N/A 	size: 417792 (0x66000)
 utime | 0.000000 | 0.000000 | 0.000000
-stime | 0.001121 | 0.001123 | 0.000002
+stime | 0.001016 | 0.001018 | 0.000002
 ttime | 0.000002 | 0.000002 | 0.000002
-maxrss | 2000 | 2000 | 0
-minflt | 165 | 165 | 0
+maxrss | 2040 | 2040 | 0
+minflt | 162 | 162 | 0
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
 nivcsw | 0 | 0 | 0
-Mem usage !! 659 500 394 206 0 245 0
+Mem usage !! 658 510 394 206 0 244 0
 
 

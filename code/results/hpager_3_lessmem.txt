@@ -9,11 +9,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000000 | 0.000000 | 0.000000
-stime | 0.000968 | 0.000994 | 0.000026
-ttime | 0.000026 | 0.000026 | 0.000026
+utime | 0.000871 | 0.000895 | 0.000024
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000024 | 0.000024 | 0.000024
 maxrss | 492 | 492 | 0
-minflt | 74 | 77 | 3
+minflt | 72 | 75 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -33,10 +33,10 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000000 | 0.000000 | 0.000000
-stime | 0.000920 | 0.000946 | 0.000026
-ttime | 0.000026 | 0.000026 | 0.000026
-maxrss | 408 | 408 | 0
+utime | 0.000857 | 0.000882 | 0.000025
+stime | 0.000000 | 0.000000 | 0.000000
+ttime | 0.000025 | 0.000025 | 0.000025
+maxrss | 412 | 412 | 0
 minflt | 70 | 73 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -57,16 +57,16 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000861 | 0.000886 | 0.000025
+utime | 0.000860 | 0.000884 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 428 | 428 | 0
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 468 | 468 | 0
 minflt | 72 | 75 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
 nvcsw | 2 | 2 | 0
-nivcsw | 1 | 1 | 0
+nivcsw | 0 | 0 | 0
 Mem usage !! 569 1 0 206 0 155 0
 
 
@@ -81,11 +81,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000819 | 0.000841 | 0.000022
+utime | 0.000872 | 0.000897 | 0.000025
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000022 | 0.000022 | 0.000022
+ttime | 0.000025 | 0.000025 | 0.000025
 maxrss | 492 | 492 | 0
-minflt | 72 | 75 | 3
+minflt | 74 | 77 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -105,11 +105,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000892 | 0.000917 | 0.000025
+utime | 0.000845 | 0.000868 | 0.000023
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 476 | 476 | 0
-minflt | 73 | 76 | 3
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 472 | 472 | 0
+minflt | 72 | 75 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -129,11 +129,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000724 | 0.000749 | 0.000025
+utime | 0.000856 | 0.000879 | 0.000023
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 460 | 460 | 0
-minflt | 71 | 74 | 3
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 408 | 408 | 0
+minflt | 70 | 73 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -153,10 +153,10 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000911 | 0.000937 | 0.000026
+utime | 0.000855 | 0.000878 | 0.000023
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000026 | 0.000026 | 0.000026
-maxrss | 408 | 408 | 0
+ttime | 0.000023 | 0.000023 | 0.000023
+maxrss | 468 | 468 | 0
 minflt | 71 | 74 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -177,11 +177,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000905 | 0.000932 | 0.000027
+utime | 0.000812 | 0.000835 | 0.000023
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000027 | 0.000027 | 0.000027
+ttime | 0.000023 | 0.000023 | 0.000023
 maxrss | 492 | 492 | 0
-minflt | 74 | 77 | 3
+minflt | 73 | 76 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0
@@ -201,10 +201,10 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000918 | 0.000943 | 0.000025
+utime | 0.000839 | 0.000863 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 408 | 408 | 0
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 424 | 424 | 0
 minflt | 71 | 74 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
@@ -225,11 +225,11 @@ mapping created at address: 0x12d0000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1331000	offset: N/A 	size: 4096 (0x1000)
 mapping created at address: 0x12d2000	offset: N/A 	size: 8192 (0x2000)
 mapping created at address: 0x1306000	offset: N/A 	size: 12288 (0x3000)
-utime | 0.000901 | 0.000926 | 0.000025
+utime | 0.000846 | 0.000870 | 0.000024
 stime | 0.000000 | 0.000000 | 0.000000
-ttime | 0.000025 | 0.000025 | 0.000025
-maxrss | 492 | 492 | 0
-minflt | 74 | 77 | 3
+ttime | 0.000024 | 0.000024 | 0.000024
+maxrss | 476 | 476 | 0
+minflt | 71 | 74 | 3
 majflt | 0 | 0 | 0
 inblock | 0 | 0 | 0
 oublock | 0 | 0 | 0

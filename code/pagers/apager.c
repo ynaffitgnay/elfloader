@@ -19,9 +19,7 @@ all_load_elf_binary( Loadee_mgmt* loadee );
 
 int
 main( int argc, char** argv, char** envp )
-{
-  printf( "Argc: %d, argv[0]: %s, argv[1]: %s\n", argc, argv[0], argv[1]); 
-  
+{  
   if (argc < 2) {
     fprintf( stderr, "Please supply an additional argument\n" );
     return 0;
